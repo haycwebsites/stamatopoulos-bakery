@@ -2,30 +2,30 @@ import { useState, useCallback } from 'react';
 import { useHayc } from '../hayc/config-context';
 
 const labels = {
-  nameLabel: { el: 'Όνομα', en: 'Name' },
+  nameLabel: { el: 'Name', en: 'Name' },
   emailLabel: { el: 'Email', en: 'Email' },
-  messageLabel: { el: 'Μήνυμα', en: 'Message' },
-  submitButton: { el: 'Αποστολή', en: 'Send Message' },
-  submitting: { el: 'Αποστολή...', en: 'Sending...' },
-  successTitle: { el: 'Το μήνυμά σας στάλθηκε!', en: 'Message sent!' },
+  messageLabel: { el: 'Message', en: 'Message' },
+  submitButton: { el: 'Send Message', en: 'Send Message' },
+  submitting: { el: 'Sending...', en: 'Sending...' },
+  successTitle: { el: 'Message sent!', en: 'Message sent!' },
   successText: {
-    el: 'Θα επικοινωνήσουμε μαζί σας σύντομα.',
+    el: 'We will get back to you shortly.',
     en: 'We will get back to you shortly.',
   },
   errorText: {
-    el: 'Κάτι πήγε στραβά. Παρακαλώ δοκιμάστε ξανά.',
+    el: 'Something went wrong. Please try again.',
     en: 'Something went wrong. Please try again.',
   },
   nameRequired: {
-    el: 'Το όνομα είναι υποχρεωτικό.',
+    el: 'Name is required.',
     en: 'Name is required.',
   },
   emailInvalid: {
-    el: 'Εισάγετε έγκυρο email.',
+    el: 'Please enter a valid email.',
     en: 'Please enter a valid email.',
   },
   messageRequired: {
-    el: 'Το μήνυμα είναι υποχρεωτικό.',
+    el: 'Message is required.',
     en: 'Message is required.',
   },
 };

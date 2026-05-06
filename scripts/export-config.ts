@@ -1,7 +1,16 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { siteConfig, digitalProductsConfig } from '../src/config.js';
+import {
+  siteConfig,
+  navigationConfig,
+  footerConfig,
+  homeConfig,
+  aboutPageConfig,
+  contactPageConfig,
+  menuPageConfig,
+  digitalProductsConfig,
+} from '../src/config.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,6 +19,12 @@ const config = {
   version: 1,
   exportedAt: new Date().toISOString(),
   siteConfig,
+  navigationConfig,
+  footerConfig,
+  homeConfig,
+  aboutPageConfig,
+  contactPageConfig,
+  menuPageConfig,
   digitalProductsConfig,
 };
 

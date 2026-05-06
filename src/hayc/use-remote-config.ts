@@ -1,9 +1,25 @@
-import { siteConfig, digitalProductsConfig, type DigitalProductsConfig } from '../config';
+import {
+  siteConfig,
+  navigationConfig,
+  footerConfig,
+  homeConfig,
+  aboutPageConfig,
+  contactPageConfig,
+  menuPageConfig,
+  digitalProductsConfig,
+  type DigitalProductsConfig,
+} from '../config';
 
 export interface RemoteConfig {
   version: number;
   exportedAt: string;
   siteConfig: typeof siteConfig;
+  navigationConfig: typeof navigationConfig;
+  footerConfig: typeof footerConfig;
+  homeConfig: typeof homeConfig;
+  aboutPageConfig: typeof aboutPageConfig;
+  contactPageConfig: typeof contactPageConfig;
+  menuPageConfig: typeof menuPageConfig;
   digitalProductsConfig?: DigitalProductsConfig;
 }
 
@@ -11,6 +27,12 @@ export const defaultConfig: RemoteConfig = {
   version: 1,
   exportedAt: '',
   siteConfig,
+  navigationConfig,
+  footerConfig,
+  homeConfig,
+  aboutPageConfig,
+  contactPageConfig,
+  menuPageConfig,
   digitalProductsConfig,
 };
 

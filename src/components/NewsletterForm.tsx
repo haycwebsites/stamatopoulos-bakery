@@ -5,7 +5,15 @@ import { useHayc } from '../hayc/config-context';
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export function NewsletterForm() {
+export function NewsletterForm({
+  placeholder,
+  submitLabel,
+  inputAriaLabel = 'Email',
+}: {
+  placeholder: string;
+  submitLabel: string;
+  inputAriaLabel?: string;
+}) {
   const { config } = useHayc();
   const siteId = config.siteConfig.siteId;
   const apiUrl = config.siteConfig.apiUrl;
@@ -62,14 +70,14 @@ export function NewsletterForm() {
 
   if (submitted) {
     return (
-      <p className="text-sm text-green-700" role="status">
+      <p role="status">
         You are subscribed. Thank you.
       </p>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="w-full" noValidate>
+    <form onSubmit={handleSubmit} noValidate>
       <input
         type="text"
         name="_hp"
@@ -77,32 +85,33 @@ export function NewsletterForm() {
         onChange={(e) => setHp(e.target.value)}
         autoComplete="off"
         tabIndex={-1}
-        className="hidden"
+        style={{ display: 'none' }}
         aria-hidden
       />
 
-      <div className="flex w-full items-start gap-2">
+      <div className="form-group">
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter your email"
+          placeholder={placeholder}
           disabled={loading}
-          className="min-w-0 flex-1 rounded-md border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-900 disabled:cursor-not-allowed disabled:opacity-60"
-          aria-label="Email"
+          className="form_control"
+          aria-label={inputAriaLabel}
           aria-invalid={!!error}
         />
         <button
           type="submit"
           disabled={loading}
-          className="shrink-0 rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-60"
+          className="submit-btn"
         >
-          {loading ? 'Subscribing...' : 'Subscribe'}
+          {loading ? 'Subscribing...' : submitLabel}
+          <i className="far fa-paper-plane" />
         </button>
       </div>
 
       {error && (
-        <p className="mt-2 text-sm text-red-600" role="alert">
+        <p role="alert">
           {error}
         </p>
       )}
