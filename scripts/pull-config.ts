@@ -21,9 +21,10 @@ function loadEnvVar(key: string): string {
 const SITE_ID = loadEnvVar('VITE_SITE_ID');
 
 if (!SITE_ID) {
-  console.error('VITE_SITE_ID is not set. Add it to your .env.local file:');
-  console.error('VITE_SITE_ID=your-site-name');
-  process.exit(1);
+  console.warn('VITE_SITE_ID is not set — skipping remote config pull (using committed src/config.ts).');
+  console.warn('Local: add VITE_SITE_ID=your-site-slug to .env.local to pull from S3.');
+  console.warn('GitHub Actions: set repository variable SITE_ID (Settings → Secrets and variables → Actions → Variables).');
+  process.exit(0);
 }
 
 const CONFIG_URL = `${BUCKET_BASE}/sites/${SITE_ID}/config/config.json?t=${Date.now()}`;
