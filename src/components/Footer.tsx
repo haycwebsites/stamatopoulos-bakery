@@ -16,15 +16,11 @@ export default function Footer() {
           <img src={img(f.shapeTwoSrc)} alt={t(f.shapeTwoAlt)} />
         </div>
 
-        <div className="container">
+        <div className="container position-relative footer-main-wrap">
           <div className="footer-widget-area py-5">
             <div className="row">
               <div className="col-xl-3 col-md-6">
-                <div
-                  className="footer-widget footer-about-widget mb-4 pb-3"
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                >
+                <div className="footer-widget footer-about-widget mb-4 pb-3">
                   <div className="widget-content">
                     <AppLink href={f.brandHref} className="mb-4">
                       <img src={img(f.logoSrc)} alt={t(f.logoAlt)} />
@@ -51,11 +47,7 @@ export default function Footer() {
               </div>
 
               <div className="col-xl-2 col-md-6">
-                <div
-                  className="footer-widget footer-nav-widget mb-4 pb-3"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                >
+                <div className="footer-widget footer-nav-widget mb-4 pb-3">
                   <h4 {...cp('footerConfig.linksTitle')} className="widget-title mb-3 pb-2">
                     {t(f.linksTitle)}
                   </h4>
@@ -74,11 +66,7 @@ export default function Footer() {
               </div>
 
               <div className="col-xl-3 col-md-6">
-                <div
-                  className="footer-widget footer-time-widget mb-4 pb-3"
-                  data-aos="fade-up"
-                  data-aos-duration="1200"
-                >
+                <div className="footer-widget footer-time-widget mb-4 pb-3">
                   <h4 {...cp('footerConfig.openingTimeTitle')} className="widget-title mb-3 pb-2">
                     {t(f.openingTimeTitle)}
                   </h4>
@@ -103,11 +91,7 @@ export default function Footer() {
               </div>
 
               <div className="col-xl-4 col-md-6">
-                <div
-                  className="footer-widget footer-newsletter-widget mb-4 pb-3"
-                  data-aos="fade-up"
-                  data-aos-duration="1400"
-                >
+                <div className="footer-widget footer-newsletter-widget mb-4 pb-3">
                   <h4 {...cp('footerConfig.newsletterTitle')} className="widget-title mb-3 pb-2">
                     {t(f.newsletterTitle)}
                   </h4>
@@ -124,31 +108,39 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="copyright-area">
-            <div className="row">
-              <div className="col-md-6">
-                <div className="copyright-text" data-aos="fade-right" data-aos-duration="1200">
-                  <p>
+          <div className="footer-bottom-bar copyright-area">
+            <div className="row align-items-center gy-3">
+              <div className="col-12 col-md-6">
+                <div className="copyright-text text-center text-md-start">
+                  <p className="footer-copyright-line mb-0">
                     <span {...cp('footerConfig.copyrightText')} id="copyright">
                       {t(f.copyrightText)}
                     </span>{' '}
                     <span {...cp('footerConfig.madeByPrefix')}>{t(f.madeByPrefix)}</span>
-                    <a {...cp('footerConfig.madeByLabel')} href={f.madeByHref}>
+                    <a
+                      {...cp('footerConfig.madeByLabel')}
+                      href={f.madeByHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {t(f.madeByLabel)}
                     </a>
                     <span {...cp('footerConfig.madeBySuffix')}>{t(f.madeBySuffix)}</span>
                   </p>
                 </div>
               </div>
-              <div className="col-md-6">
-                <div className="copyright-link float-md-end" data-aos="fade-left" data-aos-duration="1400">
-                  <a {...cp('footerConfig.privacyPolicyLabel')} href={f.privacyPolicyHref}>
+              <div className="col-12 col-md-6">
+                <nav
+                  className="copyright-link d-flex flex-wrap gap-3 justify-content-center justify-content-md-end align-items-center"
+                  aria-label="Legal"
+                >
+                  <AppLink {...cp('footerConfig.privacyPolicyLabel')} href={f.privacyPolicyHref}>
                     {t(f.privacyPolicyLabel)}
-                  </a>
-                  <a {...cp('footerConfig.termsLabel')} href={f.termsHref}>
+                  </AppLink>
+                  <AppLink {...cp('footerConfig.termsLabel')} href={f.termsHref}>
                     {t(f.termsLabel)}
-                  </a>
-                </div>
+                  </AppLink>
+                </nav>
               </div>
             </div>
           </div>

@@ -12,37 +12,30 @@ export default function MenuPage() {
       <Navbar />
       <main>
         <section
-          className="page-banner bg-cover position-relative z-1 text-white min-vh-50 align-content-center"
+          className="bistly-page-hero page-banner bg-cover position-relative z-1 text-white"
           style={{ backgroundImage: `url(${img(mc.bannerBackgroundImage)})` }}
         >
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-lg-10">
-                <div className="page-content text-center py-5">
-                  <h1 {...cp('menuPageConfig.bannerTitle')} className="mb-3">
-                    {t(mc.bannerTitle)}
-                  </h1>
-
-                  <nav aria-label="breadcrumb">
-                    <ol className="breadcrumb justify-content-center mb-0">
-                      <li className="breadcrumb-item">
-                        <AppLink
-                          {...cp('menuPageConfig.breadcrumbHomeLabel')}
-                          href={mc.breadcrumbHomeHref}
-                          className="text-white text-decoration-none"
-                        >
-                          {t(mc.breadcrumbHomeLabel)}
-                        </AppLink>
-                      </li>
-                      <li className="breadcrumb-item active text-white" aria-current="page">
-                        <span {...cp('menuPageConfig.breadcrumbCurrentLabel')}>
-                          {t(mc.breadcrumbCurrentLabel)}
-                        </span>
-                      </li>
-                    </ol>
-                  </nav>
-                </div>
-              </div>
+          <div className="container position-relative">
+            <div className="bistly-page-hero-content text-center mx-auto" style={{ maxWidth: '720px' }}>
+              <h1 {...cp('menuPageConfig.bannerTitle')} className="bistly-page-hero-title">
+                {t(mc.bannerTitle)}
+              </h1>
+              <nav className="bistly-page-breadcrumb-nav" aria-label="Breadcrumb">
+                <AppLink
+                  {...cp('menuPageConfig.breadcrumbHomeLabel')}
+                  href={mc.breadcrumbHomeHref}
+                  className="bistly-page-breadcrumb-link"
+                >
+                  {t(mc.breadcrumbHomeLabel)}
+                </AppLink>
+                <span
+                  className="bistly-page-breadcrumb-current"
+                  aria-current="page"
+                  {...cp('menuPageConfig.breadcrumbCurrentLabel')}
+                >
+                  {t(mc.breadcrumbCurrentLabel)}
+                </span>
+              </nav>
             </div>
           </div>
         </section>

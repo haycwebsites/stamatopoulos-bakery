@@ -1,14 +1,23 @@
 import { useTemplateInit } from '../lib/useTemplateInit';
 import { useHayc } from '../hayc/config-context';
 import { AppLink } from './AppLink';
+import { useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   useTemplateInit();
   const { t, img, config, cp } = useHayc();
+  const { pathname } = useLocation();
+  const innerHeroPage =
+    pathname === '/about' ||
+    pathname === '/contact' ||
+    pathname === '/menu' ||
+    pathname.startsWith('/menu-');
 
   const nav = config.navigationConfig;
   return (
-    <header className="header-area header-three transparent-header">
+    <header
+      className={`header-area header-three transparent-header${innerHeroPage ? ' header-inner-hero' : ''}`}
+    >
       <div className="container-fluid">
         <div className="header-navigation">
           <div className="nav-inner-menu">

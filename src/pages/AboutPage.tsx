@@ -12,45 +12,38 @@ export default function AboutPage() {
       <Navbar />
       <main>
         <section
-          className="page-banner bg-cover position-relative z-1 text-white min-vh-50 align-content-center"
+          className="bistly-page-hero page-banner bg-cover position-relative z-1 text-white"
           style={{ backgroundImage: `url(${img(ac.bannerBackgroundImage)})` }}
         >
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-lg-10">
-                <div className="page-content text-center py-5">
-                  <h1 {...cp('aboutPageConfig.bannerTitle')} className="mb-3">
-                    {t(ac.bannerTitle)}
-                  </h1>
-
-                  <nav aria-label="breadcrumb">
-                    <ol className="breadcrumb justify-content-center mb-0">
-                      <li className="breadcrumb-item">
-                        <AppLink
-                          {...cp('aboutPageConfig.breadcrumbHomeLabel')}
-                          href={ac.breadcrumbHomeHref}
-                          className="text-white text-decoration-none"
-                        >
-                          {t(ac.breadcrumbHomeLabel)}
-                        </AppLink>
-                      </li>
-                      <li className="breadcrumb-item active text-white" aria-current="page">
-                        <span {...cp('aboutPageConfig.breadcrumbCurrentLabel')}>
-                          {t(ac.breadcrumbCurrentLabel)}
-                        </span>
-                      </li>
-                    </ol>
-                  </nav>
-                </div>
-              </div>
+          <div className="container position-relative">
+            <div className="bistly-page-hero-content text-center mx-auto" style={{ maxWidth: '720px' }}>
+              <h1 {...cp('aboutPageConfig.bannerTitle')} className="bistly-page-hero-title">
+                {t(ac.bannerTitle)}
+              </h1>
+              <nav className="bistly-page-breadcrumb-nav" aria-label="Breadcrumb">
+                <AppLink
+                  {...cp('aboutPageConfig.breadcrumbHomeLabel')}
+                  href={ac.breadcrumbHomeHref}
+                  className="bistly-page-breadcrumb-link"
+                >
+                  {t(ac.breadcrumbHomeLabel)}
+                </AppLink>
+                <span
+                  className="bistly-page-breadcrumb-current"
+                  aria-current="page"
+                  {...cp('aboutPageConfig.breadcrumbCurrentLabel')}
+                >
+                  {t(ac.breadcrumbCurrentLabel)}
+                </span>
+              </nav>
             </div>
           </div>
         </section>
 
         <section className="bistly-about-sec py-5">
           <div className="container">
-            <div className="row align-items-end justify-content-center">
-              <div className="col-lg-7 col-md-12">
+            <div className="row align-items-center justify-content-center g-4 g-lg-5">
+              <div className="col-lg-6 col-md-12">
                 <div className="bistly-content-box">
                   <div className="section-title mb-4">
                     <span
@@ -85,9 +78,13 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="col-lg-5 col-md-8">
-                <div className="bistly-image mb-3 pb-3 mt-xl-0 mt-5" data-aos="fade-down" data-aos-duration="1000">
-                  <img src={img(ac.sideImage)} className="img-fluid rounded" alt={t(ac.sideImageAlt)} />
+              <div className="col-lg-6 col-md-12">
+                <div className="bistly-about-intro-visual" data-aos="fade-down" data-aos-duration="1000">
+                  <img
+                    src={img(ac.sideImage)}
+                    className="img-fluid w-100 rounded-4"
+                    alt={t(ac.sideImageAlt)}
+                  />
                 </div>
                 <div className="text-box" data-aos="fade-up" data-aos-duration="1000">
                   <p {...cp('aboutPageConfig.sideText')} className="mb-3 pb-2">
