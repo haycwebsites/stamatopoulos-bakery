@@ -1,3 +1,39 @@
+/*
+ * SYNCED FILE — do not modify in derived repos.
+ * This file is automatically updated from the hayc-websites-template
+ * repository via sync-template.yml.
+ *
+ * USAGE PATTERN:
+ * Do not reimplement this form's logic inline in derived repos.
+ * Instead, create a site-specific page component that imports and
+ * renders <ContactForm /> and owns only the styling:
+ *
+ *   // src/pages/ContactPage.tsx (derived repo owned)
+ *   import { ContactForm } from '../components/ContactForm';
+ *
+ *   export function ContactPage() {
+ *     return (
+ *       <div className="your-page-shell">
+ *         <ContactForm />
+ *       </div>
+ *     );
+ *   }
+ *
+ * Style the form via these CSS class hooks in a <style> block
+ * in your page component:
+ *   .contact-form            — form wrapper
+ *   .contact-form-field      — each field wrapper
+ *   .contact-form-input      — text inputs
+ *   .contact-form-textarea   — message textarea
+ *   .contact-form-button     — submit button
+ *   .contact-form-error      — error message
+ *   .contact-form-success    — success state wrapper
+ *   .contact-form-newsletter — newsletter toggle wrapper
+ *
+ * Following this pattern ensures all analytics tracking
+ * (form_start, form_abandon, form_submit, newsletter call)
+ * is inherited automatically via template syncs.
+ */
 import { useState, useCallback, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useHayc } from '../hayc/config-context';
