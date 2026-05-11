@@ -1,3 +1,28 @@
+/*
+ * SYNCED FILE — do not modify in derived repos.
+ * This file is automatically updated from the hayc-websites-template
+ * repository via sync-template.yml.
+ *
+ * USAGE PATTERN:
+ * Do not reimplement this form's logic inline in derived repos.
+ * Instead, create a site-specific section component that imports
+ * and renders <NewsletterForm /> and owns only the styling:
+ *
+ *   // src/components/NewsletterSection.tsx (derived repo owned)
+ *   import { NewsletterForm } from './NewsletterForm';
+ *
+ *   export function NewsletterSection() {
+ *     return (
+ *       <div className="your-section-shell">
+ *         <h2>Stay in touch</h2>
+ *         <NewsletterForm />
+ *       </div>
+ *     );
+ *   }
+ *
+ * Following this pattern ensures form_submit analytics tracking
+ * is inherited automatically via template syncs.
+ */
 import { useState, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useHayc } from '../hayc/config-context';
