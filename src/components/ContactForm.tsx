@@ -1,5 +1,7 @@
 import { useState, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useHayc } from '../hayc/config-context';
+import { trackEvent } from '../hayc/use-analytics';
 
 const labels = {
   nameLabel: { el: 'Όνομα', en: 'Name' },
@@ -36,6 +38,7 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function ContactForm() {
   const { t, config } = useHayc();
+  const location = useLocation();
   const siteId = config.siteConfig.siteId;
   const apiUrl = config.siteConfig.apiUrl;
 
@@ -90,6 +93,9 @@ export function ContactForm() {
         });
         if (!res.ok) throw new Error('Request failed');
         setSubmitted(true);
+        trackEvent(apiUrl, siteId, 'form_submit', location.pathname, {
+          form: 'contact',
+        });
         /*
          * POST /api/newsletter/subscribe
          *
