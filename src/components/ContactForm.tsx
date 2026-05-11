@@ -2,32 +2,34 @@ import { useState, useCallback } from 'react';
 import { useHayc } from '../hayc/config-context';
 
 const labels = {
-  nameLabel: { el: 'Name', en: 'Name' },
+  nameLabel: { el: 'Όνομα', en: 'Name' },
   emailLabel: { el: 'Email', en: 'Email' },
-  messageLabel: { el: 'Message', en: 'Message' },
-  submitButton: { el: 'Send Message', en: 'Send Message' },
-  submitting: { el: 'Sending...', en: 'Sending...' },
-  successTitle: { el: 'Message sent!', en: 'Message sent!' },
+  messageLabel: { el: 'Μήνυμα', en: 'Message' },
+  submitButton: { el: 'Αποστολή', en: 'Send Message' },
+  submitting: { el: 'Αποστολή...', en: 'Sending...' },
+  successTitle: { el: 'Το μήνυμά σας στάλθηκε!', en: 'Message sent!' },
   successText: {
-    el: 'We will get back to you shortly.',
+    el: 'Θα επικοινωνήσουμε μαζί σας σύντομα.',
     en: 'We will get back to you shortly.',
   },
   errorText: {
-    el: 'Something went wrong. Please try again.',
+    el: 'Κάτι πήγε στραβά. Παρακαλώ δοκιμάστε ξανά.',
     en: 'Something went wrong. Please try again.',
   },
   nameRequired: {
-    el: 'Name is required.',
+    el: 'Το όνομα είναι υποχρεωτικό.',
     en: 'Name is required.',
   },
   emailInvalid: {
-    el: 'Please enter a valid email.',
+    el: 'Εισάγετε έγκυρο email.',
     en: 'Please enter a valid email.',
   },
   messageRequired: {
-    el: 'Message is required.',
+    el: 'Το μήνυμα είναι υποχρεωτικό.',
     en: 'Message is required.',
   },
+  newsletterOptInLabel: { el: 'Εγγραφή στο newsletter', en: 'Subscribe to newsletter' },
+  newsletterOptInHint: { el: 'Λαμβάνετε νέα και ενημερώσεις', en: 'Receive news and updates' },
 };
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -49,6 +51,9 @@ export function ContactForm() {
     email?: string;
     message?: string;
   }>({});
+
+  const [newsletterOptIn, setNewsletterOptIn] = useState(false);
+  const hardcodedTags: string[] = ['contact-form'];
 
   const validate = useCallback((): boolean => {
     const errors: { name?: string; email?: string; message?: string } = {};
@@ -85,13 +90,45 @@ export function ContactForm() {
         });
         if (!res.ok) throw new Error('Request failed');
         setSubmitted(true);
+        /*
+         * POST /api/newsletter/subscribe
+         *
+         * Required (minimum):
+         *   siteId    — resolved from config.siteConfig.siteId
+         *   email     — visitor's email address
+         *
+         * Optional (maximum):
+         *   name        — visitor's full name
+         *   firstName   — visitor's first name
+         *   lastName    — visitor's last name
+         *   group       — subscriber group name (string)
+         *   tags        — array or comma-separated string of tag names
+         *   subscribed  — boolean; true = subscribed, false = unsubscribed (default: true)
+         *   _hp         — honeypot field; non-empty value silently discards the request
+         *
+         * Always fire regardless of newsletterOptIn value — the backend uses
+         * subscribed: false to record the contact as unsubscribed rather than
+         * skipping the record entirely.
+         */
+        fetch(`${apiUrl}/api/newsletter/subscribe`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            siteId,
+            email: email.trim(),
+            name: name.trim(),
+            subscribed: newsletterOptIn,
+            tags: hardcodedTags,
+            _hp: hp,
+          }),
+        }).catch(() => {});
       } catch {
         setError(t(labels.errorText));
       } finally {
         setLoading(false);
       }
     },
-    [apiUrl, siteId, name, email, message, hp, validate, t]
+    [apiUrl, siteId, name, email, message, hp, validate, t, newsletterOptIn]
   );
 
   if (submitted) {
@@ -268,6 +305,25 @@ export function ContactForm() {
               {fieldErrors.message}
             </p>
           )}
+        </div>
+
+        <div className="contact-form-field contact-form-newsletter">
+          <label className="contact-form-newsletter-label">
+            <input
+              type="checkbox"
+              className="contact-form-newsletter-checkbox"
+              checked={newsletterOptIn}
+              onChange={(e) => setNewsletterOptIn(e.target.checked)}
+            />
+            <span className="contact-form-newsletter-text">
+              <span className="contact-form-newsletter-title">
+                {t(labels.newsletterOptInLabel)}
+              </span>
+              <span className="contact-form-newsletter-hint">
+                {t(labels.newsletterOptInHint)}
+              </span>
+            </span>
+          </label>
         </div>
 
         <button type="submit" className="contact-form-button" disabled={loading}>
