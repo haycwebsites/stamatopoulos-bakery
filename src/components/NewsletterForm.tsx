@@ -1,5 +1,7 @@
 import { useState, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useHayc } from '../hayc/config-context';
+import { trackEvent } from '../hayc/use-analytics';
 
 // <NewsletterForm />
 
@@ -7,6 +9,7 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function NewsletterForm() {
   const { config } = useHayc();
+  const location = useLocation();
   const siteId = config.siteConfig.siteId;
   const apiUrl = config.siteConfig.apiUrl;
 
@@ -51,6 +54,9 @@ export function NewsletterForm() {
 
         if (!res.ok) throw new Error('Request failed');
         setSubmitted(true);
+        trackEvent(apiUrl, siteId, 'form_submit', location.pathname, {
+          form: 'newsletter',
+        });
       } catch {
         setError('Something went wrong. Please try again.');
       } finally {
