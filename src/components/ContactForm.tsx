@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useHayc } from '../hayc/config-context';
 import { trackEvent } from '../hayc/use-analytics';
@@ -58,6 +58,33 @@ export function ContactForm() {
   const [newsletterOptIn, setNewsletterOptIn] = useState(false);
   const hardcodedTags: string[] = ['contact-form'];
 
+  const [formStarted, setFormStarted] = useState(false);
+  const isDirtyRef = useRef(false);
+
+  useEffect(() => {
+    isDirtyRef.current =
+      name.trim().length > 0 ||
+      email.trim().length > 0 ||
+      message.trim().length > 0;
+  }, [name, email, message]);
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (
+        document.visibilityState === 'hidden' &&
+        isDirtyRef.current &&
+        !submitted
+      ) {
+        trackEvent(apiUrl, siteId, 'form_abandon', location.pathname, {
+          form: 'contact',
+        });
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
+  }, [apiUrl, siteId, location.pathname, submitted]);
+
   const validate = useCallback((): boolean => {
     const errors: { name?: string; email?: string; message?: string } = {};
     if (!name.trim()) errors.name = t(labels.nameRequired);
@@ -93,6 +120,7 @@ export function ContactForm() {
         });
         if (!res.ok) throw new Error('Request failed');
         setSubmitted(true);
+        isDirtyRef.current = false;
         trackEvent(apiUrl, siteId, 'form_submit', location.pathname, {
           form: 'contact',
         });
@@ -254,6 +282,14 @@ export function ContactForm() {
               setName(e.target.value);
               if (fieldErrors.name) setFieldErrors((prev) => ({ ...prev, name: undefined }));
             }}
+            onFocus={() => {
+              if (!formStarted) {
+                setFormStarted(true);
+                trackEvent(apiUrl, siteId, 'form_start', location.pathname, {
+                  form: 'contact',
+                });
+              }
+            }}
             disabled={loading}
             aria-invalid={!!fieldErrors.name}
             aria-describedby={fieldErrors.name ? 'contact-name-error' : undefined}
@@ -278,6 +314,14 @@ export function ContactForm() {
               setEmail(e.target.value);
               if (fieldErrors.email) setFieldErrors((prev) => ({ ...prev, email: undefined }));
             }}
+            onFocus={() => {
+              if (!formStarted) {
+                setFormStarted(true);
+                trackEvent(apiUrl, siteId, 'form_start', location.pathname, {
+                  form: 'contact',
+                });
+              }
+            }}
             disabled={loading}
             aria-invalid={!!fieldErrors.email}
             aria-describedby={fieldErrors.email ? 'contact-email-error' : undefined}
@@ -300,6 +344,14 @@ export function ContactForm() {
             onChange={(e) => {
               setMessage(e.target.value);
               if (fieldErrors.message) setFieldErrors((prev) => ({ ...prev, message: undefined }));
+            }}
+            onFocus={() => {
+              if (!formStarted) {
+                setFormStarted(true);
+                trackEvent(apiUrl, siteId, 'form_start', location.pathname, {
+                  form: 'contact',
+                });
+              }
             }}
             disabled={loading}
             rows={4}
