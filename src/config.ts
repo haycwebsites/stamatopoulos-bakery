@@ -599,12 +599,12 @@ export const homeConfig: HomeConfig = {
   offerKicker: { el: 'Τούρτες κατά παραγγελία', en: 'Cakes to order' },
   offerTitle: { el: 'Η τούρτα σου, φτιαγμένη μόνο για σένα', en: 'Your cake, made only for you' },
   offerText: {
-    el: 'Σχεδιάζουμε τούρτες για κάθε περίσταση — γάμους, βαφτίσια, γιορτές και προσωπικές στιγμές — με γεύσεις και διακόσμηση ακριβώς όπως τις έχεις φανταστεί.',
-    en: 'We design cakes for every occasion — weddings, christenings, celebrations, and personal moments — with flavors and decoration exactly as you imagine them.',
+    el: 'Κάθε τούρτα σχεδιάζεται ξεχωριστά, με βάση την περίσταση, το ύφος και αυτό που θέλεις να εκφράζει. Από γενέθλια μέχρι βαφτίσεις και ιδιαίτερες στιγμές, δημιουργούμε τούρτες με χαρακτήρα, φροντίδα και ισορροπία.',
+    en: 'Every cake is designed individually, based on the occasion, the mood, and what you want to express. From birthdays to christenings and special moments, we create cakes with character, care, and balance.',
   },
   offerCtaLabel: { el: 'ΔΗΜΙΟΥΡΓΗΣΕ ΤΗ ΔΙΚΗ ΣΟΥ', en: 'CREATE YOUR OWN' },
   offerCtaHref: '/contact',
-  offerImage: '/assets/images/stamatopoulos/promo-custom-cakes.png',
+  offerImage: '/assets/images/stamatopoulos/offer-custom-cake.png',
   offerImageAlt: { el: 'Τούρτα κατά παραγγελία', en: 'Custom celebration cake' },
 
   testimonials: [
