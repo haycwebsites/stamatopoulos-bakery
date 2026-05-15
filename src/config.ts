@@ -499,7 +499,7 @@ export const homeConfig: HomeConfig = {
     },
   ],
 
-  aboutLeftBackgroundImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg',
+  aboutLeftBackgroundImage: '/public/assets/images/stamatopoulos/97fc5e805ac11e44aa93524cdede5776ead81514.jpg',
   aboutShapeImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/shape1-1.png',
   aboutShapeAlt: { el: 'shape', en: 'shape' },
   aboutKicker: { el: 'Η ΙΣΤΟΡΙΑ ΜΑΣ', en: 'OUR STORY' },
