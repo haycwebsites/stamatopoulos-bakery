@@ -10,87 +10,90 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="stamatopoulos-about-page">
         <section
-          className="bistly-page-hero page-banner bg-cover position-relative z-1 text-white"
+          className="stamatopoulos-about-hero bg-cover position-relative text-white"
           style={{ backgroundImage: `url(${img(ac.bannerBackgroundImage)})` }}
         >
-          <div className="container position-relative">
-            <div className="bistly-page-hero-content text-center mx-auto" style={{ maxWidth: '720px' }}>
-              <h1 {...cp('aboutPageConfig.bannerTitle')} className="bistly-page-hero-title">
+          <div className="container position-relative z-1">
+            <div className="stamatopoulos-about-hero-inner text-center mx-auto">
+              <h1 {...cp('aboutPageConfig.bannerTitle')} className="stamatopoulos-about-hero-title">
                 {t(ac.bannerTitle)}
               </h1>
-              <nav className="bistly-page-breadcrumb-nav" aria-label="Breadcrumb">
-                <AppLink
-                  {...cp('aboutPageConfig.breadcrumbHomeLabel')}
-                  href={ac.breadcrumbHomeHref}
-                  className="bistly-page-breadcrumb-link"
-                >
-                  {t(ac.breadcrumbHomeLabel)}
-                </AppLink>
-                <span
-                  className="bistly-page-breadcrumb-current"
-                  aria-current="page"
-                  {...cp('aboutPageConfig.breadcrumbCurrentLabel')}
-                >
-                  {t(ac.breadcrumbCurrentLabel)}
-                </span>
-              </nav>
+              {ac.bannerSubtitle ? (
+                <p {...cp('aboutPageConfig.bannerSubtitle')} className="stamatopoulos-about-hero-subtitle mb-0">
+                  {t(ac.bannerSubtitle)}
+                </p>
+              ) : null}
             </div>
           </div>
         </section>
 
-        <section className="bistly-about-sec py-5">
-          <div className="container">
-            <div className="row align-items-center justify-content-center g-4 g-lg-5">
-              <div className="col-lg-6 col-md-12">
-                <div className="bistly-content-box">
-                  <div className="section-title mb-4">
-                    <span
-                      {...cp('aboutPageConfig.aboutKicker')}
-                      className="sub-title"
-                      data-aos="fade-down"
-                      data-aos-duration="1000"
-                    >
-                      {t(ac.aboutKicker)}
-                    </span>
-                    <h2 {...cp('aboutPageConfig.aboutTitle')} className="text-anm">
-                      {t(ac.aboutTitle)}
-                    </h2>
-                  </div>
-                  <p {...cp('aboutPageConfig.aboutLead')} className="mb-5" data-aos="fade-up" data-aos-duration="1000">
+        <section className="stamatopoulos-about-history py-5">
+          <div className="container py-lg-4">
+            <div className="row align-items-start justify-content-center g-5 gx-xl-5">
+              <div className="col-lg-6">
+                <div className="stamatopoulos-about-history-copy">
+                  <p
+                    {...cp('aboutPageConfig.aboutKicker')}
+                    className="stamatopoulos-about-kicker mb-2"
+                    data-aos="fade-down"
+                    data-aos-duration="800"
+                  >
+                    {t(ac.aboutKicker)}
+                  </p>
+                  <h2
+                    {...cp('aboutPageConfig.aboutTitle')}
+                    className="stamatopoulos-about-section-title mb-4"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                  >
+                    {t(ac.aboutTitle)}
+                  </h2>
+                  <p
+                    {...cp('aboutPageConfig.aboutLead')}
+                    className="stamatopoulos-about-body mb-4 mb-lg-5"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                  >
                     {t(ac.aboutLead)}
                   </p>
-
-                  <section className="bistly-instagram-sec overflow-hidden">
-                    <div className="instagram-marquee">
-                      <div className="instagram-track">
-                        {ac.aboutMarqueeImages.map((it, i) => (
+                  {(ac.historyGalleryImages ?? []).length > 0 ? (
+                  <div className="row g-2 g-sm-3 stamatopoulos-about-history-grid" data-aos="fade-up" data-aos-duration="1100">
+                    {(ac.historyGalleryImages ?? []).map((it, i) => (
+                      <div key={`${it.src}-${i}`} className="col-4">
+                        <div className="stamatopoulos-about-history-thumb">
                           <img
-                            key={`${it.src}-${i}`}
                             src={img(it.src)}
                             alt={t(it.alt)}
+                            {...cp(`aboutPageConfig.historyGalleryImages.${i}.src`)}
                           />
-                        ))}
+                        </div>
                       </div>
-                    </div>
-                  </section>
+                    ))}
+                  </div>
+                  ) : null}
                 </div>
               </div>
 
-              <div className="col-lg-6 col-md-12">
-                <div className="bistly-about-intro-visual" data-aos="fade-down" data-aos-duration="1000">
+              <div className="col-lg-6">
+                <div className="stamatopoulos-about-history-visual" data-aos="fade-down" data-aos-duration="1000">
                   <img
                     src={img(ac.sideImage)}
-                    className="img-fluid w-100 rounded-4"
+                    className="stamatopoulos-about-history-main-img w-100"
                     alt={t(ac.sideImageAlt)}
+                    {...cp('aboutPageConfig.sideImageAlt')}
                   />
                 </div>
-                <div className="text-box" data-aos="fade-up" data-aos-duration="1000">
-                  <p {...cp('aboutPageConfig.sideText')} className="mb-3 pb-2">
+                <div className="stamatopoulos-about-history-aside mt-4" data-aos="fade-up" data-aos-duration="1100">
+                  <p {...cp('aboutPageConfig.sideText')} className="stamatopoulos-about-body mb-4">
                     {t(ac.sideText)}
                   </p>
-                  <AppLink {...cp('aboutPageConfig.sideCtaLabel')} href={ac.sideCtaHref} className="theme-btn style-one">
+                  <AppLink
+                    {...cp('aboutPageConfig.sideCtaLabel')}
+                    href={ac.sideCtaHref}
+                    className="theme-btn style-one stamatopoulos-btn-salmon"
+                  >
                     {t(ac.sideCtaLabel)}
                   </AppLink>
                 </div>
@@ -99,8 +102,8 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="bistly-fun-fact bistly-about-fun-fact py-5">
-          <div className="container">
+        <section className="stamatopoulos-about-stats py-5">
+          <div className="container py-lg-3">
             <div className="row text-center g-4 g-lg-5 justify-content-center">
               {ac.funFacts.map((ff, i) => (
                 <div
@@ -109,15 +112,17 @@ export default function AboutPage() {
                   data-aos="fade-up"
                   data-aos-duration={ff.aosDurationMs ?? 800}
                 >
-                  <div className="bistly-fun-fact-item">
-                    <div className="bistly-fun-fact-icon mb-3">
-                      <i className={ff.iconClass} />
+                  <div className="stamatopoulos-about-stat-item">
+                    <div className="stamatopoulos-about-stat-icon mb-3">
+                      <i className={ff.iconClass} aria-hidden />
                     </div>
-                    <div className="bistly-fun-fact-number">
+                    <div className="stamatopoulos-about-stat-value">
                       <span {...cp(`aboutPageConfig.funFacts.${i}.value`)}>{t(ff.value)}</span>
-                      <span {...cp(`aboutPageConfig.funFacts.${i}.suffix`)}>{t(ff.suffix)}</span>
+                      {t(ff.suffix).trim() ? (
+                        <span {...cp(`aboutPageConfig.funFacts.${i}.suffix`)}>{t(ff.suffix)}</span>
+                      ) : null}
                     </div>
-                    <p className="bistly-fun-fact-label mb-0" {...cp(`aboutPageConfig.funFacts.${i}.label`)}>
+                    <p className="stamatopoulos-about-stat-label mb-0" {...cp(`aboutPageConfig.funFacts.${i}.label`)}>
                       {t(ff.label)}
                     </p>
                   </div>
@@ -127,42 +132,50 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="bistly-features-sec bistly-about-features-sec py-5">
+        <section className="stamatopoulos-about-philosophy py-5">
           <div className="container py-lg-4">
-            <div className="row align-items-center g-4 g-xl-5">
+            <div className="row align-items-center g-5 gx-xl-5">
               <div className="col-lg-6 order-2 order-lg-1">
-                <div className="bistly-about-features-inner pe-lg-4">
+                <div className="pe-lg-4">
                   <p
                     {...cp('aboutPageConfig.featureKicker')}
-                    className="bistly-about-features-kicker mb-3"
+                    className="stamatopoulos-about-kicker mb-2"
                     data-aos="fade-down"
-                    data-aos-duration="1000"
+                    data-aos-duration="900"
                   >
                     {t(ac.featureKicker)}
                   </p>
+                  <h2
+                    {...cp('aboutPageConfig.featureTitle')}
+                    className="stamatopoulos-about-section-title mb-4"
+                    data-aos="fade-up"
+                    data-aos-duration="950"
+                  >
+                    {t(ac.featureTitle)}
+                  </h2>
                   <p
                     {...cp('aboutPageConfig.featureLead')}
-                    className="bistly-about-features-lead mb-4 mb-lg-5"
+                    className="stamatopoulos-about-body mb-4 mb-lg-5"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                   >
                     {t(ac.featureLead)}
                   </p>
-                  <div className="row g-3 g-md-4">
+                  <div className="row g-3">
                     <div className="col-sm-6">
                       {ac.featureItemsLeft.map((it, i) => (
                         <div
                           key={`l-${i}`}
-                          className="bistly-iconic-box bistly-about-iconic-box"
+                          className="stamatopoulos-about-pillar"
                           data-aos="fade-up"
                           data-aos-duration={it.aosDurationMs ?? 1200}
                         >
-                          <div className="icon">
-                            <i className={it.iconClass} />
+                          <div className="stamatopoulos-about-pillar-icon">
+                            <i className={it.iconClass} aria-hidden />
                           </div>
-                          <div className="content">
-                            <h5 {...cp(`aboutPageConfig.featureItemsLeft.${i}.title`)}>{t(it.title)}</h5>
-                          </div>
+                          <h5 {...cp(`aboutPageConfig.featureItemsLeft.${i}.title`)} className="stamatopoulos-about-pillar-title">
+                            {t(it.title)}
+                          </h5>
                         </div>
                       ))}
                     </div>
@@ -170,49 +183,56 @@ export default function AboutPage() {
                       {ac.featureItemsRight.map((it, i) => (
                         <div
                           key={`r-${i}`}
-                          className="bistly-iconic-box bistly-about-iconic-box"
+                          className="stamatopoulos-about-pillar"
                           data-aos="fade-up"
                           data-aos-duration={it.aosDurationMs ?? 1400}
                         >
-                          <div className="icon">
-                            <i className={it.iconClass} />
+                          <div className="stamatopoulos-about-pillar-icon">
+                            <i className={it.iconClass} aria-hidden />
                           </div>
-                          <div className="content">
-                            <h5 {...cp(`aboutPageConfig.featureItemsRight.${i}.title`)}>{t(it.title)}</h5>
-                          </div>
+                          <h5 {...cp(`aboutPageConfig.featureItemsRight.${i}.title`)} className="stamatopoulos-about-pillar-title">
+                            {t(it.title)}
+                          </h5>
                         </div>
                       ))}
                     </div>
                   </div>
-                  <div className="bistly-button mt-4 pt-2" data-aos="fade-up" data-aos-duration="1600">
+                  <div className="mt-4 pt-2" data-aos="fade-up" data-aos-duration="1100">
                     <AppLink
                       {...cp('aboutPageConfig.featureCtaLabel')}
                       href={ac.featureCtaHref}
-                      className="theme-btn style-one bistly-about-feature-cta"
+                      className="theme-btn style-one stamatopoulos-btn-salmon"
                     >
                       {t(ac.featureCtaLabel)}
                     </AppLink>
                   </div>
                 </div>
               </div>
-              <div
-                className="col-lg-6 order-1 order-lg-2 text-center"
-                data-aos="fade-down"
-                data-aos-duration="1800"
-              >
-                <div className="bistly-about-feature-image">
-                  <img src={img(ac.featureImage)} className="img-fluid rounded-4" alt={t(ac.featureImageAlt)} />
+              <div className="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-down" data-aos-duration="1000">
+                <div className="stamatopoulos-about-philosophy-visual mx-auto">
+                  <img
+                    src={img(ac.featureImage)}
+                    className="stamatopoulos-about-philosophy-img w-100"
+                    alt={t(ac.featureImageAlt)}
+                    {...cp('aboutPageConfig.featureImageAlt')}
+                  />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="bistly-instagram-sec py-5 overflow-hidden">
-          <div className="instagram-marquee">
-            <div className="instagram-track">
+        <section className="stamatopoulos-about-gallery py-5">
+          <div className="container-fluid px-2 px-md-3 px-xl-4">
+            <div className="stamatopoulos-about-gallery-grid">
               {ac.instagramMarqueeImages.map((it, i) => (
-                <img key={`${it.src}-${i}`} src={img(it.src)} alt={t(it.alt)} />
+                <div key={`${it.src}-${i}`} className="stamatopoulos-about-gallery-cell">
+                  <img
+                    src={img(it.src)}
+                    alt={t(it.alt)}
+                    {...cp(`aboutPageConfig.instagramMarqueeImages.${i}.src`)}
+                  />
+                </div>
               ))}
             </div>
           </div>
@@ -222,4 +242,3 @@ export default function AboutPage() {
     </>
   );
 }
-

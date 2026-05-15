@@ -1846,6 +1846,244 @@ a {
   margin: 0;
 }
 
+/* About page — Stamatopoulos / Figma */
+.stamatopoulos-about-page .stamatopoulos-about-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: min(560px, 64vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: clamp(6.75rem, 12vw, 10rem);
+  padding-bottom: clamp(3.25rem, 7vw, 5.25rem);
+}
+
+.stamatopoulos-about-page .stamatopoulos-about-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 18, 16, 0.58);
+  z-index: 0;
+}
+
+.stamatopoulos-about-hero-inner {
+  max-width: 840px;
+}
+
+.stamatopoulos-about-hero-title {
+  font-family: var(--heading-font, 'Marcellus', Georgia, serif);
+  font-size: clamp(2.35rem, 6vw, 3.85rem);
+  font-weight: 400;
+  line-height: 1.12;
+  color: #ffffff !important;
+  margin: 0 0 1rem;
+}
+
+.stamatopoulos-about-hero-subtitle {
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: clamp(0.95rem, 2vw, 1.125rem);
+  line-height: 1.65;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.94);
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stamatopoulos-about-history {
+  background-color: #f9f3ea;
+}
+
+.stamatopoulos-about-kicker {
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4a2c1d;
+  margin-bottom: 0.35rem;
+}
+
+.stamatopoulos-about-section-title {
+  font-family: var(--heading-font, 'Marcellus', Georgia, serif);
+  font-size: clamp(1.85rem, 3.6vw, 2.65rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #4a2c1d;
+}
+
+.stamatopoulos-about-body {
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(42, 29, 22, 0.78);
+}
+
+.stamatopoulos-about-history-thumb {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.stamatopoulos-about-history-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+  transition: transform 0.35s ease;
+}
+
+.stamatopoulos-about-history-thumb:hover img {
+  transform: scale(1.04);
+}
+
+.stamatopoulos-about-history-main-img {
+  display: block;
+  border-radius: 14px;
+  max-height: min(560px, 78vh);
+  object-fit: cover;
+}
+
+.stamatopoulos-about-stats {
+  background-color: #76947f;
+  color: #ffffff;
+}
+
+.stamatopoulos-about-stat-item {
+  padding: 0.35rem 0.25rem;
+}
+
+.stamatopoulos-about-stat-icon {
+  width: 56px;
+  height: 56px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.stamatopoulos-about-stat-icon .fa-circle-notch {
+  animation: none !important;
+}
+
+.stamatopoulos-about-stat-value {
+  font-family: var(--heading-font, 'Marcellus', Georgia, serif);
+  font-size: clamp(1.65rem, 3vw, 2.15rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 0.45rem;
+}
+
+.stamatopoulos-about-stat-value span + span {
+  margin-left: 0.12em;
+}
+
+.stamatopoulos-about-stat-label {
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: 0.875rem;
+  line-height: 1.45;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stamatopoulos-about-philosophy {
+  background-color: #ffffff;
+}
+
+.stamatopoulos-about-pillar {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.stamatopoulos-about-pillar-icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(233, 141, 116, 0.14);
+  color: #4a2c1d;
+  font-size: 1rem;
+}
+
+.stamatopoulos-about-pillar-title {
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #4a2c1d;
+  margin: 0;
+  padding-top: 0.2rem;
+}
+
+.stamatopoulos-about-philosophy-visual {
+  max-width: 520px;
+}
+
+.stamatopoulos-about-philosophy-img {
+  display: block;
+  border-radius: 14px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.stamatopoulos-about-gallery {
+  background-color: #faf7f2;
+}
+
+.stamatopoulos-about-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .stamatopoulos-about-gallery-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.65rem;
+  }
+}
+
+.stamatopoulos-about-gallery-cell {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.stamatopoulos-about-gallery-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.stamatopoulos-about-gallery-cell:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 575.98px) {
+  .stamatopoulos-about-history-main-img {
+    max-height: none;
+    aspect-ratio: 4 / 5;
+  }
+}
+
 /* Stamatopoulos footer — Figma: sage grid, serif headings, CTA pill */
 .stamatopoulos-footer .footer-widget-area {
   padding-top: 3rem !important;

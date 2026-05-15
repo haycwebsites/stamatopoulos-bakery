@@ -261,6 +261,7 @@ export interface AboutFeatureItemConfig {
 export interface AboutPageConfig {
   bannerBackgroundImage: string;
   bannerTitle: LocaleString;
+  bannerSubtitle?: LocaleString;
   breadcrumbHomeLabel: LocaleString;
   breadcrumbHomeHref: string;
   breadcrumbCurrentLabel: LocaleString;
@@ -268,7 +269,8 @@ export interface AboutPageConfig {
   aboutKicker: LocaleString;
   aboutTitle: LocaleString;
   aboutLead: LocaleString;
-  aboutMarqueeImages: { src: string; alt: LocaleString }[];
+  /** Three square thumbnails below the history column body copy */
+  historyGalleryImages?: { src: string; alt: LocaleString }[];
   sideImage: string;
   sideImageAlt: LocaleString;
   sideText: LocaleString;
@@ -741,84 +743,124 @@ export const homeConfig: HomeConfig = {
 };
 
 export const aboutPageConfig: AboutPageConfig = {
-  bannerBackgroundImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/page-bg.jpg',
-  bannerTitle: { el: 'About', en: 'About' },
-  breadcrumbHomeLabel: { el: 'Home', en: 'Home' },
+  bannerBackgroundImage:
+    'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/page-bg.jpg',
+  bannerTitle: { el: 'Η ιστορία μας', en: 'Our story' },
+  bannerSubtitle: {
+    el: 'Τέσσερις γενιές παράδοσης, φροντίδας και σύγχρονης δημιουργίας στην τέχνη του γλυκού.',
+    en: 'Four generations of tradition, care, and contemporary creativity in the art of pastry.',
+  },
+  breadcrumbHomeLabel: { el: 'Αρχική', en: 'Home' },
   breadcrumbHomeHref: '/',
-  breadcrumbCurrentLabel: { el: 'About', en: 'About' },
+  breadcrumbCurrentLabel: { el: 'Σχετικά με εμάς', en: 'About Us' },
 
-  aboutKicker: { el: 'About Us', en: 'About Us' },
-  aboutTitle: { el: 'Savor Story Behind the Flavor', en: 'Savor Story Behind the Flavor' },
+  aboutKicker: { el: 'Σχετικά με εμάς', en: 'About us' },
+  aboutTitle: {
+    el: 'Μια οικογενειακή παράδοση που συνεχίζεται',
+    en: 'A family tradition that continues',
+  },
   aboutLead: {
-    el: 'Embark on a culinary journey where tradition meets innovation. Our dishes are thoughtfully crafted with the finest ingredients.',
-    en: 'Embark on a culinary journey where tradition meets innovation. Our dishes are thoughtfully crafted with the finest ingredients.',
+    el: 'Από το 1950, η οικογένειά μας δίνει μορφή στο γλυκό με σεβασμό στην παράδοση και ανοιχτό βλέμμα στη σύγχρονη δημιουργία. Κάθε γενιά πρόσθεσε τη δική της πινελιά — τεχνική, φαντασία και καθημερινή φροντίδα — ώστε αυτό που σας προσφέρουμε σήμερα να είναι γεύση, μνήμη και στιγμή μαζί.',
+    en: 'Since 1950, our family has shaped pastry with respect for tradition and an eye for contemporary craft. Each generation added its own touch — skill, imagination, and daily care — so what we offer today is flavor, memory, and a moment shared.',
   },
-  aboutMarqueeImages: Array.from({ length: 10 }).map(() => ({
-    src: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg',
-    alt: { el: '', en: '' },
-  })),
+  historyGalleryImages: [
+    {
+      src: '/assets/images/stamatopoulos/97fc5e805ac11e44aa93524cdede5776ead81514.jpg',
+      alt: { el: 'Αρχείο εργαστηρίου', en: 'Workshop archive' },
+    },
+    {
+      src: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg',
+      alt: { el: 'Ιστορική φωτογραφία', en: 'Historical photo' },
+    },
+    {
+      src: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/about-img1.jpg',
+      alt: { el: 'Παραδοσιακό εργαστήριο', en: 'Traditional workshop' },
+    },
+  ],
   sideImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/hero-img1.jpg',
-  sideImageAlt: { el: 'about Image', en: 'about Image' },
+  sideImageAlt: { el: 'Η ομάδα μας στο εργαστήριο', en: 'Our team in the workshop' },
   sideText: {
-    el: 'Embark on a culinary journey where tradition meets innovation. Our dishes are thoughtfully.',
-    en: 'Embark on a culinary journey where tradition meets innovation. Our dishes are thoughtfully.',
+    el: 'Σήμερα, το εργαστήριό μας συνδυάζει την εμπειρία των προηγούμενων γενεών με φρέσκιες ιδέες — πάντα με τα χέρια στην πρώτη ύλη και το βλέμμα στη λεπτομέρεια.',
+    en: 'Today our workshop blends the experience of past generations with fresh ideas — hands on the ingredients and an eye on every detail.',
   },
-  sideCtaLabel: { el: 'Contact Us', en: 'Contact Us' },
-  sideCtaHref: '/contact',
+  sideCtaLabel: { el: 'ΑΝΑΚΑΛΥΨΤΕ ΤΙΣ ΔΗΜΙΟΥΡΓΙΕΣ ΜΑΣ', en: 'DISCOVER OUR CREATIONS' },
+  sideCtaHref: '/menu',
 
   funFacts: [
     {
-      iconClass: 'flaticon-chef',
-      value: { el: '300', en: '300' },
-      suffix: { el: '+', en: '+' },
-      label: { el: 'Culinary Expert', en: 'Culinary Expert' },
+      iconClass: 'fas fa-circle-notch',
+      value: { el: '1950', en: '1950' },
+      suffix: { el: '', en: '' },
+      label: { el: 'Όλα ξεκίνησαν με μεράκι', en: 'It all began with passion' },
       aosDurationMs: 800,
     },
     {
-      iconClass: 'flaticon-dining-room',
-      value: { el: '260', en: '260' },
-      suffix: { el: '+', en: '+' },
-      label: { el: 'Five-Star Dining', en: 'Five-Star Dining' },
-      aosDurationMs: 1000,
+      iconClass: 'far fa-heart',
+      value: { el: '4 γενιές', en: '4 generations' },
+      suffix: { el: '', en: '' },
+      label: { el: 'Οικογενειακή παράδοση', en: 'Family tradition' },
+      aosDurationMs: 950,
     },
     {
-      iconClass: 'flaticon-offers',
-      value: { el: '5', en: '5' },
-      suffix: { el: 'K+', en: 'K+' },
-      label: { el: 'Food Offerings', en: 'Food Offerings' },
+      iconClass: 'fas fa-star',
+      value: { el: '1976', en: '1976' },
+      suffix: { el: '', en: '' },
+      label: { el: 'Το εργαστήριο παίρνει μορφή', en: 'The workshop takes shape' },
+      aosDurationMs: 1100,
+    },
+    {
+      iconClass: 'fas fa-leaf',
+      value: { el: 'Σήμερα', en: 'Today' },
+      suffix: { el: '', en: '' },
+      label: {
+        el: 'Η οικογένεια Γιάννης & Στέλλα Σταματόπουλος',
+        en: 'The Yiannis & Stella Stamatopoulos family',
+      },
+      aosDurationMs: 1250,
+    },
+  ],
+
+  featureKicker: { el: 'Η φιλοσοφία μας', en: 'Our philosophy' },
+  featureTitle: {
+    el: 'Παράδοση, φροντίδα και γεύση με χαρακτήρα',
+    en: 'Tradition, care, and flavor with character',
+  },
+  featureLead: {
+    el: 'Πιστεύουμε ότι ένα γλυκό είναι περισσότερο από συνταγή: είναι η συνέπεια στην πρώτη ύλη, η υπομονή στην τεχνική και η χαρά να το μοιράζεσαι. Κάθε δημιουργία φτιάχνεται για να συνοδεύει τις δικές σας στιγμές — μικρές ή μεγάλες.',
+    en: 'We believe a dessert is more than a recipe: it is consistency in ingredients, patience in technique, and the joy of sharing. Every creation is made to accompany your moments — quiet or grand.',
+  },
+  featureItemsLeft: [
+    {
+      iconClass: 'fas fa-people-group',
+      title: { el: 'Οικογενειακή παράδοση', en: 'Family tradition' },
       aosDurationMs: 1200,
     },
     {
-      iconClass: 'flaticon-happy-face',
-      value: { el: '27', en: '27' },
-      suffix: { el: 'K+', en: 'K+' },
-      label: { el: 'Happy Customer', en: 'Happy Customer' },
-      aosDurationMs: 1400,
+      iconClass: 'fas fa-wheat-awn',
+      title: { el: 'Ποιοτικές πρώτες ύλες', en: 'Quality ingredients' },
+      aosDurationMs: 1300,
     },
   ],
-
-  featureKicker: { el: 'Simple, Classic, Delicious', en: 'Simple, Classic, Delicious' },
-  featureTitle: { el: 'Fine Dining Rooted in the City Heartbeat', en: 'Fine Dining Rooted in the City Heartbeat' },
-  featureLead: {
-    el: 'Experience fine dining crafted with elegance and passion, perfectly rooted in the vibrant rhythm and soul of the city’s heartbeat.',
-    en: 'Experience fine dining crafted with elegance and passion, perfectly rooted in the vibrant rhythm and soul of the city’s heartbeat.',
-  },
-  featureItemsLeft: [
-    { iconClass: 'flaticon-chef', title: { el: 'Professional Chefs', en: 'Professional Chefs' }, aosDurationMs: 1200 },
-    { iconClass: 'flaticon-chef', title: { el: 'Online Delivery Shop', en: 'Online Delivery Shop' }, aosDurationMs: 1300 },
-  ],
   featureItemsRight: [
-    { iconClass: 'flaticon-chef', title: { el: 'Fresh Ingredients', en: 'Fresh Ingredients' }, aosDurationMs: 1400 },
-    { iconClass: 'flaticon-chef', title: { el: '24/7 Services', en: '24/7 Services' }, aosDurationMs: 1500 },
+    {
+      iconClass: 'fas fa-hand-sparkles',
+      title: { el: 'Χειροποίητη φροντίδα', en: 'Handcrafted care' },
+      aosDurationMs: 1400,
+    },
+    {
+      iconClass: 'fas fa-cake-candles',
+      title: { el: 'Σύγχρονη δημιουργία', en: 'Contemporary creation' },
+      aosDurationMs: 1500,
+    },
   ],
-  featureCtaLabel: { el: 'View all menu', en: 'View all menu' },
-  featureCtaHref: '/menu-grid',
-  featureImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/hero-img1.jpg',
-  featureImageAlt: { el: 'Feature Image', en: 'Feature Image' },
+  featureCtaLabel: { el: 'ΑΝΑΚΑΛΥΨΤΕ ΤΙΣ ΔΗΜΙΟΥΡΓΙΕΣ ΜΑΣ', en: 'DISCOVER OUR CREATIONS' },
+  featureCtaHref: '/menu',
+  featureImage: '/assets/images/stamatopoulos/promo-custom-cakes.png',
+  featureImageAlt: { el: 'Τούρτα με λουλούδια', en: 'Floral decorated cake' },
 
-  instagramMarqueeImages: Array.from({ length: 10 }).map(() => ({
+  instagramMarqueeImages: Array.from({ length: 5 }).map(() => ({
     src: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg',
-    alt: { el: '', en: '' },
+    alt: { el: 'Στιγμές από το εργαστήριο', en: 'Moments from our workshop' },
   })),
 };
 
