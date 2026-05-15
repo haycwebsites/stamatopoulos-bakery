@@ -19,68 +19,45 @@
     "apiUrl": "https://hayc.gr"
   },
   "navigationConfig": {
-    "logoSrc": "/assets/images/home-coffee/logo/logo-main.svg",
+    "logoSrc": "/assets/images/stamatopoulos/logo-yiannis-stella.svg",
     "logoAlt": {
-      "el": "Brand Logo",
-      "en": "Brand Logo"
+      "el": "Yiannis & Stella — Stamatopoulos Pastry",
+      "en": "Yiannis & Stella — Stamatopoulos Pastry"
     },
     "brandHref": "/",
     "items": [
       {
         "label": {
-          "el": "Home",
+          "el": "Αρχική",
           "en": "Home"
         },
         "href": "/"
       },
       {
         "label": {
-          "el": "About Us",
+          "el": "Σχετικά με Εμάς",
           "en": "About Us"
         },
         "href": "/about"
       },
       {
         "label": {
-          "el": "Menu",
-          "en": "Menu"
+          "el": "Δημιουργίες",
+          "en": "Creations"
         },
-        "href": "#",
-        "children": [
-          {
-            "label": {
-              "el": "Menu Grid",
-              "en": "Menu Grid"
-            },
-            "href": "/menu-grid"
-          },
-          {
-            "label": {
-              "el": "Menu List",
-              "en": "Menu List"
-            },
-            "href": "/menu-list"
-          },
-          {
-            "label": {
-              "el": "Menu Details",
-              "en": "Menu Details"
-            },
-            "href": "/menu-details"
-          }
-        ]
+        "href": "/menu"
       },
       {
         "label": {
-          "el": "Contact",
+          "el": "Επικοινωνία",
           "en": "Contact"
         },
         "href": "/contact"
       }
     ],
     "ctaLabel": {
-      "el": "Reservation",
-      "en": "Reservation"
+      "el": "ΠΑΡΑΓΓΕΛΙΑ",
+      "en": "ORDER"
     },
     "ctaHref": "/contact",
     "followUsLabel": {
@@ -117,15 +94,23 @@
       "el": "shape",
       "en": "shape"
     },
-    "logoSrc": "/assets/images/home-restaurant/logo/logo-white.svg",
+    "logoSrc": "/assets/images/stamatopoulos/logo-yiannis-stella.svg",
     "logoAlt": {
-      "el": "Brand Logo",
-      "en": "Brand Logo"
+      "el": "Yiannis & Stella — Stamatopoulos Pastry",
+      "en": "Yiannis & Stella — Stamatopoulos Pastry"
     },
     "brandHref": "/",
+    "brandHeadlineLine1": {
+      "el": "Yiannis & Stella",
+      "en": "Yiannis & Stella"
+    },
+    "brandHeadlineLine2": {
+      "el": "STAMATOPOULOS — PASTRY",
+      "en": "STAMATOPOULOS — PASTRY"
+    },
     "aboutText": {
-      "el": "Bistly Restaurant offers flavorful dishes, cozy ambiance.",
-      "en": "Bistly Restaurant offers flavorful dishes, cozy ambiance."
+      "el": "Γλυκές δημιουργίες με ρίζες από το 1950, φτιαγμένες με φροντίδα, τεχνική και χαρακτήρα.",
+      "en": "Sweet creations with roots since 1950, made with care, skill, and character."
     },
     "socialLinks": [
       {
@@ -133,112 +118,118 @@
         "href": "#"
       },
       {
-        "platform": "twitter",
-        "href": "#"
-      },
-      {
         "platform": "instagram",
-        "href": "#"
-      },
-      {
-        "platform": "youtube",
         "href": "#"
       }
     ],
     "linksTitle": {
-      "el": "Links",
-      "en": "Links"
+      "el": "Χρήσιμοι Σύνδεσμοι",
+      "en": "Useful Links"
     },
     "links": [
       {
         "label": {
-          "el": "Home",
+          "el": "Αρχική",
           "en": "Home"
         },
         "href": "/"
       },
       {
         "label": {
-          "el": "Menu",
-          "en": "Menu"
-        },
-        "href": "/menu"
-      },
-      {
-        "label": {
-          "el": "About Us",
+          "el": "Σχετικά με Εμάς",
           "en": "About Us"
         },
         "href": "/about"
       },
       {
         "label": {
-          "el": "Contact",
+          "el": "Δημιουργίες",
+          "en": "Creations"
+        },
+        "href": "/menu"
+      },
+      {
+        "label": {
+          "el": "Επικοινωνία",
           "en": "Contact"
         },
         "href": "/contact"
       }
     ],
     "openingTimeTitle": {
-      "el": "Opening Time",
-      "en": "Opening Time"
+      "el": "Ωράριο Λειτουργίας",
+      "en": "Opening Hours"
     },
     "openingHours": [
       {
         "days": {
-          "el": "Mon - Thu:",
-          "en": "Mon - Thu:"
+          "el": "Δευτ - Παρ:",
+          "en": "Mon - Fri:"
         },
         "time": {
-          "el": "10:00 am - 01:00 am",
-          "en": "10:00 am - 01:00 am"
+          "el": "09:00 π.μ. - 10:00 μ.μ.",
+          "en": "9:00 a.m. - 10:00 p.m."
         }
       },
       {
         "days": {
-          "el": "Fri - Sat:",
-          "en": "Fri - Sat:"
+          "el": "Σάββατο:",
+          "en": "Saturday:"
         },
         "time": {
-          "el": "10:00 am - 01:00 am",
-          "en": "10:00 am - 01:00 am"
+          "el": "09:00 π.μ. - 10:00 μ.μ.",
+          "en": "9:00 a.m. - 10:00 p.m."
         }
       },
       {
         "days": {
-          "el": "Sunday:",
+          "el": "Κυριακή:",
           "en": "Sunday:"
         },
         "time": {
-          "el": "Off Day",
-          "en": "Off Day"
-        },
-        "isOffDay": true
+          "el": "11:00 π.μ. - 08:00 μ.μ.",
+          "en": "11:00 a.m. - 8:00 p.m."
+        }
       }
     ],
     "newsletterTitle": {
-      "el": "Newsletter",
-      "en": "Our Newsletter"
+      "el": "NEWSLETTER",
+      "en": "Newsletter"
     },
     "newsletterSubtitle": {
-      "el": "Delicious Tips, Dish Updates & More",
-      "en": "Delicious Tips, Dish Updates & More"
+      "el": "Εγγραφείτε για νέα, προσφορές και ενημερώσεις από το εργαστήριό μας.",
+      "en": "Subscribe for news, offers, and updates from our workshop."
     },
     "newsletterEmailPlaceholder": {
-      "el": "Enter Email Address",
-      "en": "Enter Email Address"
+      "el": "Το email σας",
+      "en": "Your email"
     },
     "newsletterSubscribeLabel": {
-      "el": "Subscribe",
+      "el": "ΕΓΓΡΑΦΗ",
       "en": "Subscribe"
     },
+    "ctaColumnTitle": {
+      "el": "Για custom τούρτες & events",
+      "en": "Custom cakes & events"
+    },
+    "ctaColumnBody": {
+      "el": "Επικοινώνησε μαζί μας για να σχεδιάσουμε μαζί τη δημιουργία που θέλεις.",
+      "en": "Get in touch so we can design together the creation you have in mind."
+    },
+    "ctaColumnButtonLabel": {
+      "el": "ΕΠΙΚΟΙΝΩΝΙΑ",
+      "en": "CONTACT"
+    },
+    "ctaColumnHref": "/contact",
+    "hideFooterShapes": true,
+    "hideFooterLegalLinks": true,
     "copyrightText": {
-      "el": "Copyright © 2026 All Right Reserved.",
+      "el": "Copyright © 2026 Με επιφύλαξη παντός δικαιώματος.",
       "en": "Copyright © 2026 All Right Reserved."
     },
     "madeByPrefix": {
-      "el": "Made by ",
-      "en": "Made by "
+      "el": " Φτιαγμένο από ",
+      "en": " Made by "
     },
     "madeByLabel": {
       "el": "hayc",
@@ -246,7 +237,7 @@
     },
     "madeByHref": "https://hayc.gr/",
     "madeBySuffix": {
-      "el": " with 💙",
+      "el": " με 💙",
       "en": " with 💙"
     },
     "privacyPolicyLabel": {
@@ -267,18 +258,53 @@
       "en": "hero shape"
     },
     "heroTitle": {
-      "el": "Sweet Bliss",
-      "en": "Sweet Bliss"
+      "el": "Δεν είναι απλώς γλυκό,",
+      "en": "It's not just dessert,"
+    },
+    "heroHeadlineLine2": {
+      "el": "Είναι η στιγμή σου.",
+      "en": "It's your moment."
     },
     "heroDescription": {
-      "el": "Experience the joy of Sweet Bliss — handcrafted desserts made with love, perfect for every craving, celebration, or sweet moment.",
-      "en": "Experience the joy of Sweet Bliss — handcrafted desserts made with love, perfect for every craving, celebration, or sweet moment."
+      "el": "Κάθε δημιουργία έχει τη δική της θέση σε μια ξεχωριστή στιγμή. Από ένα αγαπημένο γλυκό της βιτρίνας μέχρι μια τούρτα φτιαγμένη ακριβώς όπως την έχεις φανταστεί, στον Σταματόπουλο η παράδοση τεσσάρων γενεών συναντά τη φροντίδα, τη φαντασία και την τεχνική. Το αποτέλεσμα είναι γεύσεις που μένουν, όχι μόνο για την ποιότητά τους, αλλά για όσα συνοδεύουν.",
+      "en": "Every creation has its place in a special moment. From a favorite dessert from the window to a cake made exactly as you imagined it, at Stamatopoulos, four generations of tradition meet care, imagination and technique. The result is flavors that last, not only for their quality, but for what they accompany."
     },
     "heroCtaLabel": {
-      "el": "Contact us",
-      "en": "Contact us"
+      "el": "ΔΗΜΙΟΥΡΓΗΣΕ ΤΗΝ ΤΟΥΡΤΑ ΣΟΥ",
+      "en": "CREATE YOUR CAKE"
     },
     "heroCtaHref": "/contact",
+    "heroSecondaryCtaLabel": {
+      "el": "ΔΕΣ ΤΙΣ SIGNATURE ΔΗΜΙΟΥΡΓΙΕΣ ΜΑΣ",
+      "en": "SEE OUR SIGNATURE CREATIONS"
+    },
+    "heroSecondaryCtaHref": "/menu",
+    "heroHighlightPills": [
+      {
+        "el": "Παράδοση",
+        "en": "Tradition"
+      },
+      {
+        "el": "Αγάπη",
+        "en": "Love"
+      },
+      {
+        "el": "Ποιότητα",
+        "en": "Quality"
+      },
+      {
+        "el": "Δημιουργία",
+        "en": "Creation"
+      }
+    ],
+    "heroHighlightHeadlineLine1": {
+      "el": "Από το 1950 στην τέχνη",
+      "en": "Since 1950 in the art"
+    },
+    "heroHighlightHeadlineLine2": {
+      "el": "του γλυκού.",
+      "en": "of sweets."
+    },
     "heroAuthorThumbs": [
       {
         "src": "/assets/images/home-dessert/hero/author-thumb1.png",
@@ -324,255 +350,275 @@
       "el": "Satisfied Clients",
       "en": "Satisfied Clients"
     },
-    "heroMainImage": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/hero-img1.png",
+    "heroMainImage": "/assets/images/stamatopoulos/hero-pecan-slice.png",
     "heroMainImageAlt": {
-      "el": "Hero Image",
-      "en": "Hero Image"
+      "el": "Φέτα τούρτας με πεκάν",
+      "en": "Slice of pecan tart"
     },
     "categoriesKicker": {
-      "el": "Category",
-      "en": "Category"
+      "el": "Οι δημιουργίες μας",
+      "en": "Our creations"
     },
     "categoriesTitle": {
-      "el": "Something Sweet for Every Craving.",
-      "en": "Something Sweet for Every Craving."
+      "el": "Γλυκά που φτιάχνονται για τις στιγμές που θέλεις να θυμάσαι",
+      "en": "Sweets made for the moments you want to remember"
     },
     "categories": [
       {
-        "iconClass": "flaticon-bread",
-        "title": {
-          "el": "Breads",
-          "en": "Breads"
+        "iconSrc": "/assets/images/stamatopoulos/icon-custom-cakes.svg",
+        "iconAlt": {
+          "el": "Custom τούρτες",
+          "en": "Custom cakes"
         },
-        "bgClass": "bg_one",
+        "title": {
+          "el": "Custom Τούρτες",
+          "en": "Custom Cakes"
+        },
+        "backgroundColor": "#FEF4EB",
+        "iconBackgroundColor": "#EF8168",
+        "textColor": "#512500",
         "aosDurationMs": 1000
       },
       {
-        "iconClass": "flaticon-cake",
-        "title": {
-          "el": "Brownies",
-          "en": "Brownies"
+        "iconSrc": "/assets/images/stamatopoulos/icon-signature-desserts.svg",
+        "iconAlt": {
+          "el": "Signature desserts",
+          "en": "Signature desserts"
         },
-        "bgClass": "bg_two",
+        "title": {
+          "el": "Signature Desserts",
+          "en": "Signature Desserts"
+        },
+        "backgroundColor": "#79A3882B",
+        "iconBackgroundColor": "#79A388",
+        "textColor": "#512500",
+        "aosDurationMs": 1100
+      },
+      {
+        "iconSrc": "/assets/images/stamatopoulos/icon-events.svg",
+        "iconAlt": {
+          "el": "Εκδηλώσεις",
+          "en": "Events"
+        },
+        "title": {
+          "el": "Εκδηλώσεις",
+          "en": "Events"
+        },
+        "backgroundColor": "#EEE9E5",
+        "textColor": "#512500",
+        "iconVariant": "contained",
         "aosDurationMs": 1200
       },
       {
-        "iconClass": "flaticon-cupcake-1",
-        "title": {
-          "el": "Desserts",
-          "en": "Desserts"
+        "iconSrc": "/assets/images/stamatopoulos/icon-daily-delights.svg",
+        "iconAlt": {
+          "el": "Καθημερινές απολαύσεις",
+          "en": "Daily delights"
         },
-        "bgClass": "bg_three",
-        "aosDurationMs": 1400
-      },
-      {
-        "iconClass": "flaticon-candy",
         "title": {
-          "el": "Candy",
-          "en": "Candy"
+          "el": "Καθημερινές Απολαύσεις",
+          "en": "Daily Delights"
         },
-        "bgClass": "bg_four",
-        "aosDurationMs": 1600
-      },
-      {
-        "iconClass": "flaticon-bread",
-        "title": {
-          "el": "Cookie",
-          "en": "Cookie"
-        },
-        "bgClass": "bg_five",
-        "aosDurationMs": 1800
+        "backgroundColor": "#E1D9B240",
+        "iconBackgroundColor": "#E1D9B2",
+        "textColor": "#4B2709",
+        "aosDurationMs": 1300
       }
     ],
-    "aboutLeftBackgroundImage": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
-    "aboutShapeImage": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/shape1-1.png",
+    "aboutLeftBackgroundImage": "/public/assets/images/stamatopoulos/97fc5e805ac11e44aa93524cdede5776ead81514.jpg",
+    "aboutShapeImage": "/assets/images/stamatopoulos/about-history-shape.svg",
     "aboutShapeAlt": {
       "el": "shape",
       "en": "shape"
     },
     "aboutKicker": {
-      "el": "About Us",
-      "en": "About Us"
+      "el": "Η ΙΣΤΟΡΙΑ ΜΑΣ",
+      "en": "OUR STORY"
     },
     "aboutTitle": {
-      "el": "Sweet Moments, Freshly Made.",
-      "en": "Sweet Moments, Freshly Made."
+      "el": "Τέσσερις γενιές γεύσης, φροντίδας και εξέλιξης",
+      "en": "Four generations of taste, care, and evolution"
     },
     "aboutParagraphs": [
       {
-        "el": "At [Your Shop Name], we believe dessert is more than just a treat—it's a little moment of joy.",
-        "en": "At [Your Shop Name], we believe dessert is more than just a treat—it's a little moment of joy."
-      },
-      {
-        "el": "From handcrafted cakes and pastries to melt-in-your-mouth cookies and creamy delights, every bite is made with love, using only the finest ingredients.",
-        "en": "From handcrafted cakes and pastries to melt-in-your-mouth cookies and creamy delights, every bite is made with love, using only the finest ingredients."
-      },
-      {
-        "el": "Whether you’re here for a morning pick-me-up or a sweet evening escape, we’re here to make your day a little more delicious.",
-        "en": "Whether you’re here for a morning pick-me-up or a sweet evening escape, we’re here to make your day a little more delicious."
+        "el": "Στον Σταματόπουλο, το γλυκό δεν είναι απλώς μια συνταγή. Είναι μέρος μιας οικογενειακής διαδρομής που ξεκίνησε το 1950 και συνεχίζεται μέχρι σήμερα, με την ίδια αγάπη για την ποιότητα, τη λεπτομέρεια και τη γεύση. Κάθε δημιουργία φτιάχνεται για να συνοδεύει αληθινές στιγμές και να μένει στη μνήμη.",
+        "en": "At Stamatopoulos, dessert is not just a recipe. It is part of a family journey that began in 1950 and continues to this day, with the same love for quality, detail, and taste. Every creation is made to accompany real moments and to stay in memory."
       }
     ],
     "aboutCtaLabel": {
-      "el": "Contact us",
-      "en": "Contact us"
+      "el": "ΜΑΘΕΤΕ ΠΕΡΙΣΣΟΤΕΡΑ",
+      "en": "LEARN MORE"
     },
-    "aboutCtaHref": "/contact",
+    "aboutCtaHref": "/about",
     "experienceKicker": {
-      "el": "Our Experience",
-      "en": "Our Experience"
+      "el": "Η εμπειρια μας",
+      "en": "OUR EXPERIENCE"
     },
     "experienceTitle": {
-      "el": "Crafting Sweetness with Passion.",
-      "en": "Crafting Sweetness with Passion."
+      "el": "Παράδοση στην τεχνική, σύγχρονη ματιά στη δημιουργία.",
+      "en": "Tradition in technique, a modern approach to creation."
     },
     "experienceText": {
-      "el": "With years of experience in baking and coffee culture, we bring expert And craftsmanship to every dessert and drink we serve. From classic recipes to creative new flavors, our team is dedicated to delivering quality.",
-      "en": "With years of experience in baking and coffee culture, we bring expert And craftsmanship to every dessert and drink we serve. From classic recipes to creative new flavors, our team is dedicated to delivering quality."
+      "el": "Με εμπειρία που περνά από γενιά σε γενιά, συνδυάζουμε την καθαρότητα της ελληνικής ζαχαροπλαστικής με μια πιο σύγχρονη δημιουργική προσέγγιση. Από τις καθημερινές απολαύσεις μέχρι τις πιο ιδιαίτερες παραγγελίες, κάθε γλυκό σχεδιάζεται με φροντίδα, ισορροπία και χαρακτήρα.",
+      "en": "With experience passed from generation to generation, we combine the purity of Greek pastry-making with a more modern creative approach. From everyday treats to the most special orders, every dessert is designed with care, balance, and character."
     },
     "promoCards": [
       {
-        "backgroundImage": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/promo-bg1.jpg",
+        "backgroundImage": "/assets/images/stamatopoulos/promo-daily-delights.png",
+        "backgroundColor": "#C8DDD3",
         "kicker": {
-          "el": "Shop your",
-          "en": "Shop your"
+          "el": "Για κάθε στιγμή",
+          "en": "For every moment"
         },
         "title": {
-          "el": "Best Choice",
-          "en": "Best Choice"
+          "el": "Καθημερινές Απολαύσεις",
+          "en": "Daily Delights"
         },
         "aosDurationMs": 1000
       },
       {
-        "backgroundImage": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/promo-bg1.jpg",
+        "backgroundImage": "/assets/images/stamatopoulos/promo-signature-desserts.png",
+        "backgroundColor": "#F0EBD8",
         "kicker": {
-          "el": "Shop your",
-          "en": "Shop your"
+          "el": "Η υπογραφή μας",
+          "en": "Our signature"
         },
         "title": {
-          "el": "Popular Item",
-          "en": "Popular Item"
+          "el": "Signature Desserts",
+          "en": "Signature Desserts"
         },
         "aosDurationMs": 1200
       },
       {
-        "backgroundImage": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/promo-bg1.jpg",
+        "backgroundImage": "/assets/images/stamatopoulos/promo-custom-cakes.png",
+        "backgroundColor": "#F5D8CC",
         "kicker": {
-          "el": "Shop your",
-          "en": "Shop your"
+          "el": "Φτιαγμένα για σένα",
+          "en": "Made for you"
         },
         "title": {
-          "el": "Best Combo Pack",
-          "en": "Best Combo Pack"
+          "el": "Custom Cakes",
+          "en": "Custom Cakes"
         },
         "aosDurationMs": 1400
       }
     ],
     "chooseKicker": {
-      "el": "Why Choose Desserts",
-      "en": "Why Choose Desserts"
+      "el": "Η διαφορά μας",
+      "en": "Our difference"
     },
     "chooseTitle": {
-      "el": "Something Sweet for Every Craving.",
-      "en": "Something Sweet for Every Craving."
+      "el": "Εκεί όπου η παράδοση συναντά τη δημιουργία",
+      "en": "Where tradition meets creation"
     },
     "chooseLeftItems": [
       {
         "title": {
-          "el": "Authentic Ingredients",
-          "en": "Authentic Ingredients"
+          "el": "Ελληνική Βάση",
+          "en": "Greek Base"
         },
         "description": {
-          "el": "Authentic ingredients sourced globally for rich, natural flavor experiences.",
-          "en": "Authentic ingredients sourced globally for rich, natural flavor experiences."
+          "el": "Καθαρότητα, δομή και σεβασμός στην τέχνη της ελληνικής ζαχαροπλαστικής.",
+          "en": "Purity, structure, and respect for the art of Greek pastry-making."
         },
-        "titleBgClass": "bg-one",
+        "titleBgClass": "stamatopoulos-choose-header--sage",
         "aosDurationMs": 1000
       },
       {
         "title": {
-          "el": "Vegan Cream Frosting",
-          "en": "Vegan Cream Frosting"
+          "el": "Τέσσερις γενιές",
+          "en": "Four generations"
         },
         "description": {
-          "el": "Deliciously smooth vegan cream frosting, perfect for guilt-free indulgence.",
-          "en": "Deliciously smooth vegan cream frosting, perfect for guilt-free indulgence."
+          "el": "Η εμπειρία μας χτίζεται μέσα στον χρόνο, με τεχνική που περνά από γενιά σε γενιά.",
+          "en": "Our experience is built over time, with technique passed from generation to generation."
         },
-        "titleBgClass": "bg-two",
+        "titleBgClass": "stamatopoulos-choose-header--tan",
         "aosDurationMs": 1200
       }
     ],
-    "chooseCenterImage": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/shape1-1.png",
+    "chooseCenterImage": "/assets/images/stamatopoulos/choose-center-illustration.svg",
     "chooseCenterImageAlt": {
-      "el": "Image",
-      "en": "Image"
+      "el": "Χειροποίητες δημιουργίες",
+      "en": "Handcrafted creations"
     },
     "chooseRightItems": [
       {
         "title": {
-          "el": "Soft And Healthy Bread",
-          "en": "Soft And Healthy Bread"
+          "el": "Νότες Καραϊβικής",
+          "en": "Notes of the Caribbean"
         },
         "description": {
-          "el": "Soft, wholesome, and healthy bread made with nourishing natural ingredients.",
-          "en": "Soft, wholesome, and healthy bread made with nourishing natural ingredients."
+          "el": "Φρούτα, καρύδα και μπαχαρικά φέρνουν μια διακριτική εξωτική ένταση.",
+          "en": "Fruits, coconut, and spices bring a subtle exotic intensity."
         },
-        "titleBgClass": "bg-three",
+        "titleBgClass": "stamatopoulos-choose-header--coral",
         "aosDurationMs": 1000
       },
       {
         "title": {
-          "el": "Keto Friendly",
-          "en": "Keto Friendly"
+          "el": "Ξεχωριστές Δημιουργίες",
+          "en": "Unique Creations"
         },
         "description": {
-          "el": "Low-carb, keto-friendly delights supporting your healthy lifestyle and goals.",
-          "en": "Low-carb, keto-friendly delights supporting your healthy lifestyle and goals."
+          "el": "Κάθε γλυκό ξεκινά από την αρχή και παίρνει μορφή με φροντίδα και ακρίβεια.",
+          "en": "Every sweet starts from scratch and takes shape with care and precision."
         },
-        "titleBgClass": "bg-four",
+        "titleBgClass": "stamatopoulos-choose-header--brown",
         "aosDurationMs": 1200
       }
     ],
     "offerKicker": {
-      "el": "Summer Special",
-      "en": "Summer Special"
+      "el": "Τούρτες κατά παραγγελία",
+      "en": "Cakes to order"
     },
     "offerTitle": {
-      "el": "Memories Made Sweeter",
-      "en": "Memories Made Sweeter"
+      "el": "Η τούρτα σου, φτιαγμένη μόνο για σένα",
+      "en": "Your cake, made only for you"
     },
     "offerText": {
-      "el": "Create unforgettable moments with every bite—our desserts bring people together, adding sweetness and joy to every special memory shared.",
-      "en": "Create unforgettable moments with every bite—our desserts bring people together, adding sweetness and joy to every special memory shared."
+      "el": "Κάθε τούρτα σχεδιάζεται ξεχωριστά, με βάση την περίσταση, το ύφος και αυτό που θέλεις να εκφράζει. Από γενέθλια μέχρι βαφτίσεις και ιδιαίτερες στιγμές, δημιουργούμε τούρτες με χαρακτήρα, φροντίδα και ισορροπία.",
+      "en": "Every cake is designed individually, based on the occasion, the mood, and what you want to express. From birthdays to christenings and special moments, we create cakes with character, care, and balance."
     },
     "offerCtaLabel": {
-      "el": "Order now",
-      "en": "Order now"
+      "el": "ΔΗΜΙΟΥΡΓΗΣΕ ΤΗ ΔΙΚΗ ΣΟΥ",
+      "en": "CREATE YOUR OWN"
     },
-    "offerCtaHref": "/menu-grid",
-    "offerImage": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/shape1-1.png",
+    "offerCtaHref": "/contact",
+    "offerImage": "/assets/images/stamatopoulos/offer-custom-cake.png",
     "offerImageAlt": {
-      "el": "offer image",
-      "en": "offer image"
+      "el": "Τούρτα κατά παραγγελία",
+      "en": "Custom celebration cake"
     },
     "testimonials": [
       {
         "text": {
-          "el": "Every bite is a dream! I’ve never tasted desserts this fresh and flavorful. The presentation, the texture, the taste—everything is perfect.",
-          "en": "Every bite is a dream! I’ve never tasted desserts this fresh and flavorful. The presentation, the texture, the taste—everything is perfect."
+          "el": "Η τούρτα για τον γάμο μας ήταν ακριβώς όπως την ονειρευόμασταν. Η γεύση, η παρουσίαση και η φροντίδα ξεχώρισαν σε κάθε λεπτομέρεια.",
+          "en": "Our wedding cake was exactly as we dreamed. The flavor, presentation, and care stood out in every detail."
         },
         "author": {
-          "el": "John Smith / Main Chef",
-          "en": "John Smith / Main Chef"
+          "el": "Μαρία & Νίκος Κ.",
+          "en": "Maria & Nikos K."
         }
       },
       {
         "text": {
-          "el": "Every bite is a dream! I’ve never tasted desserts this fresh and flavorful. The presentation, the texture, the taste—everything is perfect.",
-          "en": "Every bite is a dream! I’ve never tasted desserts this fresh and flavorful. The presentation, the texture, the taste—everything is perfect."
+          "el": "Τα γλυκά της βιτρίνας είναι πάντα φρέσκα και γευστικά. Έχουμε γίνει σταθεροί πελάτες για κάθε οικογενειακή γιορτή.",
+          "en": "The sweets in the display are always fresh and delicious. We have become regular customers for every family celebration."
         },
         "author": {
-          "el": "John Smith / Main Chef",
-          "en": "John Smith / Main Chef"
+          "el": "Ελένη Π.",
+          "en": "Eleni P."
+        }
+      },
+      {
+        "text": {
+          "el": "Εξαιρετική ποιότητα και εξυπηρέτηση. Η custom τούρτα που φτιάξατε για τα γενέθλιά μου ήταν το highlight της βραδιάς.",
+          "en": "Excellent quality and service. The custom cake you made for my birthday was the highlight of the evening."
+        },
+        "author": {
+          "el": "Γιώργος Α.",
+          "en": "Giorgos A."
         }
       }
     ],
@@ -620,601 +666,705 @@
         }
       }
     ],
-    "ctaBackgroundImage": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/cta-bg.jpg",
+    "ctaBackgroundImage": "/assets/images/stamatopoulos/newsletter-background.svg",
     "ctaTitle": {
-      "el": "Get the Inside Scoop on Sweet Offers & News!",
-      "en": "Get the Inside Scoop on Sweet Offers & News!"
+      "el": "Νέα από το εργαστήριό μας",
+      "en": "News from our workshop"
     },
     "ctaSubtitle": {
-      "el": "Get 10% Off Instantly! Stay in the Loop With Our Newest Offers and Treats.",
-      "en": "Get 10% Off Instantly! Stay in the Loop With Our Newest Offers and Treats."
+      "el": "Ανακάλυψε πρώτος νέες γεύσεις, εποχιακές προτάσεις και δημιουργίες που ξεχωρίζουν.",
+      "en": "Be the first to discover new flavors, seasonal suggestions, and creations that stand out."
     },
     "ctaEmailPlaceholder": {
-      "el": "Enter your email address",
-      "en": "Enter your email address"
+      "el": "Το email σου",
+      "en": "Your email"
     },
     "ctaButtonLabel": {
-      "el": "Subscribe",
-      "en": "Subscribe"
+      "el": "ΕΓΓΡΑΦΗ",
+      "en": "SUBSCRIBE"
     },
     "blogKicker": {
-      "el": "Latest Blog",
-      "en": "Latest Blog"
+      "el": "Τα τελευταία νέα μας",
+      "en": "Our latest news"
     },
     "blogTitle": {
-      "el": "Our Recent Posts",
-      "en": "Our Recent Posts"
+      "el": "Ότι νέο παίρνει μορφή στο εργαστήριό μας",
+      "en": "Everything new takes shape in our workshop"
+    },
+    "blogReadMoreLabel": {
+      "el": "Διαβάστε περισσότερα",
+      "en": "Read more"
     },
     "blogPosts": [
       {
         "image": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/about-img1.jpg",
         "authorLabel": {
-          "el": "By John",
+          "el": "Από τον Γιάννη",
           "en": "By John"
         },
         "dateLabel": {
-          "el": "May 19, 2025",
+          "el": "19 Μαΐου 2025",
           "en": "May 19, 2025"
         },
         "title": {
-          "el": "The Art of Perfect Frosting Tips from Our Pastry Experts",
+          "el": "Η τέχνη του τέλειου frosting: συμβουλές από τους ζαχαροπλάστες μας",
           "en": "The Art of Perfect Frosting Tips from Our Pastry Experts"
         },
         "excerpt": {
-          "el": "An insider look at creating smooth, flavorful, and beautifully piped frosting.",
+          "el": "Μια εικόνα από μέσα για το πώς δημιουργούμε λείες, γευστικές και όμορφα διακοσμημένες επικαλύψεις.",
           "en": "An insider look at creating smooth, flavorful, and beautifully piped frosting."
         },
-        "href": "blog-details.html"
+        "href": "#"
       },
       {
         "image": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/about-img1.jpg",
         "authorLabel": {
-          "el": "By John",
+          "el": "Από τον Γιάννη",
           "en": "By John"
         },
         "dateLabel": {
-          "el": "May 19, 2025",
+          "el": "19 Μαΐου 2025",
           "en": "May 19, 2025"
         },
         "title": {
-          "el": "Behind the Recipe The Story of Our Signature Cupcake",
-          "en": "Behind the Recipe The Story of Our Signature Cupcake"
+          "el": "Η τέχνη του τέλειου frosting: συμβουλές από τους ζαχαροπλάστες μας",
+          "en": "The Art of Perfect Frosting Tips from Our Pastry Experts"
         },
         "excerpt": {
-          "el": "Tell the story behind your best-selling cupcake ingredient inspiration, and how it's made.",
-          "en": "Tell the story behind your best-selling cupcake ingredient inspiration, and how it's made."
+          "el": "Μια εικόνα από μέσα για το πώς δημιουργούμε λείες, γευστικές και όμορφα διακοσμημένες επικαλύψεις.",
+          "en": "An insider look at creating smooth, flavorful, and beautifully piped frosting."
         },
-        "href": "blog-details.html"
+        "href": "#"
       },
       {
         "image": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/about-img1.jpg",
         "authorLabel": {
-          "el": "By John",
+          "el": "Από τον Γιάννη",
           "en": "By John"
         },
         "dateLabel": {
-          "el": "May 19, 2025",
+          "el": "19 Μαΐου 2025",
           "en": "May 19, 2025"
         },
         "title": {
-          "el": "Celebrating Life’s Moments, One Dessert at a Time",
-          "en": "Celebrating Life’s Moments, One Dessert at a Time"
+          "el": "Η τέχνη του τέλειου frosting: συμβουλές από τους ζαχαροπλάστες μας",
+          "en": "The Art of Perfect Frosting Tips from Our Pastry Experts"
         },
         "excerpt": {
-          "el": "A heartwarming piece on how desserts bring people together for birthdays.",
-          "en": "A heartwarming piece on how desserts bring people together for birthdays."
+          "el": "Μια εικόνα από μέσα για το πώς δημιουργούμε λείες, γευστικές και όμορφα διακοσμημένες επικαλύψεις.",
+          "en": "An insider look at creating smooth, flavorful, and beautifully piped frosting."
         },
-        "href": "blog-details.html"
+        "href": "#"
       }
     ]
   },
   "aboutPageConfig": {
-    "bannerBackgroundImage": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/page-bg.jpg",
+    "bannerBackgroundImage": "/assets/images/stamatopoulos/about/hero-cupcakes.png",
     "bannerTitle": {
-      "el": "About",
-      "en": "About"
+      "el": "Η ιστορία μας",
+      "en": "Our story"
+    },
+    "bannerSubtitle": {
+      "el": "Τέσσερις γενιές παράδοσης, φροντίδας και σύγχρονης δημιουργίας στην τέχνη του γλυκού.",
+      "en": "Four generations of tradition, care, and contemporary creativity in the art of pastry."
     },
     "breadcrumbHomeLabel": {
-      "el": "Home",
+      "el": "Αρχική",
       "en": "Home"
     },
     "breadcrumbHomeHref": "/",
     "breadcrumbCurrentLabel": {
-      "el": "About",
-      "en": "About"
-    },
-    "aboutKicker": {
-      "el": "About Us",
+      "el": "Σχετικά με εμάς",
       "en": "About Us"
     },
+    "aboutKicker": {
+      "el": "Σχετικά με εμάς",
+      "en": "About us"
+    },
     "aboutTitle": {
-      "el": "Savor Story Behind the Flavor",
-      "en": "Savor Story Behind the Flavor"
+      "el": "Μια οικογενειακή παράδοση που συνεχίζεται",
+      "en": "A family tradition that continues"
     },
     "aboutLead": {
-      "el": "Embark on a culinary journey where tradition meets innovation. Our dishes are thoughtfully crafted with the finest ingredients.",
-      "en": "Embark on a culinary journey where tradition meets innovation. Our dishes are thoughtfully crafted with the finest ingredients."
+      "el": "Από το 1950, η οικογένειά μας δίνει μορφή στο γλυκό με σεβασμό στην παράδοση και ανοιχτό βλέμμα στη σύγχρονη δημιουργία. Κάθε γενιά πρόσθεσε τη δική της πινελιά — τεχνική, φαντασία και καθημερινή φροντίδα — ώστε αυτό που σας προσφέρουμε σήμερα να είναι γεύση, μνήμη και στιγμή μαζί.",
+      "en": "Since 1950, our family has shaped pastry with respect for tradition and an eye for contemporary craft. Each generation added its own touch — skill, imagination, and daily care — so what we offer today is flavor, memory, and a moment shared."
     },
-    "aboutMarqueeImages": [
+    "historyGalleryImages": [
       {
-        "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
+        "src": "/assets/images/stamatopoulos/about/history-thumb-1.png",
         "alt": {
-          "el": "",
-          "en": ""
+          "el": "Ιστορική φωτογραφία οικογένειας",
+          "en": "Family heritage photograph"
         }
       },
       {
-        "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
+        "src": "/assets/images/stamatopoulos/about/history-thumb-2.png",
         "alt": {
-          "el": "",
-          "en": ""
+          "el": "Παραδοσιακή παραγωγή στο εργαστήριο",
+          "en": "Traditional workshop craft"
         }
       },
       {
-        "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
+        "src": "/assets/images/stamatopoulos/about/history-thumb-3.png",
         "alt": {
-          "el": "",
-          "en": ""
-        }
-      },
-      {
-        "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
-        "alt": {
-          "el": "",
-          "en": ""
-        }
-      },
-      {
-        "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
-        "alt": {
-          "el": "",
-          "en": ""
-        }
-      },
-      {
-        "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
-        "alt": {
-          "el": "",
-          "en": ""
-        }
-      },
-      {
-        "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
-        "alt": {
-          "el": "",
-          "en": ""
-        }
-      },
-      {
-        "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
-        "alt": {
-          "el": "",
-          "en": ""
-        }
-      },
-      {
-        "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
-        "alt": {
-          "el": "",
-          "en": ""
-        }
-      },
-      {
-        "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
-        "alt": {
-          "el": "",
-          "en": ""
+          "el": "Το ιστορικό κατάστημα",
+          "en": "The historic shopfront"
         }
       }
     ],
-    "sideImage": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/hero-img1.jpg",
+    "sideImage": "/assets/images/stamatopoulos/about/history-team.png",
     "sideImageAlt": {
-      "el": "about Image",
-      "en": "about Image"
+      "el": "Η ομάδα μας στο εργαστήριο",
+      "en": "Our team in the workshop"
     },
     "sideText": {
-      "el": "Embark on a culinary journey where tradition meets innovation. Our dishes are thoughtfully.",
-      "en": "Embark on a culinary journey where tradition meets innovation. Our dishes are thoughtfully."
+      "el": "Σήμερα, το εργαστήριό μας συνδυάζει την εμπειρία των προηγούμενων γενεών με φρέσκιες ιδέες — πάντα με τα χέρια στην πρώτη ύλη και το βλέμμα στη λεπτομέρεια.",
+      "en": "Today our workshop blends the experience of past generations with fresh ideas — hands on the ingredients and an eye on every detail."
     },
     "sideCtaLabel": {
-      "el": "Contact Us",
-      "en": "Contact Us"
+      "el": "ΑΝΑΚΑΛΥΨΤΕ ΤΙΣ ΔΗΜΙΟΥΡΓΙΕΣ ΜΑΣ",
+      "en": "DISCOVER OUR CREATIONS"
     },
-    "sideCtaHref": "/contact",
+    "sideCtaHref": "/menu",
     "funFacts": [
       {
-        "iconClass": "flaticon-chef",
+        "iconSrc": "/assets/images/stamatopoulos/about/icons/stat-spiral.svg",
         "value": {
-          "el": "300",
-          "en": "300"
+          "el": "1950",
+          "en": "1950"
         },
         "suffix": {
-          "el": "+",
-          "en": "+"
+          "el": "",
+          "en": ""
         },
         "label": {
-          "el": "Culinary Expert",
-          "en": "Culinary Expert"
+          "el": "Εκεί όπου ξεκινά η ιστορία μας",
+          "en": "Where our story begins"
         },
         "aosDurationMs": 800
       },
       {
-        "iconClass": "flaticon-dining-room",
+        "iconSrc": "/assets/images/stamatopoulos/about/icons/stat-heart.svg",
         "value": {
-          "el": "260",
-          "en": "260"
+          "el": "4 γενιές",
+          "en": "4 generations"
         },
         "suffix": {
-          "el": "+",
-          "en": "+"
+          "el": "",
+          "en": ""
         },
         "label": {
-          "el": "Five-Star Dining",
-          "en": "Five-Star Dining"
+          "el": "Οικογενειακής παράδοσης",
+          "en": "Family tradition"
         },
-        "aosDurationMs": 1000
+        "aosDurationMs": 950
       },
       {
-        "iconClass": "flaticon-offers",
+        "iconSrc": "/assets/images/stamatopoulos/about/icons/stat-snowflake.svg",
         "value": {
-          "el": "5",
-          "en": "5"
+          "el": "1976",
+          "en": "1976"
         },
         "suffix": {
-          "el": "K+",
-          "en": "K+"
+          "el": "",
+          "en": ""
         },
         "label": {
-          "el": "Food Offerings",
-          "en": "Food Offerings"
+          "el": "Το εργαστήριο παίρνει μορφή",
+          "en": "The workshop takes shape"
         },
-        "aosDurationMs": 1200
+        "aosDurationMs": 1100
       },
       {
-        "iconClass": "flaticon-happy-face",
+        "iconSrc": "/assets/images/stamatopoulos/about/icons/stat-leaf.svg",
         "value": {
-          "el": "27",
-          "en": "27"
+          "el": "Σήμερα",
+          "en": "Today"
         },
         "suffix": {
-          "el": "K+",
-          "en": "K+"
+          "el": "",
+          "en": ""
         },
         "label": {
-          "el": "Happy Customer",
-          "en": "Happy Customer"
+          "el": "Η οικογένεια Γιάννης & Στέλλα Σταματόπουλος",
+          "en": "The Yiannis & Stella Stamatopoulos family"
         },
-        "aosDurationMs": 1400
+        "aosDurationMs": 1250
       }
     ],
     "featureKicker": {
-      "el": "Simple, Classic, Delicious",
-      "en": "Simple, Classic, Delicious"
+      "el": "Η φιλοσοφία μας",
+      "en": "Our philosophy"
     },
     "featureTitle": {
-      "el": "Fine Dining Rooted in the City Heartbeat",
-      "en": "Fine Dining Rooted in the City Heartbeat"
+      "el": "Παράδοση, φροντίδα και γεύση με χαρακτήρα",
+      "en": "Tradition, care, and flavor with character"
     },
     "featureLead": {
-      "el": "Experience fine dining crafted with elegance and passion, perfectly rooted in the vibrant rhythm and soul of the city’s heartbeat.",
-      "en": "Experience fine dining crafted with elegance and passion, perfectly rooted in the vibrant rhythm and soul of the city’s heartbeat."
+      "el": "Κάθε δημιουργία μας ξεκινά από τον σεβασμό στην οικογενειακή παράδοση και ολοκληρώνεται με μια σύγχρονη ματιά στη γεύση, την αισθητική και την εμπειρία.",
+      "en": "Every creation starts with respect for family tradition and is completed with a contemporary eye on flavor, aesthetics, and experience."
     },
     "featureItemsLeft": [
       {
-        "iconClass": "flaticon-chef",
+        "iconSrc": "/assets/images/stamatopoulos/icon-custom-cakes.svg",
         "title": {
-          "el": "Professional Chefs",
-          "en": "Professional Chefs"
+          "el": "Οικογενειακή παράδοση",
+          "en": "Family tradition"
         },
         "aosDurationMs": 1200
       },
       {
-        "iconClass": "flaticon-chef",
+        "iconSrc": "/assets/images/stamatopoulos/icon-signature-desserts.svg",
         "title": {
-          "el": "Online Delivery Shop",
-          "en": "Online Delivery Shop"
+          "el": "Ποιοτικές πρώτες ύλες",
+          "en": "Quality ingredients"
         },
         "aosDurationMs": 1300
       }
     ],
     "featureItemsRight": [
       {
-        "iconClass": "flaticon-chef",
+        "iconSrc": "/assets/images/stamatopoulos/icon-events.svg",
         "title": {
-          "el": "Fresh Ingredients",
-          "en": "Fresh Ingredients"
+          "el": "Χειροποίητη φροντίδα",
+          "en": "Handcrafted care"
         },
         "aosDurationMs": 1400
       },
       {
-        "iconClass": "flaticon-chef",
+        "iconSrc": "/assets/images/stamatopoulos/icon-daily-delights.svg",
         "title": {
-          "el": "24/7 Services",
-          "en": "24/7 Services"
+          "el": "Σύγχρονη δημιουργία",
+          "en": "Contemporary creation"
         },
         "aosDurationMs": 1500
       }
     ],
     "featureCtaLabel": {
-      "el": "View all menu",
-      "en": "View all menu"
+      "el": "ΑΝΑΚΑΛΥΨΕ ΤΙΣ ΔΗΜΙΟΥΡΓΙΕΣ ΜΑΣ",
+      "en": "DISCOVER OUR CREATIONS"
     },
-    "featureCtaHref": "/menu-grid",
-    "featureImage": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/hero-img1.jpg",
+    "featureCtaHref": "/menu",
+    "featureImage": "/assets/images/stamatopoulos/about/philosophy-cake.png",
     "featureImageAlt": {
-      "el": "Feature Image",
-      "en": "Feature Image"
+      "el": "Διακοσμημένη τούρτα σε πράσινο πιατέλο",
+      "en": "Decorated celebration cake on a sage cake stand"
     },
     "instagramMarqueeImages": [
       {
         "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
         "alt": {
-          "el": "",
-          "en": ""
+          "el": "Στιγμές από το εργαστήριο",
+          "en": "Moments from our workshop"
         }
       },
       {
         "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
         "alt": {
-          "el": "",
-          "en": ""
+          "el": "Στιγμές από το εργαστήριο",
+          "en": "Moments from our workshop"
         }
       },
       {
         "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
         "alt": {
-          "el": "",
-          "en": ""
+          "el": "Στιγμές από το εργαστήριο",
+          "en": "Moments from our workshop"
         }
       },
       {
         "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
         "alt": {
-          "el": "",
-          "en": ""
+          "el": "Στιγμές από το εργαστήριο",
+          "en": "Moments from our workshop"
         }
       },
       {
         "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
         "alt": {
-          "el": "",
-          "en": ""
-        }
-      },
-      {
-        "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
-        "alt": {
-          "el": "",
-          "en": ""
-        }
-      },
-      {
-        "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
-        "alt": {
-          "el": "",
-          "en": ""
-        }
-      },
-      {
-        "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
-        "alt": {
-          "el": "",
-          "en": ""
-        }
-      },
-      {
-        "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
-        "alt": {
-          "el": "",
-          "en": ""
-        }
-      },
-      {
-        "src": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg",
-        "alt": {
-          "el": "",
-          "en": ""
+          "el": "Στιγμές από το εργαστήριο",
+          "en": "Moments from our workshop"
         }
       }
     ]
   },
   "contactPageConfig": {
-    "bannerBackgroundImage": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/page-bg.jpg",
+    "bannerBackgroundImage": "/assets/images/stamatopoulos/contact-hero.png",
     "bannerTitle": {
-      "el": "Contact Us",
-      "en": "Contact Us"
+      "el": "Μιληστε μαζι μας",
+      "en": "Talk to us"
+    },
+    "bannerSubtitle": {
+      "el": "Για παραγγελίες, εκδηλώσεις ή οποιαδήποτε πληροφορία, είμαστε εδώ για να σας εξυπηρετήσουμε.",
+      "en": "For orders, events, or any information, we are here to help."
     },
     "breadcrumbHomeLabel": {
-      "el": "Home",
+      "el": "Αρχική",
       "en": "Home"
     },
     "breadcrumbHomeHref": "/",
     "breadcrumbCurrentLabel": {
-      "el": "Contact Us",
-      "en": "Contact Us"
+      "el": "Επικοινωνία",
+      "en": "Contact"
     },
     "infoItems": [
       {
-        "iconClass": "far fa-map-marker-alt",
+        "iconSrc": "/assets/images/stamatopoulos/contact-icon-location.svg",
         "title": {
-          "el": "Our Location",
-          "en": "Our Location"
+          "el": "Που θα μας βρείτε",
+          "en": "Where to find us"
         },
         "lines": [
           {
             "value": {
-              "el": "456 Elm Avenue, Metropolis NY 10001",
-              "en": "456 Elm Avenue, Metropolis NY 10001"
+              "el": "Διεύθυνση, Τρίπολη",
+              "en": "Address, Tripoli"
             }
           }
         ],
         "aosDurationMs": 800
       },
       {
-        "iconClass": "far fa-phone-alt",
+        "iconSrc": "/assets/images/stamatopoulos/contact-icon-phone.svg",
         "title": {
-          "el": "Contact Number",
-          "en": "Contact Number"
+          "el": "Καλέστε μας",
+          "en": "Call us"
         },
         "lines": [
           {
             "value": {
-              "el": "+000 123 456 7890",
-              "en": "+000 123 456 7890"
+              "el": "+30 123 456 7890",
+              "en": "+30 123 456 7890"
             },
-            "href": "tel:+0001234567890"
-          },
-          {
-            "value": {
-              "el": "+000 123 756 4352",
-              "en": "+000 123 756 4352"
-            },
-            "href": "tel:+0001237564352"
+            "href": "tel:+301234567890"
           }
         ],
         "aosDurationMs": 1000
       },
       {
-        "iconClass": "far fa-envelope",
+        "iconSrc": "/assets/images/stamatopoulos/contact-icon-send.svg",
         "title": {
-          "el": "Email",
-          "en": "Email Address"
+          "el": "Στείλτε μας email",
+          "en": "Send us an email"
         },
         "lines": [
           {
             "value": {
-              "el": "Contact@Example.com",
-              "en": "Contact@Example.com"
+              "el": "email@example.com",
+              "en": "email@example.com"
             },
-            "href": "mailto:Contact@Example.com"
-          },
-          {
-            "value": {
-              "el": "Info@Example.com",
-              "en": "Info@Example.com"
-            },
-            "href": "mailto:Info@Example.com"
+            "href": "mailto:email@example.com"
           }
         ],
         "aosDurationMs": 1200
       }
     ],
     "leftTitle": {
-      "el": "Talk to Us Today",
-      "en": "Talk to Us Today"
+      "el": "Επικοινωνήστε μαζί μας",
+      "en": "Contact us"
     },
     "leftSubtitle": {
-      "el": "Have a question or feedback? Our team is here to help.",
-      "en": "Have a question or feedback? Our team is here to help."
+      "el": "Έχετε κάποια ερώτηση, θέλετε να κάνετε μια παραγγελία ή σχεδιάζετε μια εκδήλωση; Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό.",
+      "en": "Have a question, want to place an order, or planning an event? Fill out the form and we will get back to you as soon as possible."
     },
     "hoursBlocks": [
       {
         "title": {
-          "el": "Opening Hours",
-          "en": "Opening Hours"
+          "el": "Ωράριο Καταστήματος",
+          "en": "Store hours"
         },
         "rows": [
           {
             "label": {
-              "el": "Mon–Thu:",
-              "en": "Mon–Thu:"
+              "el": "Δευτέρα – Σάββατο:",
+              "en": "Monday – Saturday:"
             },
             "value": {
-              "el": "10:00 am – 01:00 am",
-              "en": "10:00 am – 01:00 am"
+              "el": "08:00 – 21:00",
+              "en": "8:00 a.m. – 9:00 p.m."
             }
           },
           {
             "label": {
-              "el": "Fri–Sat:",
-              "en": "Fri–Sat:"
-            },
-            "value": {
-              "el": "10:00 am – 01:00 am",
-              "en": "10:00 am – 01:00 am"
-            }
-          },
-          {
-            "label": {
-              "el": "Sunday:",
+              "el": "Κυριακή:",
               "en": "Sunday:"
             },
             "value": {
-              "el": "Off",
-              "en": "Off"
-            }
-          }
-        ]
-      },
-      {
-        "title": {
-          "el": "Available Hours",
-          "en": "Available Hours"
-        },
-        "rows": [
-          {
-            "label": {
-              "el": "Breakfast:",
-              "en": "Breakfast:"
-            },
-            "value": {
-              "el": "07:00 – 10:00",
-              "en": "07:00 – 10:00"
-            }
-          },
-          {
-            "label": {
-              "el": "Lunch:",
-              "en": "Lunch:"
-            },
-            "value": {
-              "el": "12:00 – 02:00",
-              "en": "12:00 – 02:00"
-            }
-          },
-          {
-            "label": {
-              "el": "Dinner:",
-              "en": "Dinner:"
-            },
-            "value": {
-              "el": "07:00 – 10:00",
-              "en": "07:00 – 10:00"
+              "el": "Κλειστά",
+              "en": "Closed"
             }
           }
         ]
       }
     ],
-    "formCardTitle": {
-      "el": "Contact Form",
-      "en": "Contact Form"
+    "secondaryBlurbTitle": {
+      "el": "Για παραγγελίες & εκδηλώσεις",
+      "en": "For orders & events"
     },
-    "mapEmbedSrc": "https://www.google.com/maps?q=Athens,Greece&output=embed"
+    "secondaryBlurbBody": {
+      "el": "Τούρτες, γλυκά, candy bars και μπουφέδες για γάμους, βαφτίσεις και ξεχωριστές στιγμές. Περιγράψτε μας την περίσταση και θα επικοινωνήσουμε μαζί σας για λεπτομέρειες.",
+      "en": "Cakes, desserts, candy bars, and dessert buffets for weddings, christenings, and special moments. Tell us about your event and we will follow up with details."
+    },
+    "formCardTitle": {
+      "el": "",
+      "en": ""
+    },
+    "mapEmbedSrc": "https://www.google.com/maps?q=Tripoli+Greece&output=embed"
   },
   "menuPageConfig": {
-    "bannerBackgroundImage": "https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/page-bg.jpg",
+    "bannerBackgroundImage": "/assets/images/stamatopoulos/menu-hero.png",
     "bannerTitle": {
-      "el": "Menu",
-      "en": "Menu"
+      "el": "Οι δημιουργίες μας",
+      "en": "Our creations"
+    },
+    "bannerSubtitle": {
+      "el": "Γλυκά για την καθημερινότητα, τις γιορτές και τις ξεχωριστές στιγμές σας, φτιαγμένα με φροντίδα, ποιότητα και χαρακτήρα.",
+      "en": "Everyday treats, celebrations, and special moments—made with care, quality, and character."
     },
     "breadcrumbHomeLabel": {
-      "el": "Home",
+      "el": "Αρχική",
       "en": "Home"
     },
     "breadcrumbHomeHref": "/",
     "breadcrumbCurrentLabel": {
-      "el": "Menu",
-      "en": "Menu"
+      "el": "Δημιουργίες",
+      "en": "Creations"
     },
-    "lead": {
-      "el": "Full menu pages will be added here. For now, contact us for reservations or special orders.",
-      "en": "Full menu pages will be added here. For now, contact us for reservations or special orders."
+    "sections": [
+      {
+        "kicker": {
+          "el": "Οι γεύσεις μας",
+          "en": "Our flavors"
+        },
+        "title": {
+          "el": "Αγαπημένες καθημερινές απολαύσεις",
+          "en": "Favorite daily treats"
+        },
+        "items": [
+          {
+            "imageSrc": "/assets/images/stamatopoulos/promo-daily-delights.png",
+            "imageAlt": {
+              "el": "Πάστες και ατομικά γλυκά",
+              "en": "Pastries and individual desserts"
+            },
+            "title": {
+              "el": "Πάστες & ατομικά γλυκά",
+              "en": "Pastries & individual desserts"
+            },
+            "description": {
+              "el": "Μικρές δημιουργίες με ισορροπημένες γεύσεις και προσεγμένη εμφάνιση.",
+              "en": "Petite creations with balanced flavors and refined presentation."
+            },
+            "aosDurationMs": 750
+          },
+          {
+            "imageSrc": "/assets/images/stamatopoulos/about/history-thumb-1.png",
+            "imageAlt": {
+              "el": "Κουλουράκια και βουτήματα",
+              "en": "Cookies and dipping treats"
+            },
+            "title": {
+              "el": "Κουλουράκια & βουτήματα",
+              "en": "Cookies & dipping treats"
+            },
+            "description": {
+              "el": "Ιδανικά για τον καφέ, το κέρασμα ή το τραπέζι της ημέρας.",
+              "en": "Perfect with coffee, for treating guests, or the everyday table."
+            },
+            "aosDurationMs": 850
+          },
+          {
+            "imageSrc": "/assets/images/stamatopoulos/promo-signature-desserts.png",
+            "imageAlt": {
+              "el": "Σιροπιαστά γλυκά",
+              "en": "Syrupy desserts"
+            },
+            "title": {
+              "el": "Σιροπιαστά",
+              "en": "Syrupy classics"
+            },
+            "description": {
+              "el": "Κλασικές γεύσεις, φτιαγμένες με την παράδοση και φροντίδα που τους αξίζει.",
+              "en": "Classic flavors made with the tradition and care they deserve."
+            },
+            "aosDurationMs": 950
+          },
+          {
+            "imageSrc": "/assets/images/stamatopoulos/hero-pecan-slice.png",
+            "imageAlt": {
+              "el": "Τσουρέκια και επιδόρπια",
+              "en": "Sweet breads and desserts"
+            },
+            "title": {
+              "el": "Τσουρέκια & επιδόρπια",
+              "en": "Sweet breads & desserts"
+            },
+            "description": {
+              "el": "Αγαπημένες γεύσεις που επιστρέφουν στις στιγμές και τις γιορτές τους.",
+              "en": "Beloved flavors that belong to holidays and gathering moments."
+            },
+            "aosDurationMs": 1050
+          }
+        ]
+      },
+      {
+        "kicker": {
+          "el": "Για κάθε περίσταση",
+          "en": "For every occasion"
+        },
+        "title": {
+          "el": "Τούρτες & custom δημιουργίες",
+          "en": "Cakes & custom creations"
+        },
+        "items": [
+          {
+            "imageSrc": "/assets/images/stamatopoulos/promo-custom-cakes.png",
+            "imageAlt": {
+              "el": "Τούρτες γενεθλίων",
+              "en": "Birthday cakes"
+            },
+            "title": {
+              "el": "Τούρτες γενεθλίων",
+              "en": "Birthday cakes"
+            },
+            "description": {
+              "el": "Γεύσεις και σχέδια που φτιάχνονται για την ηλικία, το θέμα και τη στιγμή.",
+              "en": "Flavors and designs tailored to age, theme, and the moment."
+            },
+            "aosDurationMs": 750
+          },
+          {
+            "imageSrc": "/assets/images/stamatopoulos/offer-custom-cake.png",
+            "imageAlt": {
+              "el": "Τούρτες γάμου",
+              "en": "Wedding cakes"
+            },
+            "title": {
+              "el": "Τούρτες γάμου",
+              "en": "Wedding cakes"
+            },
+            "description": {
+              "el": "Κομψές γλυκές συνθέσεις για την πιο ιδιαίτερη στιγμή.",
+              "en": "Elegant sweet compositions for your most special day."
+            },
+            "aosDurationMs": 850
+          },
+          {
+            "imageSrc": "/assets/images/stamatopoulos/about/philosophy-cake.png",
+            "imageAlt": {
+              "el": "Τούρτες βάφτισης",
+              "en": "Christening cakes"
+            },
+            "title": {
+              "el": "Τούρτες βάφτισης",
+              "en": "Christening cakes"
+            },
+            "description": {
+              "el": "Πρωτότυπες δημιουργίες για μια τρυφερή και ξεχωριστή ημέρα.",
+              "en": "Original creations for a tender, unforgettable day."
+            },
+            "aosDurationMs": 950
+          },
+          {
+            "imageSrc": "/assets/images/stamatopoulos/about/history-thumb-2.png",
+            "imageAlt": {
+              "el": "Custom cakes",
+              "en": "Custom cakes"
+            },
+            "title": {
+              "el": "Custom cakes",
+              "en": "Custom cakes"
+            },
+            "description": {
+              "el": "Σχέδια και γεύσεις που δημιουργούνται με βάση τη δική σας ιδέα.",
+              "en": "Designs and flavors shaped around your own vision."
+            },
+            "aosDurationMs": 1050
+          }
+        ]
+      },
+      {
+        "kicker": {
+          "el": "Γιορτές & κεράσματα",
+          "en": "Holidays & treats"
+        },
+        "title": {
+          "el": "Γλυκές προτάσεις για εκδηλώσεις",
+          "en": "Sweet ideas for events"
+        },
+        "items": [
+          {
+            "imageSrc": "/assets/images/stamatopoulos/promo-signature-desserts.png",
+            "imageAlt": {
+              "el": "Candy bar εκδήλωσης",
+              "en": "Candy bar"
+            },
+            "title": {
+              "el": "Candy bars",
+              "en": "Candy bars"
+            },
+            "description": {
+              "el": "Γλυκές συνθέσεις με αισθητική, ποικιλία και χαρακτήρα.",
+              "en": "Sweet spreads with style, variety, and personality."
+            },
+            "aosDurationMs": 750
+          },
+          {
+            "imageSrc": "/assets/images/stamatopoulos/about/history-thumb-3.png",
+            "imageAlt": {
+              "el": "Γλυκά για γάμο",
+              "en": "Wedding sweets"
+            },
+            "title": {
+              "el": "Γλυκά για γάμο",
+              "en": "Wedding sweets"
+            },
+            "description": {
+              "el": "Προτάσεις για θρησκευτικό γάμο, κεράσματα και γλυκές λεπτομέρειες.",
+              "en": "Options for church weddings, favors, and sweet finishing touches."
+            },
+            "aosDurationMs": 850
+          },
+          {
+            "imageSrc": "/assets/images/stamatopoulos/about/hero-cupcakes.png",
+            "imageAlt": {
+              "el": "Γλυκά για βάφτιση",
+              "en": "Christening sweets"
+            },
+            "title": {
+              "el": "Γλυκά για βάφτιση",
+              "en": "Christening sweets"
+            },
+            "description": {
+              "el": "Κεράσματα και ατομικές δημιουργίες για μια όμορφη γιορτή.",
+              "en": "Favors and individual treats for a joyful celebration."
+            },
+            "aosDurationMs": 950
+          },
+          {
+            "imageSrc": "/assets/images/stamatopoulos/97fc5e805ac11e44aa93524cdede5776ead81514.jpg",
+            "imageAlt": {
+              "el": "Εταιρικές παραγγελίες",
+              "en": "Corporate orders"
+            },
+            "title": {
+              "el": "Εταιρικές παραγγελίες",
+              "en": "Corporate orders"
+            },
+            "description": {
+              "el": "Γλυκές επιλογές για εκδηλώσεις, δώρα και επαγγελματικές περιστάσεις.",
+              "en": "Sweet selections for events, gifts, and professional occasions."
+            },
+            "aosDurationMs": 1050
+          }
+        ]
+      }
+    ],
+    "bottomCtaLabel": {
+      "el": "Μιληστε μαζί μας",
+      "en": "Talk to us"
     },
-    "ctaLabel": {
-      "el": "Contact us",
-      "en": "Contact us"
-    },
-    "ctaHref": "/contact"
+    "bottomCtaHref": "/contact"
   },
   "digitalProductsConfig": {
     "enabled": false,
