@@ -107,14 +107,24 @@ export default function AboutPage() {
             <div className="row text-center g-4 g-lg-5 justify-content-center">
               {ac.funFacts.map((ff, i) => (
                 <div
-                  key={`${ff.iconClass}-${i}`}
+                  key={`${ff.iconSrc ?? ff.iconClass}-${i}`}
                   className="col-6 col-lg-3"
                   data-aos="fade-up"
                   data-aos-duration={ff.aosDurationMs ?? 800}
                 >
                   <div className="stamatopoulos-about-stat-item">
                     <div className="stamatopoulos-about-stat-icon mb-3">
-                      <i className={ff.iconClass} aria-hidden />
+                      {ff.iconSrc ? (
+                        <img
+                          src={img(ff.iconSrc)}
+                          alt=""
+                          className="stamatopoulos-about-stat-icon-img"
+                          {...cp(`aboutPageConfig.funFacts.${i}.iconSrc`)}
+                          aria-hidden
+                        />
+                      ) : (
+                        <i className={ff.iconClass ?? 'fas fa-circle'} aria-hidden />
+                      )}
                     </div>
                     <div className="stamatopoulos-about-stat-value">
                       <span {...cp(`aboutPageConfig.funFacts.${i}.value`)}>{t(ff.value)}</span>

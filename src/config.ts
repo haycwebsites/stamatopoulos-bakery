@@ -245,7 +245,10 @@ export interface HomeConfig {
 }
 
 export interface AboutFunFactItemConfig {
-  iconClass: string;
+  /** Font Awesome class when not using a custom SVG */
+  iconClass?: string;
+  /** SVG or image URL under /public (preferred for timeline icons) */
+  iconSrc?: string;
   value: LocaleString;
   suffix: LocaleString;
   label: LocaleString;
@@ -743,8 +746,7 @@ export const homeConfig: HomeConfig = {
 };
 
 export const aboutPageConfig: AboutPageConfig = {
-  bannerBackgroundImage:
-    'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/page-bg.jpg',
+  bannerBackgroundImage: '/assets/images/stamatopoulos/about/hero-cupcakes.png',
   bannerTitle: { el: 'Η ιστορία μας', en: 'Our story' },
   bannerSubtitle: {
     el: 'Τέσσερις γενιές παράδοσης, φροντίδας και σύγχρονης δημιουργίας στην τέχνη του γλυκού.',
@@ -765,19 +767,19 @@ export const aboutPageConfig: AboutPageConfig = {
   },
   historyGalleryImages: [
     {
-      src: '/assets/images/stamatopoulos/97fc5e805ac11e44aa93524cdede5776ead81514.jpg',
-      alt: { el: 'Αρχείο εργαστηρίου', en: 'Workshop archive' },
+      src: '/assets/images/stamatopoulos/about/history-thumb-1.png',
+      alt: { el: 'Ιστορική φωτογραφία οικογένειας', en: 'Family heritage photograph' },
     },
     {
-      src: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg',
-      alt: { el: 'Ιστορική φωτογραφία', en: 'Historical photo' },
+      src: '/assets/images/stamatopoulos/about/history-thumb-2.png',
+      alt: { el: 'Παραδοσιακή παραγωγή στο εργαστήριο', en: 'Traditional workshop craft' },
     },
     {
-      src: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/about-img1.jpg',
-      alt: { el: 'Παραδοσιακό εργαστήριο', en: 'Traditional workshop' },
+      src: '/assets/images/stamatopoulos/about/history-thumb-3.png',
+      alt: { el: 'Το ιστορικό κατάστημα', en: 'The historic shopfront' },
     },
   ],
-  sideImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/hero-img1.jpg',
+  sideImage: '/assets/images/stamatopoulos/about/history-team.png',
   sideImageAlt: { el: 'Η ομάδα μας στο εργαστήριο', en: 'Our team in the workshop' },
   sideText: {
     el: 'Σήμερα, το εργαστήριό μας συνδυάζει την εμπειρία των προηγούμενων γενεών με φρέσκιες ιδέες — πάντα με τα χέρια στην πρώτη ύλη και το βλέμμα στη λεπτομέρεια.',
@@ -788,28 +790,28 @@ export const aboutPageConfig: AboutPageConfig = {
 
   funFacts: [
     {
-      iconClass: 'fas fa-circle-notch',
+      iconSrc: '/assets/images/stamatopoulos/about/icons/stat-spiral.svg',
       value: { el: '1950', en: '1950' },
       suffix: { el: '', en: '' },
       label: { el: 'Όλα ξεκίνησαν με μεράκι', en: 'It all began with passion' },
       aosDurationMs: 800,
     },
     {
-      iconClass: 'far fa-heart',
+      iconSrc: '/assets/images/stamatopoulos/about/icons/stat-heart.svg',
       value: { el: '4 γενιές', en: '4 generations' },
       suffix: { el: '', en: '' },
       label: { el: 'Οικογενειακή παράδοση', en: 'Family tradition' },
       aosDurationMs: 950,
     },
     {
-      iconClass: 'fas fa-star',
+      iconSrc: '/assets/images/stamatopoulos/about/icons/stat-snowflake.svg',
       value: { el: '1976', en: '1976' },
       suffix: { el: '', en: '' },
       label: { el: 'Το εργαστήριο παίρνει μορφή', en: 'The workshop takes shape' },
       aosDurationMs: 1100,
     },
     {
-      iconClass: 'fas fa-leaf',
+      iconSrc: '/assets/images/stamatopoulos/about/icons/stat-leaf.svg',
       value: { el: 'Σήμερα', en: 'Today' },
       suffix: { el: '', en: '' },
       label: {
