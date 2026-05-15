@@ -1848,7 +1848,8 @@ a {
 
 /* About page — Stamatopoulos / Figma */
 .stamatopoulos-about-page .stamatopoulos-about-hero,
-.stamatopoulos-contact-page .stamatopoulos-about-hero {
+.stamatopoulos-contact-page .stamatopoulos-about-hero,
+.stamatopoulos-menu-page .stamatopoulos-about-hero {
   position: relative;
   background-size: cover;
   background-position: center;
@@ -1861,7 +1862,8 @@ a {
 }
 
 .stamatopoulos-about-page .stamatopoulos-about-hero::before,
-.stamatopoulos-contact-page .stamatopoulos-about-hero::before {
+.stamatopoulos-contact-page .stamatopoulos-about-hero::before,
+.stamatopoulos-menu-page .stamatopoulos-about-hero::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -1896,6 +1898,108 @@ a {
 /* Contact page — Stamatopoulos / Figma */
 .stamatopoulos-contact-page .stamatopoulos-about-hero-inner {
   max-width: 720px;
+}
+
+.stamatopoulos-menu-page .stamatopoulos-menu-hero-inner {
+  max-width: 860px;
+}
+
+.stamatopoulos-menu-page .stamatopoulos-menu-section {
+  background-color: #ffffff;
+}
+
+.stamatopoulos-menu-section-head {
+  max-width: 46rem;
+  margin-bottom: 0.25rem;
+}
+
+.stamatopoulos-menu-section-kicker {
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: rgba(81, 37, 0, 0.65);
+  margin: 0 0 0.85rem;
+}
+
+.stamatopoulos-menu-section-title {
+  font-family: var(--heading-font, 'Marcellus', Georgia, serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.55rem);
+  font-weight: 400;
+  color: #512500;
+  line-height: 1.18;
+  margin: 0;
+}
+
+.stamatopoulos-menu-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.35rem;
+  height: 100%;
+}
+
+.stamatopoulos-menu-card-thumb {
+  flex-shrink: 0;
+  width: 118px;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(81, 37, 0, 0.06);
+}
+
+.stamatopoulos-menu-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.stamatopoulos-menu-card-title {
+  font-family: var(--heading-font, 'Marcellus', Georgia, serif);
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #e98d74;
+  line-height: 1.28;
+  margin: 0 0 0.5rem;
+}
+
+.stamatopoulos-menu-card-desc {
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 0.78);
+}
+
+.stamatopoulos-menu-bottom-cta-wrap {
+  background-color: #ffffff;
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.stamatopoulos-menu-bottom-cta-wrap .container {
+  padding-top: 0;
+}
+
+.stamatopoulos-menu-bottom-cta {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  padding: 0.85rem 2.25rem;
+}
+
+@media (max-width: 575.98px) {
+  .stamatopoulos-menu-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .stamatopoulos-menu-card-thumb {
+    width: 100%;
+    max-width: 220px;
+  }
 }
 
 .stamatopoulos-contact-quick {

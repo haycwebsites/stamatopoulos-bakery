@@ -341,15 +341,35 @@ export interface ContactPageConfig {
   mapEmbedSrc: string;
 }
 
+export interface MenuPageCategoryItemConfig {
+  imageSrc: string;
+  imageAlt: LocaleString;
+  title: LocaleString;
+  description: LocaleString;
+  aosDurationMs?: number;
+}
+
+export interface MenuPageCategorySectionConfig {
+  kicker: LocaleString;
+  title: LocaleString;
+  items: MenuPageCategoryItemConfig[];
+}
+
 export interface MenuPageConfig {
   bannerBackgroundImage: string;
   bannerTitle: LocaleString;
+  /** Hero line below title (Stamatopoulos menu — no breadcrumb in hero) */
+  bannerSubtitle?: LocaleString;
   breadcrumbHomeLabel: LocaleString;
   breadcrumbHomeHref: string;
   breadcrumbCurrentLabel: LocaleString;
-  lead: LocaleString;
-  ctaLabel: LocaleString;
-  ctaHref: string;
+  /** Legacy placeholder block — omitted when using `sections` layout */
+  lead?: LocaleString;
+  ctaLabel?: LocaleString;
+  ctaHref?: string;
+  sections?: MenuPageCategorySectionConfig[];
+  bottomCtaLabel?: LocaleString;
+  bottomCtaHref?: string;
 }
 
 // =============================================================================
@@ -883,7 +903,7 @@ export const aboutPageConfig: AboutPageConfig = {
 
 export const contactPageConfig: ContactPageConfig = {
   bannerBackgroundImage: '/assets/images/stamatopoulos/contact-hero.png',
-  bannerTitle: { el: 'Μιλήστε μαζί μας', en: 'Talk to us' },
+  bannerTitle: { el: 'Μιληστε μαζι μας', en: 'Talk to us' },
   bannerSubtitle: {
     el: 'Για παραγγελίες, εκδηλώσεις ή οποιαδήποτε πληροφορία, είμαστε εδώ για να σας εξυπηρετήσουμε.',
     en: 'For orders, events, or any information, we are here to help.',
@@ -944,17 +964,157 @@ export const contactPageConfig: ContactPageConfig = {
 };
 
 export const menuPageConfig: MenuPageConfig = {
-  bannerBackgroundImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/page-bg.jpg',
-  bannerTitle: { el: 'Menu', en: 'Menu' },
-  breadcrumbHomeLabel: { el: 'Home', en: 'Home' },
-  breadcrumbHomeHref: '/',
-  breadcrumbCurrentLabel: { el: 'Menu', en: 'Menu' },
-  lead: {
-    el: 'Full menu pages will be added here. For now, contact us for reservations or special orders.',
-    en: 'Full menu pages will be added here. For now, contact us for reservations or special orders.',
+  bannerBackgroundImage: '/assets/images/stamatopoulos/menu-hero.png',
+  bannerTitle: { el: 'Οι δημιουργίες μας', en: 'Our creations' },
+  bannerSubtitle: {
+    el: 'Γλυκά για την καθημερινότητα, τις γιορτές και τις ξεχωριστές στιγμές σας, φτιαγμένα με φροντίδα, ποιότητα και χαρακτήρα.',
+    en: 'Everyday treats, celebrations, and special moments—made with care, quality, and character.',
   },
-  ctaLabel: { el: 'Contact us', en: 'Contact us' },
-  ctaHref: '/contact',
+  breadcrumbHomeLabel: { el: 'Αρχική', en: 'Home' },
+  breadcrumbHomeHref: '/',
+  breadcrumbCurrentLabel: { el: 'Δημιουργίες', en: 'Creations' },
+  sections: [
+    {
+      kicker: { el: 'Οι γεύσεις μας', en: 'Our flavors' },
+      title: { el: 'Αγαπημένες καθημερινές απολαύσεις', en: 'Favorite daily treats' },
+      items: [
+        {
+          imageSrc: '/assets/images/stamatopoulos/promo-daily-delights.png',
+          imageAlt: { el: 'Πάστες και ατομικά γλυκά', en: 'Pastries and individual desserts' },
+          title: { el: 'Πάστες & ατομικά γλυκά', en: 'Pastries & individual desserts' },
+          description: {
+            el: 'Μικρές δημιουργίες με ισορροπημένες γεύσεις και προσεγμένη εμφάνιση.',
+            en: 'Petite creations with balanced flavors and refined presentation.',
+          },
+          aosDurationMs: 750,
+        },
+        {
+          imageSrc: '/assets/images/stamatopoulos/about/history-thumb-1.png',
+          imageAlt: { el: 'Κουλουράκια και βουτήματα', en: 'Cookies and dipping treats' },
+          title: { el: 'Κουλουράκια & βουτήματα', en: 'Cookies & dipping treats' },
+          description: {
+            el: 'Ιδανικά για τον καφέ, το κέρασμα ή το τραπέζι της ημέρας.',
+            en: 'Perfect with coffee, for treating guests, or the everyday table.',
+          },
+          aosDurationMs: 850,
+        },
+        {
+          imageSrc: '/assets/images/stamatopoulos/promo-signature-desserts.png',
+          imageAlt: { el: 'Σιροπιαστά γλυκά', en: 'Syrupy desserts' },
+          title: { el: 'Σιροπιαστά', en: 'Syrupy classics' },
+          description: {
+            el: 'Κλασικές γεύσεις, φτιαγμένες με την παράδοση και φροντίδα που τους αξίζει.',
+            en: 'Classic flavors made with the tradition and care they deserve.',
+          },
+          aosDurationMs: 950,
+        },
+        {
+          imageSrc: '/assets/images/stamatopoulos/hero-pecan-slice.png',
+          imageAlt: { el: 'Τσουρέκια και επιδόρπια', en: 'Sweet breads and desserts' },
+          title: { el: 'Τσουρέκια & επιδόρπια', en: 'Sweet breads & desserts' },
+          description: {
+            el: 'Αγαπημένες γεύσεις που επιστρέφουν στις στιγμές και τις γιορτές τους.',
+            en: 'Beloved flavors that belong to holidays and gathering moments.',
+          },
+          aosDurationMs: 1050,
+        },
+      ],
+    },
+    {
+      kicker: { el: 'Για κάθε περίσταση', en: 'For every occasion' },
+      title: { el: 'Τούρτες & custom δημιουργίες', en: 'Cakes & custom creations' },
+      items: [
+        {
+          imageSrc: '/assets/images/stamatopoulos/promo-custom-cakes.png',
+          imageAlt: { el: 'Τούρτες γενεθλίων', en: 'Birthday cakes' },
+          title: { el: 'Τούρτες γενεθλίων', en: 'Birthday cakes' },
+          description: {
+            el: 'Γεύσεις και σχέδια που φτιάχνονται για την ηλικία, το θέμα και τη στιγμή.',
+            en: 'Flavors and designs tailored to age, theme, and the moment.',
+          },
+          aosDurationMs: 750,
+        },
+        {
+          imageSrc: '/assets/images/stamatopoulos/offer-custom-cake.png',
+          imageAlt: { el: 'Τούρτες γάμου', en: 'Wedding cakes' },
+          title: { el: 'Τούρτες γάμου', en: 'Wedding cakes' },
+          description: {
+            el: 'Κομψές γλυκές συνθέσεις για την πιο ιδιαίτερη στιγμή.',
+            en: 'Elegant sweet compositions for your most special day.',
+          },
+          aosDurationMs: 850,
+        },
+        {
+          imageSrc: '/assets/images/stamatopoulos/about/philosophy-cake.png',
+          imageAlt: { el: 'Τούρτες βάφτισης', en: 'Christening cakes' },
+          title: { el: 'Τούρτες βάφτισης', en: 'Christening cakes' },
+          description: {
+            el: 'Πρωτότυπες δημιουργίες για μια τρυφερή και ξεχωριστή ημέρα.',
+            en: 'Original creations for a tender, unforgettable day.',
+          },
+          aosDurationMs: 950,
+        },
+        {
+          imageSrc: '/assets/images/stamatopoulos/about/history-thumb-2.png',
+          imageAlt: { el: 'Custom cakes', en: 'Custom cakes' },
+          title: { el: 'Custom cakes', en: 'Custom cakes' },
+          description: {
+            el: 'Σχέδια και γεύσεις που δημιουργούνται με βάση τη δική σας ιδέα.',
+            en: 'Designs and flavors shaped around your own vision.',
+          },
+          aosDurationMs: 1050,
+        },
+      ],
+    },
+    {
+      kicker: { el: 'Γιορτές & κεράσματα', en: 'Holidays & treats' },
+      title: { el: 'Γλυκές προτάσεις για εκδηλώσεις', en: 'Sweet ideas for events' },
+      items: [
+        {
+          imageSrc: '/assets/images/stamatopoulos/promo-signature-desserts.png',
+          imageAlt: { el: 'Candy bar εκδήλωσης', en: 'Candy bar' },
+          title: { el: 'Candy bars', en: 'Candy bars' },
+          description: {
+            el: 'Γλυκές συνθέσεις με αισθητική, ποικιλία και χαρακτήρα.',
+            en: 'Sweet spreads with style, variety, and personality.',
+          },
+          aosDurationMs: 750,
+        },
+        {
+          imageSrc: '/assets/images/stamatopoulos/about/history-thumb-3.png',
+          imageAlt: { el: 'Γλυκά για γάμο', en: 'Wedding sweets' },
+          title: { el: 'Γλυκά για γάμο', en: 'Wedding sweets' },
+          description: {
+            el: 'Προτάσεις για θρησκευτικό γάμο, κεράσματα και γλυκές λεπτομέρειες.',
+            en: 'Options for church weddings, favors, and sweet finishing touches.',
+          },
+          aosDurationMs: 850,
+        },
+        {
+          imageSrc: '/assets/images/stamatopoulos/about/hero-cupcakes.png',
+          imageAlt: { el: 'Γλυκά για βάφτιση', en: 'Christening sweets' },
+          title: { el: 'Γλυκά για βάφτιση', en: 'Christening sweets' },
+          description: {
+            el: 'Κεράσματα και ατομικές δημιουργίες για μια όμορφη γιορτή.',
+            en: 'Favors and individual treats for a joyful celebration.',
+          },
+          aosDurationMs: 950,
+        },
+        {
+          imageSrc: '/assets/images/stamatopoulos/97fc5e805ac11e44aa93524cdede5776ead81514.jpg',
+          imageAlt: { el: 'Εταιρικές παραγγελίες', en: 'Corporate orders' },
+          title: { el: 'Εταιρικές παραγγελίες', en: 'Corporate orders' },
+          description: {
+            el: 'Γλυκές επιλογές για εκδηλώσεις, δώρα και επαγγελματικές περιστάσεις.',
+            en: 'Sweet selections for events, gifts, and professional occasions.',
+          },
+          aosDurationMs: 1050,
+        },
+      ],
+    },
+  ],
+  bottomCtaLabel: { el: 'Μιληστε μαζί μας', en: 'Talk to us' },
+  bottomCtaHref: '/contact',
 };
 
 export const digitalProductsConfig: DigitalProductsConfig = {
