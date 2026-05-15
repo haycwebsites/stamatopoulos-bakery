@@ -543,7 +543,7 @@ export const homeConfig: HomeConfig = {
   },
   categories: [
     {
-      iconSrc: '/assets/images/stamatopoulos/icon-custom-cakes.svg',
+      iconSrc: '/assets/images/stamatopoulos/icon-daily-delights.svg',
       iconAlt: { el: 'Custom τούρτες', en: 'Custom cakes' },
       title: { el: 'Custom Τούρτες', en: 'Custom Cakes' },
       backgroundColor: '#FEF4EB',
