@@ -740,12 +740,14 @@ a {
 .ds-about-sec .about-wrapper {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .ds-about-sec .about-wrapper .about-left-wrap {
   width: calc(50% - 15px);
   margin-right: 15px;
   min-height: 1100px;
+  align-self: stretch;
 }
 
 @media screen and (max-width: 1199.98px) {
@@ -759,11 +761,34 @@ a {
 
 .ds-about-sec .about-wrapper .about-right-wrap {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  min-height: 100%;
+  gap: 0;
+}
+
+.ds-about-sec .about-wrapper .about-right-wrap > .bistly-about-box,
+.ds-about-sec .about-wrapper .about-right-wrap > .bistly-experience-box {
+  flex: 1 1 50%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 1199.98px) {
   .ds-about-sec .about-wrapper .about-right-wrap {
     width: 100%;
+    display: block;
+    min-height: 0;
+  }
+
+  .ds-about-sec .about-wrapper .about-right-wrap > .bistly-about-box,
+  .ds-about-sec .about-wrapper .about-right-wrap > .bistly-experience-box {
+    flex: none;
+    display: block;
+    min-height: auto;
   }
 }
 
@@ -773,7 +798,6 @@ a {
   overflow: hidden;
   padding: 45px 50px;
   background-color: #FEF4EB;
-  margin-bottom: 10px;
 }
 
 .ds-about-sec .bistly-about-box .shape {
@@ -788,7 +812,13 @@ a {
 } */
 
 .ds-about-sec .bistly-about-box .content {
+  position: relative;
+  z-index: 1;
   max-width: 580px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1199.98px) {
@@ -830,6 +860,10 @@ a {
 
 .ds-about-sec .bistly-experience-box .content {
   max-width: 580px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1199.98px) {
