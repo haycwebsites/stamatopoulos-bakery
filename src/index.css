@@ -1140,3 +1140,171 @@ a {
     object-fit: cover;
   }
 }
+
+/* Stamatopoulos home — post-hero sections */
+.stamatopoulos-sub-title {
+  font-family: var(--body-font, 'Roboto', sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #84a58e !important;
+}
+
+.stamatopoulos-sub-title::before,
+.stamatopoulos-sub-title::after {
+  display: none !important;
+}
+
+.stamatopoulos-categories-sec {
+  background-color: #ffffff;
+}
+
+.stamatopoulos-categories-heading {
+  font-family: var(--heading-font, 'Marcellus', serif);
+  font-size: clamp(1.65rem, 3.5vw, 2.5rem) !important;
+  line-height: 1.25 !important;
+  color: #512500 !important;
+  font-weight: 400;
+}
+
+.stamatopoulos-categories-sec .categories-wrapper {
+  justify-content: center;
+  gap: 1rem 1.25rem;
+}
+
+.stamatopoulos-btn-salmon.theme-btn.style-one {
+  background-color: #e98d74;
+  border: 2px solid #e98d74;
+  border-radius: 999px;
+  color: #fff;
+}
+
+.stamatopoulos-btn-salmon.theme-btn.style-one:hover {
+  background-color: #d97a62;
+  border-color: #d97a62;
+  color: #fff;
+}
+
+.ds-about-sec .bistly-experience-box {
+  background-color: #84a58e !important;
+}
+
+.ds-about-sec .bistly-experience-box .section-title h2,
+.ds-about-sec .bistly-experience-box p {
+  color: #fff !important;
+}
+
+.ds-promo-sec .bistly-promo-item .content span:empty {
+  display: none;
+}
+
+.ds-promo-sec .bistly-promo-item .content h2 {
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  line-height: 1.2;
+  color: #512500;
+}
+
+.stamatopoulos-testimonials-sec {
+  background-color: #fff;
+}
+
+.stamatopoulos-testimonial-card {
+  background: #faf4ed;
+  border-radius: 20px;
+  padding: 1.75rem 1.5rem;
+  height: 100%;
+  border: 1px solid rgba(81, 37, 0, 0.08);
+}
+
+.stamatopoulos-testimonial-stars {
+  color: #ff9f1a;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.2rem;
+}
+
+.stamatopoulos-testimonial-card p {
+  color: #512500;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.stamatopoulos-testimonial-card footer {
+  font-weight: 600;
+  color: #512500;
+  font-size: 0.875rem;
+}
+
+.stamatopoulos-newsletter-wrap {
+  background-color: #84a58e !important;
+  background-image: none !important;
+  border-radius: 24px;
+  padding: clamp(2.5rem, 5vw, 3.5rem) 1.5rem;
+}
+
+.stamatopoulos-newsletter-sec .ds-cta-box h2 {
+  color: #fff !important;
+  font-family: var(--heading-font, 'Marcellus', serif);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 400;
+}
+
+.stamatopoulos-newsletter-sec .ds-cta-box .form-group {
+  display: flex;
+  max-width: 480px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 999px;
+  overflow: hidden;
+  padding: 4px;
+}
+
+.stamatopoulos-newsletter-sec .ds-cta-box .form_control {
+  flex: 1;
+  border: none;
+  padding: 14px 20px;
+  background: transparent;
+  outline: none;
+}
+
+.stamatopoulos-newsletter-btn.theme-btn.style-one {
+  background-color: #e98d74;
+  border-radius: 999px;
+  border: none;
+  padding: 12px 22px;
+  flex-shrink: 0;
+}
+
+.stamatopoulos-blog-sec .stamatopoulos-blog-meta {
+  font-size: 0.8125rem;
+  color: #84a58e;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.stamatopoulos-blog-meta-sep {
+  margin: 0 0.35rem;
+}
+
+.stamatopoulos-blog-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #512500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.stamatopoulos-blog-read-more:hover {
+  color: #e98d74;
+}
+
+.default-footer.rs-footer {
+  background-color: #6b8f71 !important;
+}

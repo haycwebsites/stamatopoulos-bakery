@@ -74,20 +74,22 @@ export default function IndexPage() {
           </div>
         </section>
 
-        <section className="ds-categories-sec py-5">
+        <section className="ds-categories-sec stamatopoulos-categories-sec py-5">
           <div className="container">
             <div className="row justify-content-center pt-5">
-              <div className="col-xl-7">
-                <div className="section-title text-center mt-3">
-                  <span
-                    {...cp('homeConfig.categoriesKicker')}
-                    className="sub-title"
-                    data-aos="fade-down"
-                    data-aos-duration="1000"
-                  >
-                    {t(hc.categoriesKicker)}
-                  </span>
-                  <h2 {...cp('homeConfig.categoriesTitle')} className="text-anm">
+              <div className="col-xl-10">
+                <div className="section-title text-center mt-3 stamatopoulos-section-title">
+                  {t(hc.categoriesKicker) ? (
+                    <span
+                      {...cp('homeConfig.categoriesKicker')}
+                      className="sub-title stamatopoulos-sub-title"
+                      data-aos="fade-down"
+                      data-aos-duration="1000"
+                    >
+                      {t(hc.categoriesKicker)}
+                    </span>
+                  ) : null}
+                  <h2 {...cp('homeConfig.categoriesTitle')} className="text-anm stamatopoulos-categories-heading">
                     {t(hc.categoriesTitle)}
                   </h2>
                 </div>
@@ -128,7 +130,7 @@ export default function IndexPage() {
                   </div>
                   <div className="content">
                     <div className="section-title mb-4">
-                      <span {...cp('homeConfig.aboutKicker')} className="sub-title">
+                      <span {...cp('homeConfig.aboutKicker')} className="sub-title stamatopoulos-sub-title">
                         {t(hc.aboutKicker)}
                       </span>
                       <h2 {...cp('homeConfig.aboutTitle')}>{t(hc.aboutTitle)}</h2>
@@ -144,7 +146,7 @@ export default function IndexPage() {
                       <AppLink
                         {...cp('homeConfig.aboutCtaLabel')}
                         href={hc.aboutCtaHref}
-                        className="theme-btn style-one"
+                        className="theme-btn style-one stamatopoulos-btn-salmon"
                       >
                         {t(hc.aboutCtaLabel)}
                       </AppLink>
@@ -155,9 +157,11 @@ export default function IndexPage() {
                 <div className="bistly-experience-box" data-aos="fade-up" data-aos-duration="1200">
                   <div className="content">
                     <div className="section-title">
-                      <span {...cp('homeConfig.experienceKicker')} className="sub-title">
-                        {t(hc.experienceKicker)}
-                      </span>
+                      {t(hc.experienceKicker) ? (
+                        <span {...cp('homeConfig.experienceKicker')} className="sub-title stamatopoulos-sub-title">
+                          {t(hc.experienceKicker)}
+                        </span>
+                      ) : null}
                       <h2 {...cp('homeConfig.experienceTitle')}>{t(hc.experienceTitle)}</h2>
                     </div>
                     <p {...cp('homeConfig.experienceText')}>{t(hc.experienceText)}</p>
@@ -180,7 +184,9 @@ export default function IndexPage() {
                     data-aos-duration={card.aosDurationMs ?? 1000}
                   >
                     <div className="content">
-                      <span {...cp(`homeConfig.promoCards.${i}.kicker`)}>{t(card.kicker)}</span>
+                      {t(card.kicker) ? (
+                        <span {...cp(`homeConfig.promoCards.${i}.kicker`)}>{t(card.kicker)}</span>
+                      ) : null}
                       <h2 {...cp(`homeConfig.promoCards.${i}.title`)}>{t(card.title)}</h2>
                     </div>
                   </div>
@@ -197,7 +203,7 @@ export default function IndexPage() {
                 <div className="section-title text-center">
                   <span
                     {...cp('homeConfig.chooseKicker')}
-                    className="sub-title"
+                    className="sub-title stamatopoulos-sub-title"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                   >
@@ -267,7 +273,7 @@ export default function IndexPage() {
                   <div className="section-title mb-3">
                     <span
                       {...cp('homeConfig.offerKicker')}
-                      className="sub-title"
+                      className="sub-title stamatopoulos-sub-title"
                       data-aos="fade-down"
                       data-aos-duration="1000"
                     >
@@ -281,7 +287,11 @@ export default function IndexPage() {
                     {t(hc.offerText)}
                   </p>
                   <div className="bistly-button pt-2" data-aos="fade-up" data-aos-duration="1400">
-                    <AppLink {...cp('homeConfig.offerCtaLabel')} href={hc.offerCtaHref} className="theme-btn style-one">
+                    <AppLink
+                      {...cp('homeConfig.offerCtaLabel')}
+                      href={hc.offerCtaHref}
+                      className="theme-btn style-one stamatopoulos-btn-salmon"
+                    >
                       {t(hc.offerCtaLabel)}
                     </AppLink>
                   </div>
@@ -299,21 +309,46 @@ export default function IndexPage() {
           </div>
         </section>
 
-        <section className="ds-cta pt-5 p-r z-1 overflow-hidden">
+        <section className="ds-testimonials-sec stamatopoulos-testimonials-sec py-5">
           <div className="container">
-            <div
-              className="ds-cta-wrapper bg_cover mt-5"
-              style={{ backgroundImage: `url(${img(hc.ctaBackgroundImage)})` }}
-            >
+            <div className="row justify-content-center g-4">
+              {hc.testimonials.map((item, i) => (
+                <div key={i} className="col-lg-4 col-md-6">
+                  <article
+                    className="stamatopoulos-testimonial-card"
+                    data-aos="fade-up"
+                    data-aos-duration={1000 + i * 150}
+                  >
+                    <div className="stamatopoulos-testimonial-stars" aria-hidden="true">
+                      <i className="fas fa-star" />
+                      <i className="fas fa-star" />
+                      <i className="fas fa-star" />
+                      <i className="fas fa-star" />
+                      <i className="fas fa-star" />
+                    </div>
+                    <p {...cp(`homeConfig.testimonials.${i}.text`)}>{t(item.text)}</p>
+                    <footer {...cp(`homeConfig.testimonials.${i}.author`)}>{t(item.author)}</footer>
+                  </article>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="ds-cta stamatopoulos-newsletter-sec pt-5 p-r z-1 overflow-hidden">
+          <div className="container">
+            <div className="ds-cta-wrapper stamatopoulos-newsletter-wrap bg_cover mt-5">
               <div className="row justify-content-center">
-                <div className="col-xl-7">
+                <div className="col-xl-8">
                   <div className="ds-cta-box text-center">
                     <div className="section-title" data-aos="fade-up" data-aos-duration="1000">
                       <h2 {...cp('homeConfig.ctaTitle')}>{t(hc.ctaTitle)}</h2>
                     </div>
-                    <p {...cp('homeConfig.ctaSubtitle')} data-aos="fade-up" data-aos-duration="1200">
-                      {t(hc.ctaSubtitle)}
-                    </p>
+                    {t(hc.ctaSubtitle) ? (
+                      <p {...cp('homeConfig.ctaSubtitle')} data-aos="fade-up" data-aos-duration="1200">
+                        {t(hc.ctaSubtitle)}
+                      </p>
+                    ) : null}
                     <form autoComplete="off" data-aos="fade-up" data-aos-duration="1400">
                       <div className="form-group">
                         <input
@@ -324,7 +359,11 @@ export default function IndexPage() {
                           required
                           {...cp('homeConfig.ctaEmailPlaceholder')}
                         />
-                        <button {...cp('homeConfig.ctaButtonLabel')} className="theme-btn style-one" type="submit">
+                        <button
+                          {...cp('homeConfig.ctaButtonLabel')}
+                          className="theme-btn style-one stamatopoulos-newsletter-btn"
+                          type="submit"
+                        >
                           {t(hc.ctaButtonLabel)}
                         </button>
                       </div>
@@ -336,14 +375,14 @@ export default function IndexPage() {
           </div>
         </section>
 
-        <section className="ds-blog py-5">
+        <section className="ds-blog stamatopoulos-blog-sec py-5">
           <div className="container">
             <div className="row justify-content-center py-5">
-              <div className="col-lg-7">
-                <div className="section-title text-center mt-xl-4">
+              <div className="col-lg-9">
+                <div className="section-title text-center mt-xl-4 stamatopoulos-section-title">
                   <span
                     {...cp('homeConfig.blogKicker')}
-                    className="sub-title"
+                    className="sub-title stamatopoulos-sub-title"
                     data-aos="fade-down"
                     data-aos-duration="1000"
                   >
@@ -364,13 +403,10 @@ export default function IndexPage() {
                       <img src={img(post.image)} alt={t(post.title)} />
                     </div>
                     <div className="post-content">
-                      <div className="post-meta">
-                        <span {...cp(`homeConfig.blogPosts.${i}.authorLabel`)}>
-                          <i className="far fa-user" /> {t(post.authorLabel)}
-                        </span>
-                        <span {...cp(`homeConfig.blogPosts.${i}.dateLabel`)}>
-                          <i className="far fa-calendar-alt" /> {t(post.dateLabel)}
-                        </span>
+                      <div className="post-meta stamatopoulos-blog-meta">
+                        <span {...cp(`homeConfig.blogPosts.${i}.dateLabel`)}>{t(post.dateLabel)}</span>
+                        <span className="stamatopoulos-blog-meta-sep">—</span>
+                        <span {...cp(`homeConfig.blogPosts.${i}.authorLabel`)}>{t(post.authorLabel)}</span>
                       </div>
                       <h4>
                         <a {...cp(`homeConfig.blogPosts.${i}.title`)} href={post.href}>
@@ -378,6 +414,13 @@ export default function IndexPage() {
                         </a>
                       </h4>
                       <p {...cp(`homeConfig.blogPosts.${i}.excerpt`)}>{t(post.excerpt)}</p>
+                      <a
+                        {...cp('homeConfig.blogReadMoreLabel')}
+                        href={post.href}
+                        className="stamatopoulos-blog-read-more"
+                      >
+                        {t(hc.blogReadMoreLabel)} <i className="fas fa-arrow-right" />
+                      </a>
                     </div>
                   </div>
                 </div>
