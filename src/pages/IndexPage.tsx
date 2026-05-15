@@ -100,13 +100,15 @@ export default function IndexPage() {
                 <div
                   key={`${cat.iconSrc ?? cat.iconClass ?? 'cat'}-${i}`}
                   className={`bistly-category-item stamatopoulos-category-item${
-                    cat.backgroundColor === '#79A388'
+                    cat.backgroundColor === '#79A3882B'
                       ? ' stamatopoulos-category-item--sage'
                       : cat.backgroundColor === '#FEF4EB'
                         ? ' stamatopoulos-category-item--cream'
                         : cat.backgroundColor === '#EEE9E5'
                           ? ' stamatopoulos-category-item--stone'
-                          : ''
+                          : cat.backgroundColor === '#E1D9B240'
+                            ? ' stamatopoulos-category-item--daily'
+                            : ''
                   }${cat.bgClass ? ` ${cat.bgClass}` : ''} mb-4`}
                   style={{
                     ...(cat.backgroundColor ? { backgroundColor: cat.backgroundColor } : {}),
