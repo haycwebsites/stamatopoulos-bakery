@@ -126,6 +126,7 @@ export interface HomeCategoryConfig {
   bgClass?: string;
   backgroundColor?: string;
   textColor?: string;
+  iconBackgroundColor?: string;
   iconVariant?: 'default' | 'contained';
   aosDurationMs?: number;
 }
@@ -473,6 +474,7 @@ export const homeConfig: HomeConfig = {
       iconAlt: { el: 'Signature desserts', en: 'Signature desserts' },
       title: { el: 'Signature Desserts', en: 'Signature Desserts' },
       backgroundColor: '#79A3882B',
+      iconBackgroundColor: '#79A388',
       textColor: '#512500',
       aosDurationMs: 1100,
     },

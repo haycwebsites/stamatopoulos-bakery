@@ -117,7 +117,10 @@ export default function IndexPage() {
                   data-aos="fade-up"
                   data-aos-duration={cat.aosDurationMs ?? 1000}
                 >
-                  <div className={`icon${cat.iconVariant === 'contained' ? ' icon-contained' : ''}`}>
+                  <div
+                    className={`icon${cat.iconVariant === 'contained' ? ' icon-contained' : ''}`}
+                    style={cat.iconBackgroundColor ? { backgroundColor: cat.iconBackgroundColor } : undefined}
+                  >
                     {cat.iconSrc ? (
                       <img
                         src={img(cat.iconSrc)}
