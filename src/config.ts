@@ -95,6 +95,10 @@ export interface FooterConfig {
   aboutText: LocaleString;
   socialLinks: SocialLinkConfig[];
 
+  /** Optional serif/sans stack headline instead of logo image only */
+  brandHeadlineLine1?: LocaleString;
+  brandHeadlineLine2?: LocaleString;
+
   linksTitle: LocaleString;
   links: FooterLinkConfig[];
 
@@ -105,6 +109,17 @@ export interface FooterConfig {
   newsletterSubtitle: LocaleString;
   newsletterEmailPlaceholder: LocaleString;
   newsletterSubscribeLabel: LocaleString;
+
+  /** Fourth column: contact CTA (when set, replaces newsletter signup block) */
+  ctaColumnTitle?: LocaleString;
+  ctaColumnBody?: LocaleString;
+  ctaColumnButtonLabel?: LocaleString;
+  ctaColumnHref?: string;
+
+  /** Omit decorative corner shapes for flat layouts */
+  hideFooterShapes?: boolean;
+  /** Single-row copyright (hide Privacy / Terms) */
+  hideFooterLegalLinks?: boolean;
 
   copyrightText: LocaleString;
   madeByPrefix: LocaleString;
@@ -377,18 +392,20 @@ export const footerConfig: FooterConfig = {
   logoSrc: '/assets/images/stamatopoulos/logo-yiannis-stella.svg',
   logoAlt: { el: 'Yiannis & Stella — Stamatopoulos Pastry', en: 'Yiannis & Stella — Stamatopoulos Pastry' },
   brandHref: '/',
+
+  brandHeadlineLine1: { el: 'Yiannis & Stella', en: 'Yiannis & Stella' },
+  brandHeadlineLine2: { el: 'STAMATOPOULOS — PASTRY', en: 'STAMATOPOULOS — PASTRY' },
+
   aboutText: {
-    el: 'Από το 1950, τέσσερις γενιές δημιουργούν γλυκά με παράδοση, φροντίδα και αγάπη για την τέχνη του ζαχαροπλαστικού.',
-    en: 'Since 1950, four generations have been creating sweets with tradition, care, and love for the art of pastry.',
+    el: 'Γλυκές δημιουργίες με ρίζες από το 1950, φτιαγμένες με φροντίδα, τεχνική και χαρακτήρα.',
+    en: 'Sweet creations with roots since 1950, made with care, skill, and character.',
   },
   socialLinks: [
     { platform: 'facebook', href: '#' },
-    { platform: 'twitter', href: '#' },
     { platform: 'instagram', href: '#' },
-    { platform: 'youtube', href: '#' },
   ],
 
-  linksTitle: { el: 'ΧΡΗΣΙΜΟΙ ΣΥΝΔΕΣΜΟΙ', en: 'Useful Links' },
+  linksTitle: { el: 'Χρήσιμοι Σύνδεσμοι', en: 'Useful Links' },
   links: [
     { label: { el: 'Αρχική', en: 'Home' }, href: '/' },
     { label: { el: 'Σχετικά με Εμάς', en: 'About Us' }, href: '/about' },
@@ -396,11 +413,20 @@ export const footerConfig: FooterConfig = {
     { label: { el: 'Επικοινωνία', en: 'Contact' }, href: '/contact' },
   ],
 
-  openingTimeTitle: { el: 'ΩΡΑΡΙΟ', en: 'Opening Hours' },
+  openingTimeTitle: { el: 'Ωράριο Λειτουργίας', en: 'Opening Hours' },
   openingHours: [
-    { days: { el: 'Mon - Thu:', en: 'Mon - Thu:' }, time: { el: '10:00 am - 01:00 am', en: '10:00 am - 01:00 am' } },
-    { days: { el: 'Fri - Sat:', en: 'Fri - Sat:' }, time: { el: '10:00 am - 01:00 am', en: '10:00 am - 01:00 am' } },
-    { days: { el: 'Sunday:', en: 'Sunday:' }, time: { el: 'Off Day', en: 'Off Day' }, isOffDay: true },
+    {
+      days: { el: 'Δευτ - Παρ:', en: 'Mon - Fri:' },
+      time: { el: '09:00 π.μ. - 10:00 μ.μ.', en: '9:00 a.m. - 10:00 p.m.' },
+    },
+    {
+      days: { el: 'Σάββατο:', en: 'Saturday:' },
+      time: { el: '09:00 π.μ. - 10:00 μ.μ.', en: '9:00 a.m. - 10:00 p.m.' },
+    },
+    {
+      days: { el: 'Κυριακή:', en: 'Sunday:' },
+      time: { el: '11:00 π.μ. - 08:00 μ.μ.', en: '11:00 a.m. - 8:00 p.m.' },
+    },
   ],
 
   newsletterTitle: { el: 'NEWSLETTER', en: 'Newsletter' },
@@ -411,11 +437,28 @@ export const footerConfig: FooterConfig = {
   newsletterEmailPlaceholder: { el: 'Το email σας', en: 'Your email' },
   newsletterSubscribeLabel: { el: 'ΕΓΓΡΑΦΗ', en: 'Subscribe' },
 
-  copyrightText: { el: '© 2026 Stamatopoulos Pastry. Με επιφύλαξη παντός δικαιώματος.', en: '© 2026 Stamatopoulos Pastry. All rights reserved.' },
-  madeByPrefix: { el: 'Made by ', en: 'Made by ' },
+  ctaColumnTitle: {
+    el: 'Για custom τούρτες & events',
+    en: 'Custom cakes & events',
+  },
+  ctaColumnBody: {
+    el: 'Επικοινώνησε μαζί μας για να σχεδιάσουμε μαζί τη δημιουργία που θέλεις.',
+    en: 'Get in touch so we can design together the creation you have in mind.',
+  },
+  ctaColumnButtonLabel: { el: 'ΕΠΙΚΟΙΝΩΝΙΑ', en: 'CONTACT' },
+  ctaColumnHref: '/contact',
+
+  hideFooterShapes: true,
+  hideFooterLegalLinks: true,
+
+  copyrightText: {
+    el: 'Copyright © 2026 Με επιφύλαξη παντός δικαιώματος.',
+    en: 'Copyright © 2026 All Right Reserved.',
+  },
+  madeByPrefix: { el: ' Φτιαγμένο από ', en: ' Made by ' },
   madeByLabel: { el: 'hayc', en: 'hayc' },
   madeByHref: 'https://hayc.gr/',
-  madeBySuffix: { el: ' with 💙', en: ' with 💙' },
+  madeBySuffix: { el: ' με 💙', en: ' with 💙' },
 
   privacyPolicyLabel: { el: 'Privacy Policy', en: 'Privacy Policy' },
   privacyPolicyHref: '#',
