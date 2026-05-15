@@ -242,47 +242,57 @@ export default function IndexPage() {
           </div>
         </section>
 
-        <section className="ds-choose-sec">
+        <section className="ds-choose-sec stamatopoulos-choose-sec">
           <div className="container">
             <div className="row justify-content-center py-5">
-              <div className="col-xl-7">
-                <div className="section-title text-center">
+              <div className="col-xl-8 col-lg-10">
+                <div className="section-title text-center stamatopoulos-choose-heading">
                   <span
                     {...cp('homeConfig.chooseKicker')}
-                    className="sub-title stamatopoulos-sub-title"
+                    className="stamatopoulos-choose-kicker"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                   >
                     {t(hc.chooseKicker)}
                   </span>
-                  <h2 {...cp('homeConfig.chooseTitle')} className="text-anm">
+                  <h2
+                    {...cp('homeConfig.chooseTitle')}
+                    className="stamatopoulos-choose-title"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                  >
                     {t(hc.chooseTitle)}
                   </h2>
                 </div>
               </div>
             </div>
 
-            <div className="row align-items-center pb-4">
+            <div className="row align-items-center pb-4 g-4">
               <div className="col-lg-4">
                 <div className="item-choose-list choose-list-left" data-aos="fade-right" data-aos-duration="1000">
                   {hc.chooseLeftItems.map((item, i) => (
-                    <div key={i} className="bistly-choose-item mb-5">
-                      <div className="content">
-                        <h4 {...cp(`homeConfig.chooseLeftItems.${i}.title`)} className={item.titleBgClass}>
-                          {t(item.title)}
-                        </h4>
-                        <p {...cp(`homeConfig.chooseLeftItems.${i}.description`)}>
-                          {t(item.description)}
-                        </p>
-                      </div>
+                    <div key={i} className="bistly-choose-item stamatopoulos-choose-item mb-4">
+                      <h4 {...cp(`homeConfig.chooseLeftItems.${i}.title`)} className={item.titleBgClass}>
+                        {t(item.title)}
+                      </h4>
+                      <p
+                        {...cp(`homeConfig.chooseLeftItems.${i}.description`)}
+                        className="stamatopoulos-choose-body"
+                      >
+                        {t(item.description)}
+                      </p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="col-lg-4">
-                <div className="bistly-image mb-5 d-lg-block d-none" data-aos="fade-up" data-aos-duration="1000">
-                  <img src={img(hc.chooseCenterImage)} alt={t(hc.chooseCenterImageAlt)} />
+                <div className="stamatopoulos-choose-center mb-4 mb-lg-0" data-aos="fade-up" data-aos-duration="1000">
+                  <img
+                    src={img(hc.chooseCenterImage)}
+                    alt={t(hc.chooseCenterImageAlt)}
+                    className="stamatopoulos-choose-center__image"
+                  />
                 </div>
               </div>
 
@@ -291,18 +301,19 @@ export default function IndexPage() {
                   {hc.chooseRightItems.map((item, i) => (
                     <div
                       key={i}
-                      className="bistly-choose-item mb-5"
+                      className="bistly-choose-item stamatopoulos-choose-item mb-4"
                       data-aos="fade-left"
                       data-aos-duration={item.aosDurationMs ?? 1000}
                     >
-                      <div className="content">
-                        <h4 {...cp(`homeConfig.chooseRightItems.${i}.title`)} className={item.titleBgClass}>
-                          {t(item.title)}
-                        </h4>
-                        <p {...cp(`homeConfig.chooseRightItems.${i}.description`)}>
-                          {t(item.description)}
-                        </p>
-                      </div>
+                      <h4 {...cp(`homeConfig.chooseRightItems.${i}.title`)} className={item.titleBgClass}>
+                        {t(item.title)}
+                      </h4>
+                      <p
+                        {...cp(`homeConfig.chooseRightItems.${i}.description`)}
+                        className="stamatopoulos-choose-body"
+                      >
+                        {t(item.description)}
+                      </p>
                     </div>
                   ))}
                 </div>
