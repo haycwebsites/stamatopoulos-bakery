@@ -915,8 +915,8 @@ export const contactPageConfig: ContactPageConfig = {
 
   leftTitle: { el: 'Επικοινωνήστε μαζί μας', en: 'Contact us' },
   leftSubtitle: {
-    el: 'Είμαστε στη διάθεσή σας για οποιαδήποτε ερώτηση, πρόταση ή ιδέα. Στείλτε μας το μήνυμά σας ή επισκεφθείτε μας στο κατάστημα — θα χαρούμε να σας γνωρίσουμε.',
-    en: 'We are here for any question, suggestion, or idea. Send us a message or visit our shop — we would love to meet you.',
+    el: 'Έχετε κάποια ερώτηση, θέλετε να κάνετε μια παραγγελία ή σχεδιάζετε μια εκδήλωση; Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό.',
+    en: 'Have a question, want to place an order, or planning an event? Fill out the form and we will get back to you as soon as possible.',
   },
   hoursBlocks: [
     {
@@ -935,8 +935,8 @@ export const contactPageConfig: ContactPageConfig = {
   ],
   secondaryBlurbTitle: { el: 'Για παραγγελίες & εκδηλώσεις', en: 'For orders & events' },
   secondaryBlurbBody: {
-    el: 'Αναλαμβάνουμε custom τούρτες, γλυκά επιλεγμένης ποιότητας και candy bars για γάμους, βαπτίσεις και κάθε ξεχωριστή στιγμή. Περιγράψτε μας την περίσταση και θα επικοινωνήσουμε μαζί σας για λεπτομέρειες.',
-    en: 'We create custom cakes, fine desserts, and candy bars for weddings, christenings, and every special occasion. Tell us about your event and we will follow up with details.',
+    el: 'Τούρτες, γλυκά, candy bars και μπουφέδες για γάμους, βαφτίσεις και ξεχωριστές στιγμές. Περιγράψτε μας την περίσταση και θα επικοινωνήσουμε μαζί σας για λεπτομέρειες.',
+    en: 'Cakes, desserts, candy bars, and dessert buffets for weddings, christenings, and special moments. Tell us about your event and we will follow up with details.',
   },
 
   formCardTitle: { el: '', en: '' },
