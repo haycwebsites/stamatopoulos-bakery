@@ -969,49 +969,95 @@ a {
 }
 
 /* Promo cards (3 boxes below About) */
-.ds-promo-sec .bistly-promo-item {
+.ds-promo-sec .stamatopoulos-promo-row {
+  --bs-gutter-x: 1.5rem;
+}
+
+.ds-promo-sec .stamatopoulos-promo-item {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1; /* square */
-  padding: 28px;
-  border-radius: 20px;
+  aspect-ratio: 1 / 1;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  isolation: isolate;
 }
 
-/* Fallback for older browsers without aspect-ratio */
 @supports not (aspect-ratio: 1 / 1) {
-  .ds-promo-sec .bistly-promo-item {
-    height: 340px;
+  .ds-promo-sec .stamatopoulos-promo-item {
+    min-height: 340px;
   }
 }
 
-.ds-promo-sec .bistly-promo-item .content span {
-  font-weight: 700;
-  font-family: var(--heading-font);
-  color: var(--heading-color);
-  line-height: 1;
+.ds-promo-sec .stamatopoulos-promo-item__image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 62%;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  opacity: 0.92;
+  -webkit-mask-image: linear-gradient(to top, #000 55%, transparent 100%);
+  mask-image: linear-gradient(to top, #000 55%, transparent 100%);
+  pointer-events: none;
 }
 
-.ds-promo-sec .bistly-promo-item .content h2 {
-  margin-top: 10px;
-  font-size: 40px;
-  line-height: 50px;
+.ds-promo-sec .stamatopoulos-promo-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    var(--promo-bg, transparent) 18%,
+    color-mix(in srgb, var(--promo-bg, #fff) 72%, transparent) 52%,
+    transparent 78%
+  );
+  pointer-events: none;
+}
+
+.ds-promo-sec .stamatopoulos-promo-item .content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  max-width: 92%;
+}
+
+.ds-promo-sec .stamatopoulos-promo-kicker {
+  display: block;
+  font-family: var(--stamatopoulos-body-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0;
+  color: #512500;
+  text-transform: none;
+}
+
+.ds-promo-sec .stamatopoulos-promo-title {
+  margin: 0;
+  font-family: var(--stamatopoulos-title-font);
+  font-weight: 600;
+  font-size: clamp(1.75rem, 3.2vw, 48px);
+  line-height: 1.36;
+  letter-spacing: 0;
+  color: #512500;
 }
 
 @media screen and (max-width: 1199.98px) {
-  .ds-promo-sec .bistly-promo-item {
-    height: auto;
-  }
-  .ds-promo-sec .bistly-promo-item .content h2 {
-    font-size: 24px;
-    line-height: 40px;
+  .ds-promo-sec .stamatopoulos-promo-item__image {
+    height: 58%;
   }
 }
 
@@ -1334,16 +1380,6 @@ a {
   background-color: #d97a62;
   border-color: #d97a62;
   color: #fff;
-}
-
-.ds-promo-sec .bistly-promo-item .content span:empty {
-  display: none;
-}
-
-.ds-promo-sec .bistly-promo-item .content h2 {
-  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
-  line-height: 1.2;
-  color: #512500;
 }
 
 .stamatopoulos-testimonials-sec {

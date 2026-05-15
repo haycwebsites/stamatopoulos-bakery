@@ -202,20 +202,38 @@ export default function IndexPage() {
 
         <section className="ds-promo-sec pt-5 mt-4">
           <div className="container mt-2">
-            <div className="row py-xl-5 justify-content-center">
+            <div className="row py-xl-5 justify-content-center g-4 stamatopoulos-promo-row">
               {hc.promoCards.map((card, i) => (
                 <div key={i} className="col-lg-4 col-md-6 col-sm-12">
                   <div
-                    className="bistly-promo-item text-center mb-4 bg_cover"
-                    style={{ backgroundImage: `url(${img(card.backgroundImage)})` }}
+                    className="bistly-promo-item stamatopoulos-promo-item text-center"
+                    style={
+                      {
+                        backgroundColor: card.backgroundColor,
+                        '--promo-bg': card.backgroundColor,
+                      } as Record<string, string>
+                    }
                     data-aos="fade-up"
                     data-aos-duration={card.aosDurationMs ?? 1000}
                   >
+                    <div
+                      className="stamatopoulos-promo-item__image bg_cover"
+                      style={{ backgroundImage: `url(${img(card.backgroundImage)})` }}
+                      aria-hidden
+                    />
                     <div className="content">
-                      {t(card.kicker) ? (
-                        <span {...cp(`homeConfig.promoCards.${i}.kicker`)}>{t(card.kicker)}</span>
-                      ) : null}
-                      <h2 {...cp(`homeConfig.promoCards.${i}.title`)}>{t(card.title)}</h2>
+                      <span
+                        {...cp(`homeConfig.promoCards.${i}.kicker`)}
+                        className="stamatopoulos-promo-kicker"
+                      >
+                        {t(card.kicker)}
+                      </span>
+                      <h2
+                        {...cp(`homeConfig.promoCards.${i}.title`)}
+                        className="stamatopoulos-promo-title"
+                      >
+                        {t(card.title)}
+                      </h2>
                     </div>
                   </div>
                 </div>

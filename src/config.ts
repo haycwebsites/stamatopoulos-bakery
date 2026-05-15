@@ -140,6 +140,7 @@ export interface HomeChooseItemConfig {
 
 export interface HomePromoCardConfig {
   backgroundImage: string;
+  backgroundColor: string;
   kicker: LocaleString;
   title: LocaleString;
   aosDurationMs?: number;
@@ -525,21 +526,24 @@ export const homeConfig: HomeConfig = {
 
   promoCards: [
     {
-      backgroundImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/promo-bg1.jpg',
-      kicker: { el: '', en: '' },
-      title: { el: 'ΤΟΥΡΤΕΣ & ΓΛΥΚΑ', en: 'CAKES & SWEETS' },
+      backgroundImage: '/assets/images/stamatopoulos/promo-daily-delights.png',
+      backgroundColor: '#C8DDD3',
+      kicker: { el: 'Για κάθε στιγμή', en: 'For every moment' },
+      title: { el: 'Καθημερινές Απολαύσεις', en: 'Daily Delights' },
       aosDurationMs: 1000,
     },
     {
-      backgroundImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/promo-bg1.jpg',
-      kicker: { el: '', en: '' },
-      title: { el: 'ΦΡΕΣΚΑ ΓΛΥΚΑ', en: 'FRESH SWEETS' },
+      backgroundImage: '/assets/images/stamatopoulos/promo-signature-desserts.png',
+      backgroundColor: '#F0EBD8',
+      kicker: { el: 'Η υπογραφή μας', en: 'Our signature' },
+      title: { el: 'Signature Desserts', en: 'Signature Desserts' },
       aosDurationMs: 1200,
     },
     {
-      backgroundImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/promo-bg1.jpg',
-      kicker: { el: '', en: '' },
-      title: { el: 'COOKIES & CAKES', en: 'COOKIES & CAKES' },
+      backgroundImage: '/assets/images/stamatopoulos/promo-custom-cakes.png',
+      backgroundColor: '#F5D8CC',
+      kicker: { el: 'Φτιαγμένα για σένα', en: 'Made for you' },
+      title: { el: 'Custom Cakes', en: 'Custom Cakes' },
       aosDurationMs: 1400,
     },
   ],
