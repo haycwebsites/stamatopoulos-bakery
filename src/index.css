@@ -1158,7 +1158,7 @@ a {
   text-align: left;
   font-family: var(--stamatopoulos-body-font);
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 24px;
   line-height: 1.4;
   color: #ffffff;
 }
@@ -1185,7 +1185,7 @@ a {
   margin: 0;
   font-family: var(--stamatopoulos-body-font);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 25px;
   letter-spacing: 0;
   color: #512500;
