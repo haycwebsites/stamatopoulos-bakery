@@ -513,7 +513,7 @@ export const homeConfig: HomeConfig = {
   aboutCtaLabel: { el: 'ΜΑΘΕΤΕ ΠΕΡΙΣΣΟΤΕΡΑ', en: 'LEARN MORE' },
   aboutCtaHref: '/about',
 
-  experienceKicker: { el: 'Η εμπειρία μας', en: 'OUR EXPERIENCE' },
+  experienceKicker: { el: 'Η εμπειρια μας', en: 'OUR EXPERIENCE' },
   experienceTitle: {
     el: 'Παράδοση στην τεχνική, σύγχρονη ματιά στη δημιουργία.',
     en: 'Tradition in technique, a modern approach to creation.',

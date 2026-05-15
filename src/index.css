@@ -785,7 +785,7 @@ a {
   flex-direction: column;
   align-self: stretch;
   min-height: 100%;
-  gap: 0;
+  gap: 16px;
 }
 
 .ds-about-sec .about-wrapper .about-right-wrap > .bistly-about-box,
