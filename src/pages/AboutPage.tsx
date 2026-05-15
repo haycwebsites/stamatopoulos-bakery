@@ -2,6 +2,19 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { AppLink } from '../components/AppLink';
 import { useHayc } from '../hayc/config-context';
+import type { AboutFeatureItemConfig } from '../config';
+
+/** Solid tile behind pillar icon; respects `iconShowBackdrop: false` so CMS `iconBackgroundColor` cannot bring back a removed tile. */
+function pillarIconBackdropColor(it: AboutFeatureItemConfig): string | undefined {
+  if (it.iconShowBackdrop === false) return undefined;
+  const raw = it.iconBackgroundColor;
+  if (typeof raw !== 'string') return undefined;
+  const trimmed = raw.trim();
+  if (!trimmed) return undefined;
+  const lower = trimmed.toLowerCase();
+  if (lower === 'transparent' || lower === 'none') return undefined;
+  return trimmed;
+}
 
 export default function AboutPage() {
   const { t, img, config, cp } = useHayc();
@@ -173,7 +186,9 @@ export default function AboutPage() {
                   </p>
                   <div className="row g-4 stamatopoulos-about-pillar-rows">
                     <div className="col-sm-6">
-                      {ac.featureItemsLeft.map((it, i) => (
+                      {ac.featureItemsLeft.map((it, i) => {
+                        const pillarBg = pillarIconBackdropColor(it);
+                        return (
                         <div
                           key={`${it.iconSrc ?? it.iconClass ?? 'l'}-${i}`}
                           className="stamatopoulos-about-pillar"
@@ -181,8 +196,8 @@ export default function AboutPage() {
                           data-aos-duration={it.aosDurationMs ?? 1200}
                         >
                           <div
-                            className={`stamatopoulos-about-pillar-icon${it.iconBackgroundColor ? ' stamatopoulos-about-pillar-icon--filled' : ''}`}
-                            style={it.iconBackgroundColor ? { backgroundColor: it.iconBackgroundColor } : undefined}
+                            className={`stamatopoulos-about-pillar-icon${pillarBg ? ' stamatopoulos-about-pillar-icon--filled' : ''}`}
+                            style={pillarBg ? { backgroundColor: pillarBg } : undefined}
                           >
                             {it.iconSrc ? (
                               <img
@@ -200,10 +215,13 @@ export default function AboutPage() {
                             {t(it.title)}
                           </h5>
                         </div>
-                      ))}
+                        );
+                      })}
                     </div>
                     <div className="col-sm-6">
-                      {ac.featureItemsRight.map((it, i) => (
+                      {ac.featureItemsRight.map((it, i) => {
+                        const pillarBg = pillarIconBackdropColor(it);
+                        return (
                         <div
                           key={`${it.iconSrc ?? it.iconClass ?? 'r'}-${i}`}
                           className="stamatopoulos-about-pillar"
@@ -211,8 +229,8 @@ export default function AboutPage() {
                           data-aos-duration={it.aosDurationMs ?? 1400}
                         >
                           <div
-                            className={`stamatopoulos-about-pillar-icon${it.iconBackgroundColor ? ' stamatopoulos-about-pillar-icon--filled' : ''}`}
-                            style={it.iconBackgroundColor ? { backgroundColor: it.iconBackgroundColor } : undefined}
+                            className={`stamatopoulos-about-pillar-icon${pillarBg ? ' stamatopoulos-about-pillar-icon--filled' : ''}`}
+                            style={pillarBg ? { backgroundColor: pillarBg } : undefined}
                           >
                             {it.iconSrc ? (
                               <img
@@ -230,7 +248,8 @@ export default function AboutPage() {
                             {t(it.title)}
                           </h5>
                         </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
                   <div className="mt-4 pt-2" data-aos="fade-up" data-aos-duration="1100">

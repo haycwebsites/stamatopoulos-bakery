@@ -262,6 +262,10 @@ export interface AboutFeatureItemConfig {
   iconSrc?: string;
   /** Solid fill behind the icon (e.g. events compass on dark brown) */
   iconBackgroundColor?: string;
+  /**
+   * When false, never render a solid tile behind the icon (overrides `iconBackgroundColor`, e.g. legacy CMS).
+   */
+  iconShowBackdrop?: boolean;
   title: LocaleString;
   aosDurationMs?: number;
 }
@@ -881,7 +885,7 @@ export const aboutPageConfig: AboutPageConfig = {
   featureItemsRight: [
     {
       iconSrc: '/assets/images/stamatopoulos/about/philosophy/pillar-handcrafted-care.svg',
-      iconBackgroundColor: '#512500',
+      iconShowBackdrop: false,
       title: { el: 'Χειροποίητη φροντίδα', en: 'Handcrafted care' },
       aosDurationMs: 1400,
     },
