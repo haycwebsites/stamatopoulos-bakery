@@ -995,12 +995,16 @@ a {
 
 .ds-promo-sec .stamatopoulos-promo-item__image {
   position: absolute;
-  inset: 0;
+  left: 0;
+  right: 0;
+  top: 10%;
+  bottom: -8%;
   z-index: 0;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center bottom;
+  background-position: center calc(100% + 17rem);
   pointer-events: none;
+  transform: scale(1.25);
 }
 
 /* Color wash over the photo — keeps images soft / watermark-like */
