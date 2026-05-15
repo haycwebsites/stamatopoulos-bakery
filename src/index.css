@@ -1002,9 +1002,21 @@ a {
   z-index: 0;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center calc(100% + 17rem);
+  background-position: center bottom;
   pointer-events: none;
   transform: scale(1.25);
+}
+
+.ds-promo-sec .stamatopoulos-promo-row > div:nth-child(1) .stamatopoulos-promo-item__image {
+  background-position: calc(100% + 11rem) calc(100% + 21rem);
+}
+
+.ds-promo-sec .stamatopoulos-promo-row > div:nth-child(2) .stamatopoulos-promo-item__image {
+  background-position: center calc(100% + 10rem);
+}
+
+.ds-promo-sec .stamatopoulos-promo-row > div:nth-child(3) .stamatopoulos-promo-item__image {
+  background-position: center calc(100% + 15rem);
 }
 
 /* Color wash over the photo — keeps images soft / watermark-like */
