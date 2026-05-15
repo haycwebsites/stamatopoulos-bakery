@@ -16,52 +16,60 @@ export default function IndexPage() {
     <>
       <Navbar />
       <main>
-        <section className="ds-hero-sec p-r z-1">
-          <div className="hero-shape">
-            <img src={img(hc.heroShapeImage)} alt={t(hc.heroShapeAlt)} />
-          </div>
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="hero-content text-center">
-                  <h1 {...cp('homeConfig.heroTitle')} className="text-anm">
-                    {t(hc.heroTitle)}
-                  </h1>
-                </div>
-                <div className="row">
-                  <div className="col-lg-6">
-                    <div className="text-box" data-aos="fade-up" data-aos-duration="1000">
-                      <p {...cp('homeConfig.heroDescription')}>{t(hc.heroDescription)}</p>
-                      <AppLink
-                        {...cp('homeConfig.heroCtaLabel')}
-                        href={hc.heroCtaHref}
-                        className="theme-btn style-one"
-                      >
-                        {t(hc.heroCtaLabel)}
-                      </AppLink>
-                    </div>
-                  </div>
-                  <div className="col-lg-6">
-                    <div className="bistly-author-box" data-aos="fade-up" data-aos-duration="1200">
-                      <div className="author-thumbs">
-                        {hc.heroAuthorThumbs.map(thumb => (
-                          <img key={thumb.src} src={img(thumb.src)} alt={t(thumb.alt)} />
-                        ))}
-                      </div>
-                      <h2>
-                        <span {...cp('homeConfig.heroStatsValue')}>{t(hc.heroStatsValue)}</span>{' '}
-                        <span {...cp('homeConfig.heroStatsLabel')}>{t(hc.heroStatsLabel)}</span>
-                      </h2>
-                    </div>
+        <section className="ds-hero-sec stamatopoulos-hero p-r z-1">
+          <div className="container-fluid stamatopoulos-hero-inner">
+            <div className="stamatopoulos-hero-headline text-center">
+              <h1 className="stamatopoulos-hero-title text-anm">
+                <span {...cp('homeConfig.heroTitle')}>{t(hc.heroTitle)}</span>
+                <br />
+                <span {...cp('homeConfig.heroHeadlineLine2')}>{t(hc.heroHeadlineLine2)}</span>
+              </h1>
+            </div>
+
+            <div className="stamatopoulos-hero-image-block text-center" data-aos="fade-up" data-aos-duration="900">
+              <div className="stamatopoulos-hero-image-frame">
+                <img src={img(hc.heroMainImage)} alt={t(hc.heroMainImageAlt)} />
+              </div>
+            </div>
+
+            <div className="row stamatopoulos-hero-bottom align-items-stretch gx-4 gx-xl-5 gy-5">
+              <div className="col-lg-7">
+                <div className="stamatopoulos-hero-copy" data-aos="fade-up" data-aos-duration="1000">
+                  <p {...cp('homeConfig.heroDescription')}>{t(hc.heroDescription)}</p>
+                  <div className="stamatopoulos-hero-actions">
+                    <AppLink
+                      {...cp('homeConfig.heroCtaLabel')}
+                      href={hc.heroCtaHref}
+                      className="theme-btn style-one stamatopoulos-hero-btn-primary"
+                    >
+                      {t(hc.heroCtaLabel)}
+                    </AppLink>
+                    <AppLink
+                      {...cp('homeConfig.heroSecondaryCtaLabel')}
+                      href={hc.heroSecondaryCtaHref}
+                      className="theme-btn style-one stamatopoulos-hero-btn-secondary"
+                    >
+                      {t(hc.heroSecondaryCtaLabel)}
+                    </AppLink>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="hero-image-wrap order-1">
-            <div className="hero-image">
-              <img src={img(hc.heroMainImage)} alt={t(hc.heroMainImageAlt)} />
+              <div className="col-lg-5">
+                <aside className="stamatopoulos-hero-highlight" data-aos="fade-up" data-aos-duration="1100">
+                  <div className="stamatopoulos-hero-pills">
+                    {hc.heroHighlightPills.map((pill, i) => (
+                      <span key={i} {...cp(`homeConfig.heroHighlightPills.${i}`)} className="stamatopoulos-hero-pill">
+                        {t(pill)}
+                      </span>
+                    ))}
+                  </div>
+                  <h2 className="stamatopoulos-hero-highlight-title">
+                    <span {...cp('homeConfig.heroHighlightHeadlineLine1')}>{t(hc.heroHighlightHeadlineLine1)}</span>
+                    <br />
+                    <span {...cp('homeConfig.heroHighlightHeadlineLine2')}>{t(hc.heroHighlightHeadlineLine2)}</span>
+                  </h2>
+                </aside>
+              </div>
             </div>
           </div>
         </section>

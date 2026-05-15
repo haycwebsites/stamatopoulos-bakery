@@ -157,9 +157,15 @@ export interface HomeConfig {
   heroShapeImage: string;
   heroShapeAlt: LocaleString;
   heroTitle: LocaleString;
+  heroHeadlineLine2: LocaleString;
   heroDescription: LocaleString;
   heroCtaLabel: LocaleString;
   heroCtaHref: string;
+  heroSecondaryCtaLabel: LocaleString;
+  heroSecondaryCtaHref: string;
+  heroHighlightPills: LocaleString[];
+  heroHighlightHeadlineLine1: LocaleString;
+  heroHighlightHeadlineLine2: LocaleString;
   heroAuthorThumbs: { src: string; alt: LocaleString }[];
   heroStatsValue: LocaleString;
   heroStatsLabel: LocaleString;
@@ -322,42 +328,28 @@ export const siteConfig: SiteConfig = {
 };
 
 export const navigationConfig: NavigationConfig = {
-  logoSrc: '/assets/images/home-coffee/logo/logo-main.svg',
-  logoAlt: { el: 'Brand Logo', en: 'Brand Logo' },
+  logoSrc: '/assets/images/stamatopoulos/logo-yiannis-stella.svg',
+  logoAlt: { el: 'Yiannis & Stella — Stamatopoulos Pastry', en: 'Yiannis & Stella — Stamatopoulos Pastry' },
   brandHref: '/',
   items: [
     {
-      label: { el: 'Home', en: 'Home' },
+      label: { el: 'Αρχική', en: 'Home' },
       href: '/',
     },
     {
-      label: { el: 'About Us', en: 'About Us' },
+      label: { el: 'Σχετικά με Εμάς', en: 'About Us' },
       href: '/about',
     },
     {
-      label: { el: 'Menu', en: 'Menu' },
-      href: '#',
-      children: [
-        {
-          label: { el: 'Menu Grid', en: 'Menu Grid' },
-          href: '/menu-grid',
-        },
-        {
-          label: { el: 'Menu List', en: 'Menu List' },
-          href: '/menu-list',
-        },
-        {
-          label: { el: 'Menu Details', en: 'Menu Details' },
-          href: '/menu-details',
-        },
-      ],
+      label: { el: 'Δημιουργίες', en: 'Creations' },
+      href: '/menu',
     },
     {
-      label: { el: 'Contact', en: 'Contact' },
+      label: { el: 'Επικοινωνία', en: 'Contact' },
       href: '/contact',
     },
   ],
-  ctaLabel: { el: 'Reservation', en: 'Reservation' },
+  ctaLabel: { el: 'ΠΑΡΑΓΓΕΛΙΑ', en: 'ORDER' },
   ctaHref: '/contact',
   followUsLabel: { el: 'Follow Us', en: 'Follow Us' },
   socialLinks: [
@@ -423,13 +415,24 @@ export const footerConfig: FooterConfig = {
 export const homeConfig: HomeConfig = {
   heroShapeImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/hero-shape.png',
   heroShapeAlt: { el: 'hero shape', en: 'hero shape' },
-  heroTitle: { el: 'Sweet Bliss', en: 'Sweet Bliss' },
+  heroTitle: { el: 'Δεν είναι απλώς γλυκό,', en: "It's not just dessert," },
+  heroHeadlineLine2: { el: 'Είναι η στιγμή σου.', en: "It's your moment." },
   heroDescription: {
-    el: 'Experience the joy of Sweet Bliss — handcrafted desserts made with love, perfect for every craving, celebration, or sweet moment.',
-    en: 'Experience the joy of Sweet Bliss — handcrafted desserts made with love, perfect for every craving, celebration, or sweet moment.',
+    el: 'Κάθε δημιουργία έχει τη δική της θέση σε μια ξεχωριστή στιγμή. Από ένα αγαπημένο γλυκό της βιτρίνας μέχρι μια τούρτα φτιαγμένη ακριβώς όπως την έχεις φανταστεί, στον Σταματόπουλο η παράδοση τεσσάρων γενεών συναντά τη φροντίδα, τη φαντασία και την τεχνική. Το αποτέλεσμα είναι γεύσεις που μένουν, όχι μόνο για την ποιότητά τους, αλλά για όσα συνοδεύουν.',
+    en: 'Every creation has its place in a special moment. From a favorite dessert from the window to a cake made exactly as you imagined it, at Stamatopoulos, four generations of tradition meet care, imagination and technique. The result is flavors that last, not only for their quality, but for what they accompany.',
   },
-  heroCtaLabel: { el: 'Contact us', en: 'Contact us' },
+  heroCtaLabel: { el: 'ΔΗΜΙΟΥΡΓΗΣΕ ΤΗΝ ΤΟΥΡΤΑ ΣΟΥ', en: 'CREATE YOUR CAKE' },
   heroCtaHref: '/contact',
+  heroSecondaryCtaLabel: { el: 'ΔΕΣ ΤΙΣ SIGNATURE ΔΗΜΙΟΥΡΓΙΕΣ ΜΑΣ', en: 'SEE OUR SIGNATURE CREATIONS' },
+  heroSecondaryCtaHref: '/menu',
+  heroHighlightPills: [
+    { el: 'Παράδοση', en: 'Tradition' },
+    { el: 'Αγάπη', en: 'Love' },
+    { el: 'Ποιότητα', en: 'Quality' },
+    { el: 'Δημιουργία', en: 'Creation' },
+  ],
+  heroHighlightHeadlineLine1: { el: 'Από το 1950 στην τέχνη', en: 'Since 1950 in the art' },
+  heroHighlightHeadlineLine2: { el: 'του γλυκού.', en: 'of sweets.' },
   heroAuthorThumbs: [
     { src: '/assets/images/home-dessert/hero/author-thumb1.png', alt: { el: 'Author', en: 'Author' } },
     { src: '/assets/images/home-dessert/hero/author-thumb2.png', alt: { el: 'Author', en: 'Author' } },
@@ -439,11 +442,11 @@ export const homeConfig: HomeConfig = {
   ],
   heroStatsValue: { el: '217K+', en: '217K+' },
   heroStatsLabel: { el: 'Satisfied Clients', en: 'Satisfied Clients' },
-  heroMainImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/hero-img1.png',
-  heroMainImageAlt: { el: 'Hero Image', en: 'Hero Image' },
+  heroMainImage: '/assets/images/stamatopoulos/hero-pecan-slice.png',
+  heroMainImageAlt: { el: 'Φέτα τούρτας με πεκάν', en: 'Slice of pecan tart' },
 
   categoriesKicker: { el: 'Category', en: 'Category' },
-  categoriesTitle: { el: 'Something Sweet for Every Craving.', en: 'Something Sweet for Every Craving.' },
+  categoriesTitle: { el: 'Γλυκά που φτιάχνονται για τις στιγμές που θέλεις να θυμάσαι.', en: 'Sweets made for the moments you want to remember.' },
   categories: [
     { iconClass: 'flaticon-bread', title: { el: 'Breads', en: 'Breads' }, bgClass: 'bg_one', aosDurationMs: 1000 },
     { iconClass: 'flaticon-cake', title: { el: 'Brownies', en: 'Brownies' }, bgClass: 'bg_two', aosDurationMs: 1200 },

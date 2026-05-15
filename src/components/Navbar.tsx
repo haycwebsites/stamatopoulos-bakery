@@ -13,10 +13,12 @@ export default function Navbar() {
     pathname === '/menu' ||
     pathname.startsWith('/menu-');
 
+  const homeLightNav = pathname === '/' && !innerHeroPage;
+
   const nav = config.navigationConfig;
   return (
     <header
-      className={`header-area header-three transparent-header${innerHeroPage ? ' header-inner-hero' : ''}`}
+      className={`header-area header-three transparent-header${innerHeroPage ? ' header-inner-hero' : ''}${homeLightNav ? ' header-stamatopoulos-home' : ''}`}
     >
       <div className="container-fluid">
         <div className="header-navigation">

@@ -423,6 +423,200 @@ a {
   }
 }
 
+/* Home hero — Yiannis & Stella (cream + brown + coral) */
+.ds-hero-sec.stamatopoulos-hero {
+  padding: clamp(7.25rem, 11vw, 8.75rem) 0 clamp(3rem, 5vw, 4.75rem);
+  background-color: #faf4ed;
+}
+
+@media (max-width: 1650px) {
+  .ds-hero-sec.stamatopoulos-hero {
+    padding: clamp(6.75rem, 12vw, 8rem) 0 clamp(2.75rem, 5vw, 4rem);
+  }
+}
+
+.stamatopoulos-hero-inner {
+  padding-left: clamp(1rem, 5vw, 100px);
+  padding-right: clamp(1rem, 5vw, 100px);
+  max-width: 2320px;
+  margin: 0 auto;
+}
+
+.stamatopoulos-hero-title {
+  font-family: var(--heading-font, 'Marcellus', serif);
+  font-weight: 400;
+  color: #512500;
+  font-size: clamp(1.85rem, 4.5vw, 3.35rem);
+  line-height: 1.22;
+  margin: 0 0 clamp(1.75rem, 4vw, 2.85rem);
+  letter-spacing: 0.02em;
+}
+
+.stamatopoulos-hero-image-block {
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.stamatopoulos-hero-image-frame {
+  margin-top: -90px;
+}
+
+.stamatopoulos-hero-image-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.stamatopoulos-hero-copy p {
+  font-family: var(--body-font, 'Roboto', sans-serif);
+  font-size: clamp(1rem, 1.35vw, 1.125rem);
+  line-height: 1.65;
+  color: #512500;
+  margin: 0 0 1.75rem;
+  max-width: 38rem;
+}
+
+@media screen and (max-width: 991.98px) {
+  .stamatopoulos-hero-copy {
+    text-align: center;
+  }
+
+  .stamatopoulos-hero-copy p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.stamatopoulos-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1rem;
+}
+
+@media screen and (max-width: 991.98px) {
+  .stamatopoulos-hero-actions {
+    justify-content: center;
+  }
+}
+
+.stamatopoulos-hero-btn-primary.theme-btn.style-one {
+  background-color: #e98d74;
+  color: #fff;
+  border: 2px solid #e98d74;
+  border-radius: 999px;
+  padding: 16px 22px;
+}
+
+.stamatopoulos-hero-btn-primary.theme-btn.style-one:hover {
+  background-color: #d97a62;
+  border-color: #d97a62;
+  color: #fff;
+}
+
+.stamatopoulos-hero-btn-secondary.theme-btn.style-one {
+  background-color: #fff;
+  color: #512500;
+  border: 2px solid #e98d74;
+  border-radius: 999px;
+  padding: 16px 22px;
+}
+
+.stamatopoulos-hero-btn-secondary.theme-btn.style-one:hover {
+  background-color: #fdf8f3;
+  color: #512500;
+}
+
+.stamatopoulos-hero-highlight {
+  background-color: #e98d74;
+  border-radius: 28px;
+  padding: clamp(1.75rem, 3vw, 2.25rem) clamp(1.5rem, 3vw, 2rem);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.stamatopoulos-hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.65rem;
+}
+
+.stamatopoulos-hero-pills > * {
+  margin-left: -8px; /* overlap amount */
+  margin-bottom: -8px; /* optional: vertical overlap too */
+}
+
+.stamatopoulos-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.95rem;
+  border: 1.5px solid #fff;
+  border-radius: 999px;
+  color: #fff;
+  font-family: var(--body-font, 'Roboto', sans-serif);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.stamatopoulos-hero-highlight-title {
+  font-family: var(--heading-font, 'Marcellus', serif);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2.8vw, 2.25rem);
+  line-height: 1.2;
+  color: #512500;
+  margin: 0;
+}
+
+.header-stamatopoulos-home .header-navigation .site-branding {
+  max-width: 220px;
+}
+
+.header-stamatopoulos-home .header-navigation .main-menu ul > li > a {
+  color: #512500 !important;
+}
+
+.header-stamatopoulos-home .header-navigation .main-menu ul > li > a:hover {
+  color: #2a1300 !important;
+}
+
+.header-stamatopoulos-home .nav-button .theme-btn.style-one {
+  background-color: #e98d74;
+  color: #fff;
+  border: 2px solid #e98d74;
+  border-radius: 999px;
+  padding: 14px 20px;
+}
+
+.header-stamatopoulos-home .nav-button .theme-btn.style-one:hover {
+  background-color: #d97a62;
+  border-color: #d97a62;
+  color: #fff;
+}
+
+.header-stamatopoulos-home .theme-nav-button .theme-btn.style-one {
+  background-color: #e98d74;
+  color: #fff;
+  border: 2px solid #e98d74;
+  border-radius: 999px;
+}
+
+.header-stamatopoulos-home .theme-nav-button .theme-btn.style-one:hover {
+  background-color: #d97a62;
+  border-color: #d97a62;
+  color: #fff;
+}
+
+.header-stamatopoulos-home .navbar-toggler span {
+  background-color: #512500 !important;
+}
+
+.header-stamatopoulos-home .theme-menu-top .navbar-close i {
+  color: #512500 !important;
+}
+
 .bistly-author-box {
   background-color: var(--primary-color);
   max-width: 380px;
