@@ -1187,20 +1187,12 @@ a {
   border: none !important;
 }
 
-.stamatopoulos-category-item--cream .icon:not(.icon-contained) {
-  background-color: rgba(81, 37, 0, 0.07) !important;
-}
-
 .stamatopoulos-category-item--sage .icon:not(.icon-contained) {
   background-color: #79a388 !important;
 }
 
 .stamatopoulos-category-item--stone .icon.icon-contained {
   background: transparent !important;
-}
-
-.stamatopoulos-category-item--daily .icon:not(.icon-contained) {
-  background-color: rgba(75, 39, 9, 0.08) !important;
 }
 
 .stamatopoulos-category-item .icon.icon-contained {
