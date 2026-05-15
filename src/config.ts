@@ -256,7 +256,10 @@ export interface AboutFunFactItemConfig {
 }
 
 export interface AboutFeatureItemConfig {
-  iconClass: string;
+  /** Font Awesome when not using a custom SVG */
+  iconClass?: string;
+  /** SVG under /public (Figma line icons for philosophy pillars) */
+  iconSrc?: string;
   title: LocaleString;
   aosDurationMs?: number;
 }
@@ -833,24 +836,24 @@ export const aboutPageConfig: AboutPageConfig = {
   },
   featureItemsLeft: [
     {
-      iconClass: 'fas fa-people-group',
+      iconSrc: '/assets/images/stamatopoulos/icon-custom-cakes.svg',
       title: { el: 'Οικογενειακή παράδοση', en: 'Family tradition' },
       aosDurationMs: 1200,
     },
     {
-      iconClass: 'fas fa-cookie-bite',
+      iconSrc: '/assets/images/stamatopoulos/icon-signature-desserts.svg',
       title: { el: 'Ποιοτικές πρώτες ύλες', en: 'Quality ingredients' },
       aosDurationMs: 1300,
     },
   ],
   featureItemsRight: [
     {
-      iconClass: 'fas fa-mitten',
+      iconSrc: '/assets/images/stamatopoulos/icon-events.svg',
       title: { el: 'Χειροποίητη φροντίδα', en: 'Handcrafted care' },
       aosDurationMs: 1400,
     },
     {
-      iconClass: 'fas fa-cake-candles',
+      iconSrc: '/assets/images/stamatopoulos/icon-daily-delights.svg',
       title: { el: 'Σύγχρονη δημιουργία', en: 'Contemporary creation' },
       aosDurationMs: 1500,
     },

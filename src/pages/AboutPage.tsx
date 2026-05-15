@@ -175,13 +175,23 @@ export default function AboutPage() {
                     <div className="col-sm-6">
                       {ac.featureItemsLeft.map((it, i) => (
                         <div
-                          key={`l-${i}`}
+                          key={`${it.iconSrc ?? it.iconClass ?? 'l'}-${i}`}
                           className="stamatopoulos-about-pillar"
                           data-aos="fade-up"
                           data-aos-duration={it.aosDurationMs ?? 1200}
                         >
                           <div className="stamatopoulos-about-pillar-icon">
-                            <i className={it.iconClass} aria-hidden />
+                            {it.iconSrc ? (
+                              <img
+                                src={img(it.iconSrc)}
+                                alt=""
+                                className="stamatopoulos-about-pillar-icon-img"
+                                {...cp(`aboutPageConfig.featureItemsLeft.${i}.iconSrc`)}
+                                aria-hidden
+                              />
+                            ) : (
+                              <i className={it.iconClass ?? 'fas fa-circle'} aria-hidden />
+                            )}
                           </div>
                           <h5 {...cp(`aboutPageConfig.featureItemsLeft.${i}.title`)} className="stamatopoulos-about-pillar-title">
                             {t(it.title)}
@@ -192,13 +202,23 @@ export default function AboutPage() {
                     <div className="col-sm-6">
                       {ac.featureItemsRight.map((it, i) => (
                         <div
-                          key={`r-${i}`}
+                          key={`${it.iconSrc ?? it.iconClass ?? 'r'}-${i}`}
                           className="stamatopoulos-about-pillar"
                           data-aos="fade-up"
                           data-aos-duration={it.aosDurationMs ?? 1400}
                         >
                           <div className="stamatopoulos-about-pillar-icon">
-                            <i className={it.iconClass} aria-hidden />
+                            {it.iconSrc ? (
+                              <img
+                                src={img(it.iconSrc)}
+                                alt=""
+                                className="stamatopoulos-about-pillar-icon-img"
+                                {...cp(`aboutPageConfig.featureItemsRight.${i}.iconSrc`)}
+                                aria-hidden
+                              />
+                            ) : (
+                              <i className={it.iconClass ?? 'fas fa-circle'} aria-hidden />
+                            )}
                           </div>
                           <h5 {...cp(`aboutPageConfig.featureItemsRight.${i}.title`)} className="stamatopoulos-about-pillar-title">
                             {t(it.title)}
