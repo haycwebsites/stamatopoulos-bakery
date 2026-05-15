@@ -98,16 +98,41 @@ export default function IndexPage() {
             <div className="categories-wrapper py-xl-5">
               {hc.categories.map((cat, i) => (
                 <div
-                  key={`${cat.iconClass}-${i}`}
-                  className={`bistly-category-item ${cat.bgClass} mb-4`}
+                  key={`${cat.iconSrc ?? cat.iconClass ?? 'cat'}-${i}`}
+                  className={`bistly-category-item stamatopoulos-category-item${
+                    cat.backgroundColor === '#79A388'
+                      ? ' stamatopoulos-category-item--sage'
+                      : cat.backgroundColor === '#FEF4EB'
+                        ? ' stamatopoulos-category-item--cream'
+                        : cat.backgroundColor === '#EEE9E5'
+                          ? ' stamatopoulos-category-item--stone'
+                          : ''
+                  }${cat.bgClass ? ` ${cat.bgClass}` : ''} mb-4`}
+                  style={{
+                    ...(cat.backgroundColor ? { backgroundColor: cat.backgroundColor } : {}),
+                    ...(cat.textColor ? { color: cat.textColor } : {}),
+                  }}
                   data-aos="fade-up"
                   data-aos-duration={cat.aosDurationMs ?? 1000}
                 >
-                  <div className="icon">
-                    <i className={cat.iconClass} />
+                  <div className={`icon${cat.iconVariant === 'contained' ? ' icon-contained' : ''}`}>
+                    {cat.iconSrc ? (
+                      <img
+                        src={img(cat.iconSrc)}
+                        alt={cat.iconAlt ? t(cat.iconAlt) : t(cat.title)}
+                        className="stamatopoulos-category-icon"
+                      />
+                    ) : (
+                      <i className={cat.iconClass} />
+                    )}
                   </div>
                   <div className="content">
-                    <h4 {...cp(`homeConfig.categories.${i}.title`)}>{t(cat.title)}</h4>
+                    <h4
+                      {...cp(`homeConfig.categories.${i}.title`)}
+                      style={cat.textColor ? { color: cat.textColor } : undefined}
+                    >
+                      {t(cat.title)}
+                    </h4>
                   </div>
                 </div>
               ))}

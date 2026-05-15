@@ -1183,6 +1183,46 @@ a {
   gap: 1rem 1.25rem;
 }
 
+.stamatopoulos-category-item {
+  border: none !important;
+}
+
+.stamatopoulos-category-item--cream .icon:not(.icon-contained) {
+  background-color: rgba(81, 37, 0, 0.07) !important;
+}
+
+.stamatopoulos-category-item--sage .icon:not(.icon-contained) {
+  background-color: rgba(254, 244, 235, 0.22) !important;
+}
+
+.stamatopoulos-category-item--stone .icon.icon-contained {
+  background: transparent !important;
+}
+
+.stamatopoulos-category-item .icon.icon-contained {
+  width: 50px;
+  height: 50px;
+  background: transparent !important;
+  padding: 0;
+}
+
+.stamatopoulos-category-item .icon.icon-contained .stamatopoulos-category-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.stamatopoulos-category-item .stamatopoulos-category-icon {
+  width: 34px;
+  height: auto;
+  display: block;
+}
+
+.stamatopoulos-category-item .content h4 {
+  font-family: var(--body-font, 'Roboto', sans-serif);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
 .stamatopoulos-btn-salmon.theme-btn.style-one {
   background-color: #e98d74;
   border: 2px solid #e98d74;

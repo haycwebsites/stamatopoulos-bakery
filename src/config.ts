@@ -119,9 +119,14 @@ export interface FooterConfig {
 }
 
 export interface HomeCategoryConfig {
-  iconClass: string;
+  iconClass?: string;
+  iconSrc?: string;
+  iconAlt?: LocaleString;
   title: LocaleString;
-  bgClass: string;
+  bgClass?: string;
+  backgroundColor?: string;
+  textColor?: string;
+  iconVariant?: 'default' | 'contained';
   aosDurationMs?: number;
 }
 
@@ -455,10 +460,37 @@ export const homeConfig: HomeConfig = {
     en: 'Sweets made for the moments you want to remember',
   },
   categories: [
-    { iconClass: 'flaticon-cake', title: { el: 'Custom Τούρτες', en: 'Custom Cakes' }, bgClass: 'bg_two', aosDurationMs: 1000 },
-    { iconClass: 'flaticon-cupcake-1', title: { el: 'Signature Desserts', en: 'Signature Desserts' }, bgClass: 'bg_three', aosDurationMs: 1100 },
-    { iconClass: 'flaticon-bread', title: { el: 'Εκδηλώσεις', en: 'Events' }, bgClass: 'bg_one', aosDurationMs: 1200 },
-    { iconClass: 'flaticon-candy', title: { el: 'Καθημερινές Απολαύσεις', en: 'Greek Products' }, bgClass: 'bg_four', aosDurationMs: 1300 },
+    {
+      iconSrc: '/assets/images/stamatopoulos/icon-custom-cakes.svg',
+      iconAlt: { el: 'Custom τούρτες', en: 'Custom cakes' },
+      title: { el: 'Custom Τούρτες', en: 'Custom Cakes' },
+      backgroundColor: '#FEF4EB',
+      textColor: '#512500',
+      aosDurationMs: 1000,
+    },
+    {
+      iconSrc: '/assets/images/stamatopoulos/icon-signature-desserts.svg',
+      iconAlt: { el: 'Signature desserts', en: 'Signature desserts' },
+      title: { el: 'Signature Desserts', en: 'Signature Desserts' },
+      backgroundColor: '#79A388',
+      textColor: '#FEF4EB',
+      aosDurationMs: 1100,
+    },
+    {
+      iconSrc: '/assets/images/stamatopoulos/icon-events.svg',
+      iconAlt: { el: 'Εκδηλώσεις', en: 'Events' },
+      title: { el: 'Εκδηλώσεις', en: 'Events' },
+      backgroundColor: '#EEE9E5',
+      textColor: '#512500',
+      iconVariant: 'contained',
+      aosDurationMs: 1200,
+    },
+    {
+      iconClass: 'flaticon-candy',
+      title: { el: 'Καθημερινές Απολαύσεις', en: 'Daily Delights' },
+      bgClass: 'bg_four',
+      aosDurationMs: 1300,
+    },
   ],
 
   aboutLeftBackgroundImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg',
