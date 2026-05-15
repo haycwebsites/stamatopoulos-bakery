@@ -322,32 +322,25 @@ export default function IndexPage() {
           </div>
         </section>
 
-        <section className="ds-offer-sec py-5">
+        <section className="ds-offer-sec stamatopoulos-offer-sec">
           <div className="container">
-            <div className="row py-5 align-items-center justify-content-center">
-              <div className="col-xl-5 col-lg-9">
-                <div className="bistly-content-box text-center text-xl-start">
-                  <div className="section-title mb-3">
-                    <span
-                      {...cp('homeConfig.offerKicker')}
-                      className="sub-title stamatopoulos-sub-title"
-                      data-aos="fade-down"
-                      data-aos-duration="1000"
-                    >
-                      {t(hc.offerKicker)}
-                    </span>
-                    <h2 {...cp('homeConfig.offerTitle')} className="text-anm">
-                      {t(hc.offerTitle)}
-                    </h2>
-                  </div>
-                  <p {...cp('homeConfig.offerText')} className="mb-4" data-aos="fade-up" data-aos-duration="1200">
+            <div className="row align-items-center py-5 g-4 g-xl-5">
+              <div className="col-lg-5">
+                <div className="stamatopoulos-offer-copy" data-aos="fade-right" data-aos-duration="1000">
+                  <span {...cp('homeConfig.offerKicker')} className="stamatopoulos-offer-kicker">
+                    {t(hc.offerKicker)}
+                  </span>
+                  <h2 {...cp('homeConfig.offerTitle')} className="stamatopoulos-offer-title">
+                    {t(hc.offerTitle)}
+                  </h2>
+                  <p {...cp('homeConfig.offerText')} className="stamatopoulos-offer-text">
                     {t(hc.offerText)}
                   </p>
-                  <div className="bistly-button pt-2" data-aos="fade-up" data-aos-duration="1400">
+                  <div className="stamatopoulos-offer-actions">
                     <AppLink
                       {...cp('homeConfig.offerCtaLabel')}
                       href={hc.offerCtaHref}
-                      className="theme-btn style-one stamatopoulos-btn-salmon"
+                      className="theme-btn style-one stamatopoulos-offer-btn"
                     >
                       {t(hc.offerCtaLabel)}
                     </AppLink>
@@ -355,10 +348,14 @@ export default function IndexPage() {
                 </div>
               </div>
 
-              <div className="col-xl-7 col-lg-9">
-                <div className="bistly-image-box mt-5 mt-xl-5" data-aos="fade-up" data-aos-duration="1000">
-                  <div className="bistly-image text-end">
-                    <img src={img(hc.offerImage)} alt={t(hc.offerImageAlt)} />
+              <div className="col-lg-7">
+                <div className="stamatopoulos-offer-visual" data-aos="fade-left" data-aos-duration="1000">
+                  <div className="stamatopoulos-offer-circle">
+                    <img
+                      src={img(hc.offerImage)}
+                      alt={t(hc.offerImageAlt)}
+                      className="stamatopoulos-offer-circle__image"
+                    />
                   </div>
                 </div>
               </div>
