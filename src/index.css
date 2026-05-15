@@ -1160,6 +1160,16 @@ a {
   background-color: #ffffff;
 }
 
+.stamatopoulos-categories-kicker {
+  display: block;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  color: BLACK !important;
+  margin-bottom: 0.65rem;
+}
+
 .stamatopoulos-categories-heading {
   font-family: var(--heading-font, 'Marcellus', serif);
   font-size: clamp(1.65rem, 3.5vw, 2.5rem) !important;

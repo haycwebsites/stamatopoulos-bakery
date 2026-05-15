@@ -449,16 +449,16 @@ export const homeConfig: HomeConfig = {
   heroMainImage: '/assets/images/stamatopoulos/hero-pecan-slice.png',
   heroMainImageAlt: { el: 'Φέτα τούρτας με πεκάν', en: 'Slice of pecan tart' },
 
-  categoriesKicker: { el: '', en: '' },
+  categoriesKicker: { el: 'Οι δημιουργίες μας', en: 'Our creations' },
   categoriesTitle: {
     el: 'Γλυκά που φτιάχνονται για τις στιγμές που θέλεις να θυμάσαι',
     en: 'Sweets made for the moments you want to remember',
   },
   categories: [
-    { iconClass: 'flaticon-cake', title: { el: 'Χωρίς Γλουτένη', en: 'Gluten-Free' }, bgClass: 'bg_two', aosDurationMs: 1000 },
-    { iconClass: 'flaticon-cupcake-1', title: { el: 'Φρέσκα Υλικά', en: 'Fresh Ingredients' }, bgClass: 'bg_three', aosDurationMs: 1100 },
-    { iconClass: 'flaticon-bread', title: { el: 'Χειροποίητα', en: 'Handmade' }, bgClass: 'bg_one', aosDurationMs: 1200 },
-    { iconClass: 'flaticon-candy', title: { el: 'Ελληνικά Προϊόντα', en: 'Greek Products' }, bgClass: 'bg_four', aosDurationMs: 1300 },
+    { iconClass: 'flaticon-cake', title: { el: 'Custom Τούρτες', en: 'Custom Cakes' }, bgClass: 'bg_two', aosDurationMs: 1000 },
+    { iconClass: 'flaticon-cupcake-1', title: { el: 'Signature Desserts', en: 'Signature Desserts' }, bgClass: 'bg_three', aosDurationMs: 1100 },
+    { iconClass: 'flaticon-bread', title: { el: 'Εκδηλώσεις', en: 'Events' }, bgClass: 'bg_one', aosDurationMs: 1200 },
+    { iconClass: 'flaticon-candy', title: { el: 'Καθημερινές Απολαύσεις', en: 'Greek Products' }, bgClass: 'bg_four', aosDurationMs: 1300 },
   ],
 
   aboutLeftBackgroundImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg',

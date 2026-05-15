@@ -82,7 +82,7 @@ export default function IndexPage() {
                   {t(hc.categoriesKicker) ? (
                     <span
                       {...cp('homeConfig.categoriesKicker')}
-                      className="sub-title stamatopoulos-sub-title"
+                      className="sub-title stamatopoulos-sub-title stamatopoulos-categories-kicker"
                       data-aos="fade-down"
                       data-aos-duration="1000"
                     >
@@ -116,7 +116,7 @@ export default function IndexPage() {
         </section>
 
         <section className="ds-about-sec">
-          <div className="container-fluid">
+          <div className="container-fluid p-0">
             <div className="about-wrapper d-flex">
               <div
                 className="about-left-wrap bg_cover"
