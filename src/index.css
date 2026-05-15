@@ -1529,19 +1529,16 @@ a {
   background-color: #79a388 !important;
 }
 
-.stamatopoulos-category-item--stone .icon.icon-contained {
-  background: transparent !important;
-}
-
 .stamatopoulos-category-item .icon.icon-contained {
   width: 50px;
   height: 50px;
-  background: transparent !important;
   padding: 0;
+  /* background from config (iconBackgroundColor) or transparent */
+  background-color: transparent;
 }
 
 .stamatopoulos-category-item .icon.icon-contained .stamatopoulos-category-icon {
-  width: 50px;
+  width: 35px;
   height: 50px;
 }
 
@@ -2452,6 +2449,27 @@ a {
   object-fit: contain;
   object-position: left center;
   display: block;
+}
+
+.stamatopoulos-about-pillar-icon--filled {
+  justify-content: center;
+  align-self: flex-start;
+  width: 3.125rem;
+  height: 3.125rem;
+  min-width: 3.125rem;
+  padding: 0.35rem;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.stamatopoulos-about-pillar-icon--filled .stamatopoulos-about-pillar-icon-img {
+  width: 100%;
+  height: 100%;
+  max-width: 2rem;
+  max-height: 2rem;
+  margin: auto;
+  object-fit: contain;
+  object-position: center;
 }
 
 .stamatopoulos-about-pillar-title {

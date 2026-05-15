@@ -260,6 +260,8 @@ export interface AboutFeatureItemConfig {
   iconClass?: string;
   /** SVG under /public (Figma line icons for philosophy pillars) */
   iconSrc?: string;
+  /** Solid fill behind the icon (e.g. events compass on dark brown) */
+  iconBackgroundColor?: string;
   title: LocaleString;
   aosDurationMs?: number;
 }
@@ -567,10 +569,11 @@ export const homeConfig: HomeConfig = {
       backgroundColor: '#EEE9E5',
       textColor: '#512500',
       iconVariant: 'contained',
+      iconBackgroundColor: '#512500',
       aosDurationMs: 1200,
     },
     {
-      iconSrc: '/assets/images/stamatopoulos/icon-daily-delights.svg',
+      iconSrc: '/assets/images/stamatopoulos/icon-cookie.svg',
       iconAlt: { el: 'Καθημερινές απολαύσεις', en: 'Daily delights' },
       title: { el: 'Καθημερινές Απολαύσεις', en: 'Daily Delights' },
       backgroundColor: '#E1D9B240',
@@ -878,6 +881,7 @@ export const aboutPageConfig: AboutPageConfig = {
   featureItemsRight: [
     {
       iconSrc: '/assets/images/stamatopoulos/icon-events.svg',
+      iconBackgroundColor: '#512500',
       title: { el: 'Χειροποίητη φροντίδα', en: 'Handcrafted care' },
       aosDurationMs: 1400,
     },

@@ -180,7 +180,10 @@ export default function AboutPage() {
                           data-aos="fade-up"
                           data-aos-duration={it.aosDurationMs ?? 1200}
                         >
-                          <div className="stamatopoulos-about-pillar-icon">
+                          <div
+                            className={`stamatopoulos-about-pillar-icon${it.iconBackgroundColor ? ' stamatopoulos-about-pillar-icon--filled' : ''}`}
+                            style={it.iconBackgroundColor ? { backgroundColor: it.iconBackgroundColor } : undefined}
+                          >
                             {it.iconSrc ? (
                               <img
                                 src={img(it.iconSrc)}
@@ -207,7 +210,10 @@ export default function AboutPage() {
                           data-aos="fade-up"
                           data-aos-duration={it.aosDurationMs ?? 1400}
                         >
-                          <div className="stamatopoulos-about-pillar-icon">
+                          <div
+                            className={`stamatopoulos-about-pillar-icon${it.iconBackgroundColor ? ' stamatopoulos-about-pillar-icon--filled' : ''}`}
+                            style={it.iconBackgroundColor ? { backgroundColor: it.iconBackgroundColor } : undefined}
+                          >
                             {it.iconSrc ? (
                               <img
                                 src={img(it.iconSrc)}
