@@ -1899,55 +1899,51 @@ a {
 }
 
 .stamatopoulos-contact-quick {
-  background-color: #ffffff;
+  background-color: #fdfaf7;
+  padding-block: clamp(2.75rem, 5vw, 4.5rem);
 }
 
 .stamatopoulos-contact-quick-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  text-align: center;
+  gap: 1.35rem;
+  max-width: 22rem;
+  margin-inline: auto;
 }
 
-@media (min-width: 992px) {
-  .stamatopoulos-contact-quick-item {
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .stamatopoulos-contact-quick-item.text-lg-start {
-    text-align: left;
-  }
+.stamatopoulos-contact-quick-body {
+  width: 100%;
+  text-align: center;
 }
 
 .stamatopoulos-contact-quick-icon {
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(81, 37, 0, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #512500;
-  font-size: 1.25rem;
+  font-size: 1.65rem;
+  line-height: 1;
 }
 
 .stamatopoulos-contact-quick-icon-img {
-  width: 26px;
+  width: 30px;
   height: auto;
-  max-height: 27px;
+  max-height: 34px;
   object-fit: contain;
   display: block;
 }
 
 .stamatopoulos-contact-quick-title {
   font-family: var(--heading-font, 'Marcellus', Georgia, serif);
-  font-size: 1.2rem;
+  font-size: clamp(1.28rem, 2.2vw, 1.52rem);
   font-weight: 400;
   color: #512500;
-  margin: 0 0 0.35rem;
+  letter-spacing: 0.01em;
+  line-height: 1.28;
+  margin: 0 0 0.55rem;
 }
 
 .stamatopoulos-contact-quick-detail {

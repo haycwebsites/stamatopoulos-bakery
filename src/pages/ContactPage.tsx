@@ -32,13 +32,13 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="stamatopoulos-contact-quick py-5">
+        <section className="stamatopoulos-contact-quick">
           <div className="container">
-            <div className="row g-4 g-lg-5 justify-content-center">
+            <div className="row g-4 g-lg-5 justify-content-center align-items-start">
               {cc.infoItems.map((item, i) => (
-                <div key={`${item.iconSrc ?? item.iconClass ?? i}-${i}`} className="col-lg-4 col-md-4">
+                <div key={`${item.iconSrc ?? item.iconClass ?? i}-${i}`} className="col-md-4">
                   <div
-                    className="stamatopoulos-contact-quick-item text-center text-lg-start"
+                    className="stamatopoulos-contact-quick-item text-center"
                     data-aos="fade-up"
                     data-aos-duration={item.aosDurationMs ?? 800}
                   >
