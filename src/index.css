@@ -1847,7 +1847,8 @@ a {
 }
 
 /* About page — Stamatopoulos / Figma */
-.stamatopoulos-about-page .stamatopoulos-about-hero {
+.stamatopoulos-about-page .stamatopoulos-about-hero,
+.stamatopoulos-contact-page .stamatopoulos-about-hero {
   position: relative;
   background-size: cover;
   background-position: center;
@@ -1859,7 +1860,8 @@ a {
   padding-bottom: clamp(3.25rem, 7vw, 5.25rem);
 }
 
-.stamatopoulos-about-page .stamatopoulos-about-hero::before {
+.stamatopoulos-about-page .stamatopoulos-about-hero::before,
+.stamatopoulos-contact-page .stamatopoulos-about-hero::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -1889,6 +1891,283 @@ a {
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Contact page — Stamatopoulos / Figma */
+.stamatopoulos-contact-page .stamatopoulos-about-hero-inner {
+  max-width: 720px;
+}
+
+.stamatopoulos-contact-quick {
+  background-color: #ffffff;
+}
+
+.stamatopoulos-contact-quick-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 992px) {
+  .stamatopoulos-contact-quick-item {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .stamatopoulos-contact-quick-item.text-lg-start {
+    text-align: left;
+  }
+}
+
+.stamatopoulos-contact-quick-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(81, 37, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #512500;
+  font-size: 1.25rem;
+}
+
+.stamatopoulos-contact-quick-title {
+  font-family: var(--heading-font, 'Marcellus', Georgia, serif);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #512500;
+  margin: 0 0 0.35rem;
+}
+
+.stamatopoulos-contact-quick-detail {
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: rgba(81, 37, 0, 0.82);
+}
+
+.stamatopoulos-contact-quick-link {
+  color: rgba(81, 37, 0, 0.88);
+  text-decoration: underline !important;
+  text-underline-offset: 0.15em;
+}
+
+.stamatopoulos-contact-quick-link:hover {
+  color: #512500;
+}
+
+.stamatopoulos-contact-main {
+  background-color: #f9f3ea;
+}
+
+.stamatopoulos-contact-main-title {
+  font-family: var(--heading-font, 'Marcellus', Georgia, serif);
+  font-size: clamp(1.85rem, 3.6vw, 2.5rem);
+  font-weight: 400;
+  color: #512500;
+  line-height: 1.15;
+}
+
+.stamatopoulos-contact-main-lead {
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(81, 37, 0, 0.78);
+  max-width: 34rem;
+}
+
+.stamatopoulos-contact-hours-heading {
+  font-family: var(--heading-font, 'Marcellus', Georgia, serif);
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #512500;
+  margin: 0 0 0.85rem;
+}
+
+.stamatopoulos-contact-hours-list {
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: rgba(81, 37, 0, 0.82);
+}
+
+.stamatopoulos-contact-hours-row + .stamatopoulos-contact-hours-row {
+  margin-top: 0.35rem;
+}
+
+.stamatopoulos-contact-hours-label {
+  font-weight: 600;
+  color: rgba(81, 37, 0, 0.92);
+}
+
+.stamatopoulos-contact-hours-value {
+  font-weight: 400;
+}
+
+.stamatopoulos-contact-blurb-title {
+  font-family: var(--heading-font, 'Marcellus', Georgia, serif);
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #512500;
+  margin: 0 0 0.75rem;
+}
+
+.stamatopoulos-contact-blurb-text {
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: rgba(81, 37, 0, 0.78);
+  max-width: 34rem;
+}
+
+.stamatopoulos-contact-form-card {
+  background: #ffffff;
+  border: 1px solid rgba(81, 37, 0, 0.12);
+  border-radius: 14px;
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  box-shadow: 0 12px 40px rgba(41, 28, 22, 0.06);
+}
+
+.stamatopoulos-contact-form-card-title {
+  font-family: var(--heading-font, 'Marcellus', Georgia, serif);
+  font-size: 1.35rem;
+  color: #512500;
+  margin: 0 0 1.25rem;
+}
+
+.stamatopoulos-contact-form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.stamatopoulos-contact-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.stamatopoulos-contact-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.stamatopoulos-contact-form-label {
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(81, 37, 0, 0.88);
+}
+
+.stamatopoulos-contact-form-input,
+.stamatopoulos-contact-form-select,
+.stamatopoulos-contact-form-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.65rem 0.85rem;
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: #512500;
+  background: #fffef9;
+  border: 1px solid rgba(81, 37, 0, 0.18);
+  border-radius: 10px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stamatopoulos-contact-form-input:focus,
+.stamatopoulos-contact-form-select:focus,
+.stamatopoulos-contact-form-textarea:focus {
+  outline: none;
+  border-color: rgba(233, 141, 116, 0.85);
+  box-shadow: 0 0 0 3px rgba(233, 141, 116, 0.18);
+}
+
+.stamatopoulos-contact-form-input:disabled,
+.stamatopoulos-contact-form-select:disabled,
+.stamatopoulos-contact-form-textarea:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.stamatopoulos-contact-form-select {
+  appearance: auto;
+  cursor: pointer;
+}
+
+.stamatopoulos-contact-form-textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.stamatopoulos-contact-form-input[aria-invalid='true'],
+.stamatopoulos-contact-form-textarea[aria-invalid='true'] {
+  border-color: #c94a4a;
+}
+
+.stamatopoulos-contact-form-field-error {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: #b42318;
+}
+
+.stamatopoulos-contact-form-actions {
+  margin-top: 0.25rem;
+}
+
+.stamatopoulos-contact-form-actions .theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 9rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.stamatopoulos-contact-form-alert {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #b42318;
+}
+
+.stamatopoulos-contact-form-success {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.stamatopoulos-contact-form-success-title {
+  font-family: var(--heading-font, 'Marcellus', Georgia, serif);
+  font-size: 1.25rem;
+  color: #512500;
+  margin: 0 0 0.5rem;
+}
+
+.stamatopoulos-contact-form-success-text {
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: 0.9375rem;
+  color: rgba(81, 37, 0, 0.72);
+  margin: 0;
+}
+
+.stamatopoulos-contact-map {
+  background-color: #e8e4df;
+  line-height: 0;
+}
+
+.stamatopoulos-contact-map-frame {
+  display: block;
+  width: 100%;
+  height: min(480px, 55vh);
+  min-height: 360px;
+  border: 0;
 }
 
 .stamatopoulos-about-history {

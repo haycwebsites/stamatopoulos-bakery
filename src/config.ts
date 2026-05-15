@@ -318,6 +318,8 @@ export interface ContactHoursBlockConfig {
 export interface ContactPageConfig {
   bannerBackgroundImage: string;
   bannerTitle: LocaleString;
+  /** Hero line below title (Stamatopoulos layout — no breadcrumb in hero) */
+  bannerSubtitle?: LocaleString;
   breadcrumbHomeLabel: LocaleString;
   breadcrumbHomeHref: string;
   breadcrumbCurrentLabel: LocaleString;
@@ -327,8 +329,12 @@ export interface ContactPageConfig {
   leftTitle: LocaleString;
   leftSubtitle: LocaleString;
   hoursBlocks: ContactHoursBlockConfig[];
+  /** Optional block below hours (e.g. orders & events copy) */
+  secondaryBlurbTitle?: LocaleString;
+  secondaryBlurbBody?: LocaleString;
 
-  formCardTitle: LocaleString;
+  /** Heading inside the form card; omit or leave blank to hide */
+  formCardTitle?: LocaleString;
   mapEmbedSrc: string;
 }
 
@@ -873,64 +879,66 @@ export const aboutPageConfig: AboutPageConfig = {
 };
 
 export const contactPageConfig: ContactPageConfig = {
-  bannerBackgroundImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/page-bg.jpg',
-  bannerTitle: { el: 'Contact Us', en: 'Contact Us' },
-  breadcrumbHomeLabel: { el: 'Home', en: 'Home' },
+  bannerBackgroundImage:
+    'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=2400&q=80',
+  bannerTitle: { el: 'Μιλήστε μαζί μας', en: 'Talk to us' },
+  bannerSubtitle: {
+    el: 'Για παραγγελίες, εκδηλώσεις ή οποιαδήποτε πληροφορία, είμαστε εδώ για να σας εξυπηρετήσουμε.',
+    en: 'For orders, events, or any information, we are here to help.',
+  },
+  breadcrumbHomeLabel: { el: 'Αρχική', en: 'Home' },
   breadcrumbHomeHref: '/',
-  breadcrumbCurrentLabel: { el: 'Contact Us', en: 'Contact Us' },
+  breadcrumbCurrentLabel: { el: 'Επικοινωνία', en: 'Contact' },
 
   infoItems: [
     {
       iconClass: 'far fa-map-marker-alt',
-      title: { el: 'Our Location', en: 'Our Location' },
-      lines: [
-        { value: { el: '456 Elm Avenue, Metropolis NY 10001', en: '456 Elm Avenue, Metropolis NY 10001' } },
-      ],
+      title: { el: 'Που θα μας βρείτε', en: 'Where to find us' },
+      lines: [{ value: { el: 'Διεύθυνση, Τρίπολη', en: 'Address, Tripoli' } }],
       aosDurationMs: 800,
     },
     {
       iconClass: 'far fa-phone-alt',
-      title: { el: 'Contact Number', en: 'Contact Number' },
-      lines: [
-        { value: { el: '+000 123 456 7890', en: '+000 123 456 7890' }, href: 'tel:+0001234567890' },
-        { value: { el: '+000 123 756 4352', en: '+000 123 756 4352' }, href: 'tel:+0001237564352' },
-      ],
+      title: { el: 'Καλέστε μας', en: 'Call us' },
+      lines: [{ value: { el: '+30 123 456 7890', en: '+30 123 456 7890' }, href: 'tel:+301234567890' }],
       aosDurationMs: 1000,
     },
     {
-      iconClass: 'far fa-envelope',
-      title: { el: 'Email', en: 'Email Address' },
-      lines: [
-        { value: { el: 'Contact@Example.com', en: 'Contact@Example.com' }, href: 'mailto:Contact@Example.com' },
-        { value: { el: 'Info@Example.com', en: 'Info@Example.com' }, href: 'mailto:Info@Example.com' },
-      ],
+      iconClass: 'fas fa-paper-plane',
+      title: { el: 'Στείλτε μας email', en: 'Send us an email' },
+      lines: [{ value: { el: 'email@example.com', en: 'email@example.com' }, href: 'mailto:email@example.com' }],
       aosDurationMs: 1200,
     },
   ],
 
-  leftTitle: { el: 'Talk to Us Today', en: 'Talk to Us Today' },
-  leftSubtitle: { el: 'Have a question or feedback? Our team is here to help.', en: 'Have a question or feedback? Our team is here to help.' },
+  leftTitle: { el: 'Επικοινωνήστε μαζί μας', en: 'Contact us' },
+  leftSubtitle: {
+    el: 'Είμαστε στη διάθεσή σας για οποιαδήποτε ερώτηση, πρόταση ή ιδέα. Στείλτε μας το μήνυμά σας ή επισκεφθείτε μας στο κατάστημα — θα χαρούμε να σας γνωρίσουμε.',
+    en: 'We are here for any question, suggestion, or idea. Send us a message or visit our shop — we would love to meet you.',
+  },
   hoursBlocks: [
     {
-      title: { el: 'Opening Hours', en: 'Opening Hours' },
+      title: { el: 'Ωράριο Καταστήματος', en: 'Store hours' },
       rows: [
-        { label: { el: 'Mon–Thu:', en: 'Mon–Thu:' }, value: { el: '10:00 am – 01:00 am', en: '10:00 am – 01:00 am' } },
-        { label: { el: 'Fri–Sat:', en: 'Fri–Sat:' }, value: { el: '10:00 am – 01:00 am', en: '10:00 am – 01:00 am' } },
-        { label: { el: 'Sunday:', en: 'Sunday:' }, value: { el: 'Off', en: 'Off' } },
-      ],
-    },
-    {
-      title: { el: 'Available Hours', en: 'Available Hours' },
-      rows: [
-        { label: { el: 'Breakfast:', en: 'Breakfast:' }, value: { el: '07:00 – 10:00', en: '07:00 – 10:00' } },
-        { label: { el: 'Lunch:', en: 'Lunch:' }, value: { el: '12:00 – 02:00', en: '12:00 – 02:00' } },
-        { label: { el: 'Dinner:', en: 'Dinner:' }, value: { el: '07:00 – 10:00', en: '07:00 – 10:00' } },
+        {
+          label: { el: 'Δευτέρα – Σάββατο:', en: 'Monday – Saturday:' },
+          value: { el: '08:00 – 21:00', en: '8:00 a.m. – 9:00 p.m.' },
+        },
+        {
+          label: { el: 'Κυριακή:', en: 'Sunday:' },
+          value: { el: 'Κλειστά', en: 'Closed' },
+        },
       ],
     },
   ],
+  secondaryBlurbTitle: { el: 'Για παραγγελίες & εκδηλώσεις', en: 'For orders & events' },
+  secondaryBlurbBody: {
+    el: 'Αναλαμβάνουμε custom τούρτες, γλυκά επιλεγμένης ποιότητας και candy bars για γάμους, βαπτίσεις και κάθε ξεχωριστή στιγμή. Περιγράψτε μας την περίσταση και θα επικοινωνήσουμε μαζί σας για λεπτομέρειες.',
+    en: 'We create custom cakes, fine desserts, and candy bars for weddings, christenings, and every special occasion. Tell us about your event and we will follow up with details.',
+  },
 
-  formCardTitle: { el: 'Contact Form', en: 'Contact Form' },
-  mapEmbedSrc: 'https://www.google.com/maps?q=Athens,Greece&output=embed',
+  formCardTitle: { el: '', en: '' },
+  mapEmbedSrc: 'https://www.google.com/maps?q=Tripoli+Greece&output=embed',
 };
 
 export const menuPageConfig: MenuPageConfig = {
