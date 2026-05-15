@@ -1934,6 +1934,14 @@ a {
   font-size: 1.25rem;
 }
 
+.stamatopoulos-contact-quick-icon-img {
+  width: 26px;
+  height: auto;
+  max-height: 27px;
+  object-fit: contain;
+  display: block;
+}
+
 .stamatopoulos-contact-quick-title {
   font-family: var(--heading-font, 'Marcellus', Georgia, serif);
   font-size: 1.2rem;

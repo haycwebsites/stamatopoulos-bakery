@@ -36,14 +36,23 @@ export default function ContactPage() {
           <div className="container">
             <div className="row g-4 g-lg-5 justify-content-center">
               {cc.infoItems.map((item, i) => (
-                <div key={i} className="col-lg-4 col-md-4">
+                <div key={`${item.iconSrc ?? item.iconClass ?? i}-${i}`} className="col-lg-4 col-md-4">
                   <div
                     className="stamatopoulos-contact-quick-item text-center text-lg-start"
                     data-aos="fade-up"
                     data-aos-duration={item.aosDurationMs ?? 800}
                   >
                     <div className="stamatopoulos-contact-quick-icon" aria-hidden>
-                      <i className={item.iconClass} />
+                      {item.iconSrc ? (
+                        <img
+                          src={img(item.iconSrc)}
+                          alt=""
+                          className="stamatopoulos-contact-quick-icon-img"
+                          {...cp(`contactPageConfig.infoItems.${i}.iconSrc`)}
+                        />
+                      ) : (
+                        <i className={item.iconClass ?? 'fas fa-circle'} />
+                      )}
                     </div>
                     <div className="stamatopoulos-contact-quick-body">
                       <h3 {...cp(`contactPageConfig.infoItems.${i}.title`)} className="stamatopoulos-contact-quick-title">

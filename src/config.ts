@@ -299,7 +299,10 @@ export interface AboutPageConfig {
 }
 
 export interface ContactInfoItemConfig {
-  iconClass: string;
+  /** Font Awesome fallback when iconSrc is not set */
+  iconClass?: string;
+  /** Custom SVG under /public */
+  iconSrc?: string;
   title: LocaleString;
   lines: { label?: LocaleString; value: LocaleString; href?: string }[];
   aosDurationMs?: number;
@@ -879,8 +882,7 @@ export const aboutPageConfig: AboutPageConfig = {
 };
 
 export const contactPageConfig: ContactPageConfig = {
-  bannerBackgroundImage:
-    'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=2400&q=80',
+  bannerBackgroundImage: '/assets/images/stamatopoulos/contact-hero.png',
   bannerTitle: { el: 'Μιλήστε μαζί μας', en: 'Talk to us' },
   bannerSubtitle: {
     el: 'Για παραγγελίες, εκδηλώσεις ή οποιαδήποτε πληροφορία, είμαστε εδώ για να σας εξυπηρετήσουμε.',
@@ -892,19 +894,19 @@ export const contactPageConfig: ContactPageConfig = {
 
   infoItems: [
     {
-      iconClass: 'far fa-map-marker-alt',
+      iconSrc: '/assets/images/stamatopoulos/contact-icon-location.svg',
       title: { el: 'Που θα μας βρείτε', en: 'Where to find us' },
       lines: [{ value: { el: 'Διεύθυνση, Τρίπολη', en: 'Address, Tripoli' } }],
       aosDurationMs: 800,
     },
     {
-      iconClass: 'far fa-phone-alt',
+      iconSrc: '/assets/images/stamatopoulos/contact-icon-phone.svg',
       title: { el: 'Καλέστε μας', en: 'Call us' },
       lines: [{ value: { el: '+30 123 456 7890', en: '+30 123 456 7890' }, href: 'tel:+301234567890' }],
       aosDurationMs: 1000,
     },
     {
-      iconClass: 'fas fa-paper-plane',
+      iconSrc: '/assets/images/stamatopoulos/contact-icon-send.svg',
       title: { el: 'Στείλτε μας email', en: 'Send us an email' },
       lines: [{ value: { el: 'email@example.com', en: 'email@example.com' }, href: 'mailto:email@example.com' }],
       aosDurationMs: 1200,
