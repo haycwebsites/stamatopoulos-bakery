@@ -623,7 +623,7 @@ export const homeConfig: HomeConfig = {
       aosDurationMs: 1200,
     },
     {
-      backgroundImage: '/assets/images/stamatopoulos/promo-custom-cakes.png',
+      backgroundImage: '/assets/images/stamatopoulos/custom-cake-main.jpg',
       backgroundColor: '#F5D8CC',
       kicker: { el: 'Φτιαγμένα για σένα', en: 'Made for you' },
       title: { el: 'Custom Cakes', en: 'Custom Cakes' },
@@ -868,25 +868,25 @@ export const aboutPageConfig: AboutPageConfig = {
   },
   featureItemsLeft: [
     {
-      iconSrc: '/assets/images/stamatopoulos/icon-custom-cakes.svg',
+      iconSrc: '/assets/images/stamatopoulos/about/philosophy/pillar-family-tradition.svg',
       title: { el: 'Οικογενειακή παράδοση', en: 'Family tradition' },
       aosDurationMs: 1200,
     },
     {
-      iconSrc: '/assets/images/stamatopoulos/icon-signature-desserts.svg',
+      iconSrc: '/assets/images/stamatopoulos/about/philosophy/pillar-quality-ingredients.svg',
       title: { el: 'Ποιοτικές πρώτες ύλες', en: 'Quality ingredients' },
       aosDurationMs: 1300,
     },
   ],
   featureItemsRight: [
     {
-      iconSrc: '/assets/images/stamatopoulos/icon-events.svg',
+      iconSrc: '/assets/images/stamatopoulos/about/philosophy/pillar-handcrafted-care.svg',
       iconBackgroundColor: '#512500',
       title: { el: 'Χειροποίητη φροντίδα', en: 'Handcrafted care' },
       aosDurationMs: 1400,
     },
     {
-      iconSrc: '/assets/images/stamatopoulos/icon-daily-delights.svg',
+      iconSrc: '/assets/images/stamatopoulos/about/philosophy/pillar-contemporary-creation.svg',
       title: { el: 'Σύγχρονη δημιουργία', en: 'Contemporary creation' },
       aosDurationMs: 1500,
     },
