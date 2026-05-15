@@ -442,51 +442,51 @@ export default function IndexPage() {
         <section className="ds-blog stamatopoulos-blog-sec py-5">
           <div className="container">
             <div className="row justify-content-center py-5">
-              <div className="col-lg-9">
-                <div className="section-title text-center mt-xl-4 stamatopoulos-section-title">
+              <div className="col-lg-10 col-xl-9">
+                <div className="section-title text-center mt-xl-4 stamatopoulos-blog-header">
                   <span
                     {...cp('homeConfig.blogKicker')}
-                    className="sub-title stamatopoulos-sub-title"
+                    className="stamatopoulos-blog-kicker"
                     data-aos="fade-down"
                     data-aos-duration="1000"
                   >
                     {t(hc.blogKicker)}
                   </span>
-                  <h2 {...cp('homeConfig.blogTitle')} className="text-anm">
+                  <h2 {...cp('homeConfig.blogTitle')} className="stamatopoulos-blog-heading text-anm">
                     {t(hc.blogTitle)}
                   </h2>
                 </div>
               </div>
             </div>
 
-            <div className="row justify-content-center pb-4">
+            <div className="row justify-content-center gx-lg-4 stamatopoulos-blog-cards-row pb-4">
               {hc.blogPosts.map((post, i) => (
                 <div key={i} className="col-xl-4 col-md-6 col-sm-12">
-                  <div className="bistly-blog-post mb-5">
-                    <div className="post-thumbnail">
+                  <article className="stamatopoulos-blog-card bistly-blog-post mb-5 mb-xl-0">
+                    <div className="post-thumbnail stamatopoulos-blog-thumb">
                       <img src={img(post.image)} alt={t(post.title)} />
                     </div>
-                    <div className="post-content">
+                    <div className="post-content stamatopoulos-blog-card-body">
                       <div className="post-meta stamatopoulos-blog-meta">
-                        <span {...cp(`homeConfig.blogPosts.${i}.dateLabel`)}>{t(post.dateLabel)}</span>
-                        <span className="stamatopoulos-blog-meta-sep">—</span>
-                        <span {...cp(`homeConfig.blogPosts.${i}.authorLabel`)}>{t(post.authorLabel)}</span>
+                        <span className="stamatopoulos-blog-meta-item">
+                          <i className="far fa-user" aria-hidden />
+                          <span {...cp(`homeConfig.blogPosts.${i}.authorLabel`)}>{t(post.authorLabel)}</span>
+                        </span>
+                        <span className="stamatopoulos-blog-meta-item">
+                          <i className="far fa-calendar-days" aria-hidden />
+                          <span {...cp(`homeConfig.blogPosts.${i}.dateLabel`)}>{t(post.dateLabel)}</span>
+                        </span>
                       </div>
-                      <h4>
+                      <h4 className="stamatopoulos-blog-card-title">
                         <a {...cp(`homeConfig.blogPosts.${i}.title`)} href={post.href}>
                           {t(post.title)}
                         </a>
                       </h4>
-                      <p {...cp(`homeConfig.blogPosts.${i}.excerpt`)}>{t(post.excerpt)}</p>
-                      <a
-                        {...cp('homeConfig.blogReadMoreLabel')}
-                        href={post.href}
-                        className="stamatopoulos-blog-read-more"
-                      >
-                        {t(hc.blogReadMoreLabel)} <i className="fas fa-arrow-right" />
-                      </a>
+                      <p className="stamatopoulos-blog-card-excerpt" {...cp(`homeConfig.blogPosts.${i}.excerpt`)}>
+                        {t(post.excerpt)}
+                      </p>
                     </div>
-                  </div>
+                  </article>
                 </div>
               ))}
             </div>

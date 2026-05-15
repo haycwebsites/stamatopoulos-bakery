@@ -1724,31 +1724,126 @@ a {
   }
 }
 
-.stamatopoulos-blog-sec .stamatopoulos-blog-meta {
-  font-size: 0.8125rem;
-  color: #84a58e;
-  letter-spacing: 0.04em;
+/* Blog — latest news (white section, serif heading, card grid) */
+.stamatopoulos-blog-sec {
+  background-color: #ffffff;
+}
+
+.stamatopoulos-blog-sec .stamatopoulos-blog-header {
   margin-bottom: 0.5rem;
 }
 
-.stamatopoulos-blog-meta-sep {
-  margin: 0 0.35rem;
+.stamatopoulos-blog-sec .stamatopoulos-blog-kicker {
+  display: block;
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: clamp(0.8125rem, 1.6vw, 0.9375rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: #4a4a4a !important;
+  margin-bottom: 0.85rem;
 }
 
-.stamatopoulos-blog-read-more {
+.stamatopoulos-blog-sec .stamatopoulos-blog-kicker::before,
+.stamatopoulos-blog-sec .stamatopoulos-blog-kicker::after {
+  display: none !important;
+}
+
+.stamatopoulos-blog-sec .stamatopoulos-blog-heading {
+  font-family: var(--heading-font, 'Marcellus', Georgia, serif);
+  font-size: clamp(1.65rem, 3.8vw, 2.45rem);
+  font-weight: 600;
+  line-height: 1.28;
+  color: #4a2c1d;
+  margin: 0;
+}
+
+.stamatopoulos-blog-sec .stamatopoulos-blog-cards-row {
+  --bs-gutter-y: 2.5rem;
+}
+
+.stamatopoulos-blog-sec .stamatopoulos-blog-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.stamatopoulos-blog-sec .stamatopoulos-blog-thumb {
+  overflow: hidden;
+  border-radius: 0;
+  margin-bottom: 1rem;
+}
+
+.stamatopoulos-blog-sec .stamatopoulos-blog-thumb img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.stamatopoulos-blog-sec .stamatopoulos-blog-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left;
+  padding: 0;
+}
+
+.stamatopoulos-blog-sec .stamatopoulos-blog-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 1.35rem;
+  row-gap: 0.35rem;
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #8a8a8a;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  margin-bottom: 0.65rem;
+}
+
+.stamatopoulos-blog-sec .stamatopoulos-blog-meta-item {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  margin-top: 0.75rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #512500;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  gap: 0.45rem;
 }
 
-.stamatopoulos-blog-read-more:hover {
-  color: #e98d74;
+.stamatopoulos-blog-sec .stamatopoulos-blog-meta-item i {
+  font-size: 0.8125rem;
+  opacity: 0.9;
+}
+
+.stamatopoulos-blog-sec .stamatopoulos-blog-card-title {
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 0.5rem;
+}
+
+.stamatopoulos-blog-sec .stamatopoulos-blog-card-title a {
+  color: #111111;
+  text-decoration: none;
+}
+
+.stamatopoulos-blog-sec .stamatopoulos-blog-card-title a:hover {
+  color: #4a2c1d;
+}
+
+.stamatopoulos-blog-sec .stamatopoulos-blog-card-excerpt {
+  font-family: var(--stamatopoulos-body-font, 'LT Superior', sans-serif);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  font-weight: 400;
+  color: #8a8a8a;
+  margin: 0;
 }
 
 .default-footer.rs-footer {
