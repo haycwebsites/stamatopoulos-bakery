@@ -391,15 +391,25 @@ export default function IndexPage() {
 
         <section className="ds-cta stamatopoulos-newsletter-sec pt-5 p-r z-1 overflow-hidden">
           <div className="container">
-            <div className="ds-cta-wrapper stamatopoulos-newsletter-wrap bg_cover mt-5">
+            <div
+              className="ds-cta-wrapper stamatopoulos-newsletter-wrap bg_cover mt-5"
+              style={{ backgroundImage: `url(${img(hc.ctaBackgroundImage)})` }}
+            >
               <div className="row justify-content-center">
                 <div className="col-xl-8">
                   <div className="ds-cta-box text-center">
                     <div className="section-title" data-aos="fade-up" data-aos-duration="1000">
-                      <h2 {...cp('homeConfig.ctaTitle')}>{t(hc.ctaTitle)}</h2>
+                      <h2 className="stamatopoulos-newsletter-title" {...cp('homeConfig.ctaTitle')}>
+                        {t(hc.ctaTitle)}
+                      </h2>
                     </div>
                     {t(hc.ctaSubtitle) ? (
-                      <p {...cp('homeConfig.ctaSubtitle')} data-aos="fade-up" data-aos-duration="1200">
+                      <p
+                        className="stamatopoulos-newsletter-subtitle"
+                        {...cp('homeConfig.ctaSubtitle')}
+                        data-aos="fade-up"
+                        data-aos-duration="1200"
+                      >
                         {t(hc.ctaSubtitle)}
                       </p>
                     ) : null}

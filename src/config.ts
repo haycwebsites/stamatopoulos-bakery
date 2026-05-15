@@ -636,11 +636,14 @@ export const homeConfig: HomeConfig = {
     alt: { el: 'Gallery Image', en: 'Gallery Image' },
   })),
 
-  ctaBackgroundImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/cta-bg.jpg',
+  ctaBackgroundImage: '/assets/images/stamatopoulos/newsletter-background.svg',
   ctaTitle: { el: 'Νέα από το εργαστήριό μας', en: 'News from our workshop' },
-  ctaSubtitle: { el: '', en: '' },
-  ctaEmailPlaceholder: { el: 'Το email σας', en: 'Your email' },
-  ctaButtonLabel: { el: 'GO', en: 'GO' },
+  ctaSubtitle: {
+    el: 'Ανακάλυψε πρώτος νέες γεύσεις, εποχιακές προτάσεις και δημιουργίες που ξεχωρίζουν.',
+    en: 'Be the first to discover new flavors, seasonal suggestions, and creations that stand out.',
+  },
+  ctaEmailPlaceholder: { el: 'Το email σου', en: 'Your email' },
+  ctaButtonLabel: { el: 'ΕΓΓΡΑΦΗ', en: 'SUBSCRIBE' },
 
   blogKicker: { el: 'ΤΟ BLOG ΜΑΣ', en: 'OUR BLOG' },
   blogTitle: {
