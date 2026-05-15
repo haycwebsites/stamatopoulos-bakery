@@ -2028,10 +2028,11 @@ a {
 }
 
 .stamatopoulos-contact-form-card {
-  background: #ffffff;
+  background: transparent;
+  border-radius: 0;
+  padding: clamp(1.5rem, 4vw, 2.25rem);
   border: 1px solid rgba(81, 37, 0, 0.12);
   border-radius: 14px;
-  padding: clamp(1.5rem, 4vw, 2.25rem);
   box-shadow: 0 12px 40px rgba(41, 28, 22, 0.06);
 }
 
@@ -2081,8 +2082,8 @@ a {
   font-size: 0.9375rem;
   line-height: 1.45;
   color: #512500;
-  background: #fffef9;
-  border: 1px solid rgba(81, 37, 0, 0.18);
+  background: transparent;
+  border: 1px solid rgba(81, 37, 0, 0.22);
   border-radius: 10px;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
@@ -2092,7 +2093,7 @@ a {
 .stamatopoulos-contact-form-textarea:focus {
   outline: none;
   border-color: rgba(233, 141, 116, 0.85);
-  box-shadow: 0 0 0 3px rgba(233, 141, 116, 0.18);
+  box-shadow: none;
 }
 
 .stamatopoulos-contact-form-input:disabled,
@@ -2134,6 +2135,24 @@ a {
   min-width: 9rem;
   padding-left: 1.75rem;
   padding-right: 1.75rem;
+}
+
+.stamatopoulos-contact-form-actions .stamatopoulos-btn-salmon.theme-btn.style-one {
+  background-color: transparent;
+  border: 2px solid #e98d74;
+  color: #512500;
+}
+
+.stamatopoulos-contact-form-actions .stamatopoulos-btn-salmon.theme-btn.style-one:hover:not(:disabled) {
+  background-color: rgba(233, 141, 116, 0.14);
+  border-color: #e98d74;
+  color: #512500;
+}
+
+.stamatopoulos-contact-form-actions .stamatopoulos-btn-salmon.theme-btn.style-one:disabled {
+  background-color: transparent;
+  border-color: rgba(233, 141, 116, 0.45);
+  color: rgba(81, 37, 0, 0.45);
 }
 
 .stamatopoulos-contact-form-alert {
