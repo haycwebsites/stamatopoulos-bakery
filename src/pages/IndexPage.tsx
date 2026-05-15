@@ -186,12 +186,10 @@ export default function IndexPage() {
 
                 <div className="bistly-experience-box" data-aos="fade-up" data-aos-duration="1200">
                   <div className="content">
-                    <div className="section-title">
-                      {t(hc.experienceKicker) ? (
-                        <span {...cp('homeConfig.experienceKicker')} className="sub-title stamatopoulos-sub-title">
-                          {t(hc.experienceKicker)}
-                        </span>
-                      ) : null}
+                    <div className="section-title mb-4">
+                      <span {...cp('homeConfig.experienceKicker')} className="sub-title stamatopoulos-sub-title">
+                        {t(hc.experienceKicker)}
+                      </span>
                       <h2 {...cp('homeConfig.experienceTitle')}>{t(hc.experienceTitle)}</h2>
                     </div>
                     <p {...cp('homeConfig.experienceText')}>{t(hc.experienceText)}</p>

@@ -1,7 +1,18 @@
 /* Bistly theme base (partial) + fonts.
    You can paste the rest of the theme CSS here anytime. */
 
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'LT Superior';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local('LT Superior Medium'),
+    local('LT Superior'),
+    url('/assets/fonts/LTSuperior-Medium.woff') format('woff');
+}
 
 :root {
   --primary-color: #D0965C;
@@ -13,19 +24,22 @@
   --text-color: #2D4443;
   --border-color: #E9E9E9;
   --rating-color: #FF9F1A;
-  --heading-font: "Marcellus", serif;
-  --body-font: "Roboto", sans-serif;
+  --heading-font: 'Arima', cursive;
+  --body-font: 'LT Superior', sans-serif;
+  --stamatopoulos-title-font: 'Arima', cursive;
+  --stamatopoulos-body-font: 'LT Superior', sans-serif;
 }
 
 html { font-size: 100%; }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-weight: 400;
+  font-weight: 500;
   color: var(--text-color);
   font-family: var(--body-font);
   font-size: 16px;
-  line-height: 30px;
+  line-height: 25px;
+  letter-spacing: 0;
   overflow-x: hidden;
 }
 

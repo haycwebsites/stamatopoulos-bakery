@@ -12,6 +12,25 @@
   --rating-color: #FF9F1A;
 	--white-color: #ffffff;
 	--border-color: #E9E9E9;
+  --stamatopoulos-title-font: 'Arima', cursive;
+  --stamatopoulos-body-font: 'LT Superior', sans-serif;
+}
+
+/* Stamatopoulos typography (Figma) */
+.stamatopoulos-title {
+  font-family: var(--stamatopoulos-title-font);
+  font-weight: 600;
+  font-size: clamp(2rem, 4vw, 48px);
+  line-height: 1.36;
+  letter-spacing: 0;
+}
+
+.stamatopoulos-body-text {
+  font-family: var(--stamatopoulos-body-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0;
 }
 
 .hayc-nl-hidden {
@@ -443,8 +462,8 @@ a {
 }
 
 .stamatopoulos-hero-title {
-  font-family: var(--heading-font, 'Marcellus', serif);
-  font-weight: 400;
+  font-family: var(--stamatopoulos-title-font);
+  font-weight: 600;
   color: #512500;
   font-size: clamp(1.85rem, 4.5vw, 3.35rem);
   line-height: 1.22;
@@ -468,9 +487,10 @@ a {
 }
 
 .stamatopoulos-hero-copy p {
-  font-family: var(--body-font, 'Roboto', sans-serif);
-  font-size: clamp(1rem, 1.35vw, 1.125rem);
-  line-height: 1.65;
+  font-family: var(--stamatopoulos-body-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
   color: #512500;
   margin: 0 0 1.75rem;
   max-width: 38rem;
@@ -848,16 +868,20 @@ a {
 }
 
 .ds-about-sec .bistly-about-box .section-title h2 {
-  font-family: var(--heading-font, 'Marcellus', serif);
-  font-size: clamp(2.5rem, 4.5vw, 3rem);
-  line-height: 1.1;
-  font-weight: 400;
+  font-family: var(--stamatopoulos-title-font);
+  font-weight: 600;
+  font-size: clamp(2rem, 4vw, 48px);
+  line-height: 1.36;
+  letter-spacing: 0;
   color: #512500;
 }
 
 .ds-about-sec .bistly-about-box p {
-  font-size: clamp(1.0625rem, 1.35vw, 1.25rem);
-  line-height: 1.65;
+  font-family: var(--stamatopoulos-body-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0;
   color: #512500;
 }
 
@@ -920,16 +944,20 @@ a {
 }
 
 .ds-about-sec .bistly-experience-box .section-title h2 {
-  font-family: var(--heading-font, 'Marcellus', serif);
-  font-size: clamp(2.5rem, 4.5vw, 3rem);
-  line-height: 1.1;
-  font-weight: 400;
+  font-family: var(--stamatopoulos-title-font);
+  font-weight: 600;
+  font-size: clamp(2rem, 4vw, 48px);
+  line-height: 1.36;
+  letter-spacing: 0;
   color: #fff;
 }
 
 .ds-about-sec .bistly-experience-box p {
-  font-size: clamp(1.0625rem, 1.35vw, 1.25rem);
-  line-height: 1.65;
+  font-family: var(--stamatopoulos-body-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0;
   color: rgba(255, 255, 255, 0.95);
 }
 
@@ -1219,9 +1247,9 @@ a {
 
 /* Stamatopoulos home — post-hero sections */
 .stamatopoulos-sub-title {
-  font-family: var(--body-font, 'Roboto', sans-serif);
+  font-family: var(--stamatopoulos-body-font);
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #84a58e !important;
@@ -1247,11 +1275,11 @@ a {
 }
 
 .stamatopoulos-categories-heading {
-  font-family: var(--heading-font, 'Marcellus', serif);
-  font-size: clamp(1.65rem, 3.5vw, 2.5rem) !important;
-  line-height: 1.25 !important;
+  font-family: var(--stamatopoulos-title-font);
+  font-size: clamp(1.65rem, 3.5vw, 48px) !important;
+  line-height: 1.36 !important;
   color: #512500 !important;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .stamatopoulos-categories-sec .categories-wrapper {
