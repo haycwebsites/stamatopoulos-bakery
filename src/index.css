@@ -772,7 +772,7 @@ a {
   z-index: 1;
   overflow: hidden;
   padding: 45px 50px;
-  background-color: #F9F4FC;
+  background-color: #FEF4EB;
   margin-bottom: 10px;
 }
 
@@ -783,9 +783,9 @@ a {
   z-index: -1;
 }
 
-.ds-about-sec .bistly-about-box .shape img {
+/* .ds-about-sec .bistly-about-box .shape img {
   opacity: 0.05;
-}
+} */
 
 .ds-about-sec .bistly-about-box .content {
   max-width: 580px;

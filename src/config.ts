@@ -500,7 +500,7 @@ export const homeConfig: HomeConfig = {
   ],
 
   aboutLeftBackgroundImage: '/public/assets/images/stamatopoulos/97fc5e805ac11e44aa93524cdede5776ead81514.jpg',
-  aboutShapeImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/shape1-1.png',
+  aboutShapeImage: '/assets/images/stamatopoulos/about-history-shape.svg',
   aboutShapeAlt: { el: 'shape', en: 'shape' },
   aboutKicker: { el: 'Η ΙΣΤΟΡΙΑ ΜΑΣ', en: 'OUR STORY' },
   aboutTitle: { el: 'Τέσσερις γενιές γεύσης, φροντίδας και εξέλιξης', en: 'Four generations of taste, care, and evolution' },
@@ -569,7 +569,7 @@ export const homeConfig: HomeConfig = {
       aosDurationMs: 1200,
     },
   ],
-  chooseCenterImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/shape1-1.png',
+  chooseCenterImage: '/assets/images/stamatopoulos/about-history-shape.svg',
   chooseCenterImageAlt: { el: 'Δημιουργία γλυκού', en: 'Pastry creation' },
   chooseRightItems: [
     {
@@ -600,7 +600,7 @@ export const homeConfig: HomeConfig = {
   },
   offerCtaLabel: { el: 'ΣΧΕΔΙΑΣΕ ΤΗ ΔΙΚΗ ΣΟΥ', en: 'DESIGN YOUR OWN' },
   offerCtaHref: '/contact',
-  offerImage: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/shape1-1.png',
+  offerImage: '/assets/images/stamatopoulos/about-history-shape.svg',
   offerImageAlt: { el: 'offer image', en: 'offer image' },
 
   testimonials: [
