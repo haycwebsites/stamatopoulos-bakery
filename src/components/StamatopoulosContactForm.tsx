@@ -15,7 +15,7 @@ const labels = {
   date: { el: 'Ημερομηνία', en: 'Date' },
   quantity: { el: 'Αριθμός ατόμων / ποσότητα', en: 'Number of guests / quantity' },
   message: { el: 'Μήνυμα', en: 'Message' },
-  submit: { el: 'Υποβολή', en: 'Submit' },
+  submit: { el: 'Υποβολη', en: 'Submit' },
   submitting: { el: 'Αποστολή...', en: 'Sending...' },
   subjectPlaceholder: { el: 'Επιλέξτε…', en: 'Select…' },
   occasionPlaceholder: { el: 'Επιλέξτε…', en: 'Select…' },

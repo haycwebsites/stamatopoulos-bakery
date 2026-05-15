@@ -2138,9 +2138,8 @@ a {
 }
 
 .stamatopoulos-contact-form-actions .stamatopoulos-btn-salmon.theme-btn.style-one {
-  background-color: transparent;
   border: 2px solid #e98d74;
-  color: #512500;
+  color: white
 }
 
 .stamatopoulos-contact-form-actions .stamatopoulos-btn-salmon.theme-btn.style-one:hover:not(:disabled) {
