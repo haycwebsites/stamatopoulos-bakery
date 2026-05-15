@@ -144,9 +144,9 @@ export default function AboutPage() {
 
         <section className="stamatopoulos-about-philosophy py-5">
           <div className="container py-lg-4">
-            <div className="row align-items-center g-5 gx-xl-5">
-              <div className="col-lg-6 order-2 order-lg-1">
-                <div className="pe-lg-4">
+            <div className="row align-items-center justify-content-between g-5 gx-xl-5">
+              <div className="col-lg-6">
+                <div className="pe-lg-4 stamatopoulos-about-philosophy-copy">
                   <p
                     {...cp('aboutPageConfig.featureKicker')}
                     className="stamatopoulos-about-kicker mb-2"
@@ -171,7 +171,7 @@ export default function AboutPage() {
                   >
                     {t(ac.featureLead)}
                   </p>
-                  <div className="row g-3">
+                  <div className="row g-4 stamatopoulos-about-pillar-rows">
                     <div className="col-sm-6">
                       {ac.featureItemsLeft.map((it, i) => (
                         <div
@@ -218,8 +218,8 @@ export default function AboutPage() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-down" data-aos-duration="1000">
-                <div className="stamatopoulos-about-philosophy-visual mx-auto">
+              <div className="col-lg-6" data-aos="fade-down" data-aos-duration="1000">
+                <div className="stamatopoulos-about-philosophy-visual ms-lg-auto">
                   <img
                     src={img(ac.featureImage)}
                     className="stamatopoulos-about-philosophy-img w-100"

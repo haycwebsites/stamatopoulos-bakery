@@ -793,14 +793,14 @@ export const aboutPageConfig: AboutPageConfig = {
       iconSrc: '/assets/images/stamatopoulos/about/icons/stat-spiral.svg',
       value: { el: '1950', en: '1950' },
       suffix: { el: '', en: '' },
-      label: { el: 'Όλα ξεκίνησαν με μεράκι', en: 'It all began with passion' },
+      label: { el: 'Εκεί όπου ξεκινά η ιστορία μας', en: 'Where our story begins' },
       aosDurationMs: 800,
     },
     {
       iconSrc: '/assets/images/stamatopoulos/about/icons/stat-heart.svg',
       value: { el: '4 γενιές', en: '4 generations' },
       suffix: { el: '', en: '' },
-      label: { el: 'Οικογενειακή παράδοση', en: 'Family tradition' },
+      label: { el: 'Οικογενειακής παράδοσης', en: 'Family tradition' },
       aosDurationMs: 950,
     },
     {
@@ -828,8 +828,8 @@ export const aboutPageConfig: AboutPageConfig = {
     en: 'Tradition, care, and flavor with character',
   },
   featureLead: {
-    el: 'Πιστεύουμε ότι ένα γλυκό είναι περισσότερο από συνταγή: είναι η συνέπεια στην πρώτη ύλη, η υπομονή στην τεχνική και η χαρά να το μοιράζεσαι. Κάθε δημιουργία φτιάχνεται για να συνοδεύει τις δικές σας στιγμές — μικρές ή μεγάλες.',
-    en: 'We believe a dessert is more than a recipe: it is consistency in ingredients, patience in technique, and the joy of sharing. Every creation is made to accompany your moments — quiet or grand.',
+    el: 'Κάθε δημιουργία μας ξεκινά από τον σεβασμό στην οικογενειακή παράδοση και ολοκληρώνεται με μια σύγχρονη ματιά στη γεύση, την αισθητική και την εμπειρία.',
+    en: 'Every creation starts with respect for family tradition and is completed with a contemporary eye on flavor, aesthetics, and experience.',
   },
   featureItemsLeft: [
     {
@@ -838,14 +838,14 @@ export const aboutPageConfig: AboutPageConfig = {
       aosDurationMs: 1200,
     },
     {
-      iconClass: 'fas fa-wheat-awn',
+      iconClass: 'fas fa-cookie-bite',
       title: { el: 'Ποιοτικές πρώτες ύλες', en: 'Quality ingredients' },
       aosDurationMs: 1300,
     },
   ],
   featureItemsRight: [
     {
-      iconClass: 'fas fa-hand-sparkles',
+      iconClass: 'fas fa-mitten',
       title: { el: 'Χειροποίητη φροντίδα', en: 'Handcrafted care' },
       aosDurationMs: 1400,
     },
@@ -855,10 +855,13 @@ export const aboutPageConfig: AboutPageConfig = {
       aosDurationMs: 1500,
     },
   ],
-  featureCtaLabel: { el: 'ΑΝΑΚΑΛΥΨΤΕ ΤΙΣ ΔΗΜΙΟΥΡΓΙΕΣ ΜΑΣ', en: 'DISCOVER OUR CREATIONS' },
+  featureCtaLabel: { el: 'ΑΝΑΚΑΛΥΨΕ ΤΙΣ ΔΗΜΙΟΥΡΓΙΕΣ ΜΑΣ', en: 'DISCOVER OUR CREATIONS' },
   featureCtaHref: '/menu',
-  featureImage: '/assets/images/stamatopoulos/promo-custom-cakes.png',
-  featureImageAlt: { el: 'Τούρτα με λουλούδια', en: 'Floral decorated cake' },
+  featureImage: '/assets/images/stamatopoulos/about/philosophy-cake.png',
+  featureImageAlt: {
+    el: 'Διακοσμημένη τούρτα σε πράσινο πιατέλο',
+    en: 'Decorated celebration cake on a sage cake stand',
+  },
 
   instagramMarqueeImages: Array.from({ length: 5 }).map(() => ({
     src: 'https://linen-mantis-383824.hostingersite.com/wp-content/uploads/2026/02/gallery-img1.jpg',
