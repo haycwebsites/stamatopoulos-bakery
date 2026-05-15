@@ -506,8 +506,8 @@ export const homeConfig: HomeConfig = {
   aboutTitle: { el: 'Τέσσερις γενιές γεύσης, φροντίδας και εξέλιξης', en: 'Four generations of taste, care, and evolution' },
   aboutParagraphs: [
     {
-      el: 'Από το 1950, η οικογένεια Σταματόπουλου συνεχίζει την παράδοση της ζαχαροπλαστικής με σεβασμό στις κλασικές συνταγές και αγάπη για κάθε λεπτομέρεια. Κάθε γλυκό φτιάχνεται στο εργαστήριό μας με την ίδια φροντίδα που χαρακτηρίζει τέσσερις γενιές τεχνογνωσίας.',
-      en: 'Since 1950, the Stamatopoulos family has continued the tradition of pastry-making with respect for classic recipes and love for every detail. Every sweet is made in our workshop with the same care that defines four generations of expertise.',
+      el: 'Στον Σταματόπουλο, το γλυκό δεν είναι απλώς μια συνταγή. Είναι μέρος μιας οικογενειακής διαδρομής που ξεκίνησε το 1950 και συνεχίζεται μέχρι σήμερα, με την ίδια αγάπη για την ποιότητα, τη λεπτομέρεια και τη γεύση. Κάθε δημιουργία φτιάχνεται για να συνοδεύει αληθινές στιγμές και να μένει στη μνήμη.',
+      en: 'At Stamatopoulos, dessert is not just a recipe. It is part of a family journey that began in 1950 and continues to this day, with the same love for quality, detail, and taste. Every creation is made to accompany real moments and to stay in memory.',
     },
   ],
   aboutCtaLabel: { el: 'ΜΑΘΕΤΕ ΠΕΡΙΣΣΟΤΕΡΑ', en: 'LEARN MORE' },
@@ -519,8 +519,8 @@ export const homeConfig: HomeConfig = {
     en: 'Tradition in technique, a modern approach to creation.',
   },
   experienceText: {
-    el: 'Συνδυάζουμε την τεχνογνωσία που περνά από γενιά σε γενιά με σύγχρονες τεχνικές και δημιουργικές ιδέες, ώστε κάθε γλυκό να αντικατοπτρίζει την ποιότητα, την αισθητική και την προσωπικότητά μας.',
-    en: 'We combine expertise passed down through generations with modern techniques and creative ideas, so every dessert reflects our quality, aesthetics, and personality.',
+    el: 'Με εμπειρία που περνά από γενιά σε γενιά, συνδυάζουμε την καθαρότητα της ελληνικής ζαχαροπλαστικής με μια πιο σύγχρονη δημιουργική προσέγγιση. Από τις καθημερινές απολαύσεις μέχρι τις πιο ιδιαίτερες παραγγελίες, κάθε γλυκό σχεδιάζεται με φροντίδα, ισορροπία και χαρακτήρα.',
+    en: 'With experience passed from generation to generation, we combine the purity of Greek pastry-making with a more modern creative approach. From everyday treats to the most special orders, every dessert is designed with care, balance, and character.',
   },
 
   promoCards: [
