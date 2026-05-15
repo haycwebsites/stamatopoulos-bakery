@@ -814,7 +814,7 @@ a {
 .ds-about-sec .bistly-about-box .content {
   position: relative;
   z-index: 1;
-  max-width: 580px;
+  max-width: min(640px, 92%);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -835,15 +835,35 @@ a {
 }
 
 .ds-about-sec .bistly-about-box .section-title {
-  margin-bottom: 20px;
+  margin-bottom: clamp(1.25rem, 2.5vw, 1.75rem);
 }
 
 .ds-about-sec .bistly-about-box .section-title .sub-title {
-  margin-bottom: 5px;
+  margin-bottom: 0.75rem;
+  font-size: 0.8125rem;
+}
+
+.ds-about-sec .bistly-about-box .stamatopoulos-sub-title {
+  color: #512500 !important;
+}
+
+.ds-about-sec .bistly-about-box .section-title h2 {
+  font-family: var(--heading-font, 'Marcellus', serif);
+  font-size: clamp(2.5rem, 4.5vw, 3rem);
+  line-height: 1.1;
+  font-weight: 400;
+  color: #512500;
 }
 
 .ds-about-sec .bistly-about-box p {
-  line-height: 27px;
+  font-size: clamp(1.0625rem, 1.35vw, 1.25rem);
+  line-height: 1.65;
+  color: #512500;
+}
+
+.ds-about-sec .bistly-about-box .bistly-button .theme-btn {
+  font-size: 0.875rem;
+  padding: 16px 28px;
 }
 
 @media screen and (max-width: 1199.98px) {
@@ -855,11 +875,12 @@ a {
 
 .ds-about-sec .bistly-experience-box {
   padding: 40px 50px;
-  background-color: #E3C7F2;
+  background-color: #87a68d;
+  color: #fff;
 }
 
 .ds-about-sec .bistly-experience-box .content {
-  max-width: 580px;
+  max-width: min(640px, 92%);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -880,15 +901,36 @@ a {
 }
 
 .ds-about-sec .bistly-experience-box .section-title {
-  margin-bottom: 20px;
+  margin-bottom: clamp(1.25rem, 2.5vw, 1.75rem);
 }
 
 .ds-about-sec .bistly-experience-box .section-title .sub-title {
-  margin-bottom: 5px;
+  margin-bottom: 0.75rem;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.ds-about-sec .bistly-experience-box .stamatopoulos-sub-title {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+.ds-about-sec .bistly-experience-box .section-title .sub-title::before,
+.ds-about-sec .bistly-experience-box .section-title .sub-title::after {
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.ds-about-sec .bistly-experience-box .section-title h2 {
+  font-family: var(--heading-font, 'Marcellus', serif);
+  font-size: clamp(2.5rem, 4.5vw, 3rem);
+  line-height: 1.1;
+  font-weight: 400;
+  color: #fff;
 }
 
 .ds-about-sec .bistly-experience-box p {
-  line-height: 27px;
+  font-size: clamp(1.0625rem, 1.35vw, 1.25rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 @media screen and (max-width: 1199.98px) {
@@ -1264,15 +1306,6 @@ a {
   background-color: #d97a62;
   border-color: #d97a62;
   color: #fff;
-}
-
-.ds-about-sec .bistly-experience-box {
-  background-color: #84a58e !important;
-}
-
-.ds-about-sec .bistly-experience-box .section-title h2,
-.ds-about-sec .bistly-experience-box p {
-  color: #fff !important;
 }
 
 .ds-promo-sec .bistly-promo-item .content span:empty {
