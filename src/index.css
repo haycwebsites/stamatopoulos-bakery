@@ -1008,15 +1008,16 @@ a {
 }
 
 .ds-promo-sec .stamatopoulos-promo-row > div:nth-child(1) .stamatopoulos-promo-item__image {
-  background-position: calc(100% + 11rem) calc(100% + 21rem);
+  background-position: calc(100% + 6rem) calc(100% + 20rem);
+  transform: scale(1.65)!important;
 }
 
 .ds-promo-sec .stamatopoulos-promo-row > div:nth-child(2) .stamatopoulos-promo-item__image {
-  background-position: center calc(100% + 10rem);
+  background-position: center calc(100% + 1rem);
 }
 
 .ds-promo-sec .stamatopoulos-promo-row > div:nth-child(3) .stamatopoulos-promo-item__image {
-  background-position: center calc(100% + 15rem);
+  background-position: center calc(100% + 10rem);
 }
 
 /* Color wash over the photo — keeps images soft / watermark-like */
